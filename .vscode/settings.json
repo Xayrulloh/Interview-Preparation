@@ -2,5 +2,6 @@
   "cSpell.words": [
     "Libuv",
     "WASI"
-  ]
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
