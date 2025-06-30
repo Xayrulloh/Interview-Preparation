@@ -1,6 +1,6 @@
 # Nest.js Interview Questions
 
-1. ### **How does the architecture of a Nest.js application differ from other Node.js frameworks like Express.js?**
+1. ## **How does the architecture of a Nest.js application differ from other Node.js frameworks like Express.js?**
 
    Nest.js is a popular Node.js framework that uses modern JavaScript and
    TypeScript features to build scalable and efficient applications. The
@@ -38,7 +38,7 @@
    popular Node.js libraries like TypeORM and GraphQL, making it a popular
    choice for building scalable web applications.
 
-2. ### **How do you ensure that your Nest.js applications are scalable and maintainable? What techniques or best practices do you follow?**
+2. ## **How do you ensure that your Nest.js applications are scalable and maintainable? What techniques or best practices do you follow?**
 
    **Use modular architecture**: Nest.js encourages a modular architecture that
    separates different parts of the application into modules. Each module should
@@ -65,10 +65,10 @@
    access to resources in the application. By using guards, you can ensure that
    only authorized users can access sensitive data or perform certain actions.
 
-   **Use async/await:** Nest.js makes heavy use of async/await, which allows you to
-   write asynchronous code in a synchronous style. This makes the code easier to
-   read and maintain, and it allows you to write scalable applications that can handle
-   large amounts of traffic.
+   **Use async/await:** Nest.js makes heavy use of async/await, which allows you
+   to write asynchronous code in a synchronous style. This makes the code easier
+   to read and maintain, and it allows you to write scalable applications that
+   can handle large amounts of traffic.
 
    **Use Swagger/OpenAP**I: Nest.js integrates easily with Swagger/OpenAPI,
    which is a tool for documenting and testing APIs. By using Swagger/OpenAPI,
@@ -80,7 +80,7 @@
    using TypeScript, you can catch errors at compile-time rather than run-time,
    which makes the code more robust and easier to maintain.
 
-3. ### **Can you describe the role of modules in a Nest.js project?**
+3. ## **Can you describe the role of modules in a Nest.js project?**
 
    In Nest.js, modules are a fundamental building block of the application
    architecture. Modules help to organize and structure the codebase into
@@ -113,7 +113,7 @@
    the codebase in a modular and maintainable way, which is essential for
    developing robust and scalable applications.
 
-4. ### **What is dependency injection ?**
+4. ## **What is dependency injection ?**
 
    Dependency Injection (DI) in NestJS is a core concept that allows you to
    manage dependencies efficiently. It uses the built-in **NestJS IoC (Inversion
@@ -200,14 +200,14 @@
    developers to focus on building features rather than managing object
    lifetimes and dependencies manually.
 
-5. ### **What is provider?**
+5. ## **What is provider?**
 
    A provider is a term used to describe a class or a value that Nest.js can
    inject into other components (such as controllers, services, or other
    providers). Providers are a fundamental concept in the Nest.js dependency
    injection system.
 
-6. ### **What are decorators in Nest.js?**
+6. ## **What are decorators in Nest.js?**
 
    In Nest.js, decorators are a way to enhance or modify the behavior of
    classes, class members (properties and methods), and parameters. Decorators
@@ -269,7 +269,7 @@
 
      ```ts
      function MyCustomDecorator() {
-       return function (target: any, propertykey: string) {
+       return function (target: any, propertyKey: string) {
          // Custom logic here
        }
      }
@@ -284,23 +284,23 @@
    contribute to the overall readability and maintainability of Nest.js
    applications.
 
-7. ### **What are DTOs (Data Transfer Objects) in Nest.js**
+7. ## **What are DTOs (Data Transfer Objects) in Nest.js**
 
    DTOs are used to define the shape of data sent and received by APIs, helping
    to validate and document data structure
 
-8. ### **Explain the concept of Exception Filters in Nest.js**
+8. ## **Explain the concept of Exception Filters in Nest.js**
 
    Exception Filters are used to handle exceptions and transform them into
    meaningful error responses, they can be globally using exception filters or
    at the route level using the @UseFilters decorator
 
-9. ### **Explain the concept of Pipes in Nest.js**
+9. ## **Explain the concept of Pipes in Nest.js**
 
    Pipes are used for data transformation and validation before it reaches the
    route handler
 
-10. ### **What are pipes and filters?**
+10. ## **What are pipes and filters?**
 
     **Pipes:**  
      Pipes in Nest.js are a way to transform input data before it reaches the route
@@ -341,17 +341,17 @@
     }
     ```
 
-11. ### **Explain the role of Guards in Nest.js**
+11. ## **Explain the role of Guards in Nest.js**
     Guards are used to control access to routes and protect them from
     unauthorized access
-12. ### **What is the purpose of the Nest.js Guards and Pipes combination and how does it enhance the request processing flow**
+12. ## **What is the purpose of the Nest.js Guards and Pipes combination and how does it enhance the request processing flow**
     Combining Guards and Pipes allows you to perform authorization and data
     validation in a structured and sequential manner in the request processing
     flow
-13. ### **What is Middleware in Nest.js**
+13. ## **What is Middleware in Nest.js**
     Middleware functions in Nest.js are used to process requests before they
     reach the route handler
-14. ### **What is the purpose of Interceptors in Nest.js**
+14. ## **What is the purpose of Interceptors in Nest.js**
 
     In Nest.js, an interceptor is a middleware that can intercept incoming
     requests and outgoing responses. Interceptors provide a way to modify the
@@ -363,7 +363,7 @@
     globally, per module, or per controller and can be synchronous or
     asynchronous.
 
-15. ### **Explain Nest.js lifecycle request**
+15. ## **Explain Nest.js lifecycle request**
     1\. Request Received  
     2\. Routing  
     3\. Middleware Execution  

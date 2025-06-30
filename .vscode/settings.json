@@ -1,6 +1,20 @@
 {
   "cSpell.words": [
+    "AUFS",
+    "Automaticity",
+    "dbname",
+    "distro",
+    "Dockerfiles",
     "Libuv",
+    "Liskov",
+    "Liskov’s",
+    "Morphism",
+    "myapp",
+    "mycontainer",
+    "myimage",
+    "Overlayers",
+    "pypi",
+    "Sleepable",
     "WASI"
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode"
