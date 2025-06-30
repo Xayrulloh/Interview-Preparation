@@ -63,8 +63,9 @@
 
    **Use guards:** Guards are middleware functions that can be used to control
    access to resources in the application. By using guards, you can ensure that
-   only authorized users can access sensitive data or perform certain actions.  
-    Use async/await: Nest.js makes heavy use of async/await, which allows you to
+   only authorized users can access sensitive data or perform certain actions.
+
+   **Use async/await:** Nest.js makes heavy use of async/await, which allows you to
    write asynchronous code in a synchronous style. This makes the code easier to
    read and maintain, and it allows you to write scalable applications that can handle
    large amounts of traffic.
@@ -295,8 +296,10 @@
    at the route level using the @UseFilters decorator
 
 9. ### **Explain the concept of Pipes in Nest.js**
+
    Pipes are used for data transformation and validation before it reaches the
    route handler
+
 10. ### **What are pipes and filters?**
 
     **Pipes:**  
