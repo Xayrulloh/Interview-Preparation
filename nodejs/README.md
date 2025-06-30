@@ -189,8 +189,9 @@
 
 17. ### **How many types of API functions are there in Node.js?**
 
-    Asynchronous, non-blocking: mostly I/O operations which can be fork out of
-    the main loop Synchronous, blocking function: mostly operations that
+    * **Asynchronous, non-blocking:** mostly I/O operations which can be fork out of
+    the main loop
+    * **Synchronous, blocking function:** mostly operations that
     influence the process running in the main loop
 
 18. ### **Explain the concept of stub in Node.js?**
@@ -198,18 +199,14 @@
     Stubs are used in writing tests which are an important part of development.
     It replaces the whole function which is getting tested
 
-19. ### **What is an Event Emitter in Node.js?**
-
-    EventEmitter is like sockets but it works in our application
-
-20. ### **What does event-driven programming mean?**
+19. ### **What does event-driven programming mean?**
 
     An event-driven programming approach uses events to trigger various
     functions. An event can be anything, such as typing a key or clicking a
     mouse button. A call-back function is already registered with the element
     executed whenever an event is triggered.
 
-21. ### **What is an EventEmitter ?**
+20. ### **What is an EventEmitter ?**
 
     In Node.js, an EventEmitter is a core module that provides an implementation
     of the observer pattern. The observer pattern is a behavioral design pattern
@@ -242,13 +239,13 @@
     myEmitter.emit('event', 'Hello', 'World')
     ```
 
-22. ### **What is WASI and why is it being introduced?**
+21. ### **What is WASI and why is it being introduced?**
 
-    Browsers understand either javascript or web assembly so nodejs is builtin
-    on top of javascript that why it’s very rare to use WASI (Web Assembly
+    Browsers understand either javascript or Web Assembly so nodejs is builtin
+    on top of javascript thats why it’s very rare to use WASI (Web Assembly
     Server Interface) API in nodejs
 
-23. ### **What is the Process object?**
+22. ### **What is the Process object?**
 
     In Node.js, the process object is a global object that provides information
     about, and control over, the current Node.js process. It allows you to
@@ -301,18 +298,18 @@
       It provides a way to interact with the runtime environment, handle events,
       and control the behavior of the Node.js process.
 
-24. ### **What are global objects?**
+23. ### **What are global objects?**
 
     Global objects in Node.js are objects that are available in all modules
     without the need for an explicit require statement. Some of the most
     commonly used global objects in Node.js include process, console, and
     buffer.
 
-25. ### **What is the purpose of module.exports?**
+24. ### **What is the purpose of module.exports?**
 
     To use our file, module, function etc.. in the other file we can import them
 
-26. ### **What are modules in nodejs?**
+25. ### **What are modules in nodejs?**
 
     In Node.js, Modules are the blocks of encapsulated code that communicate
     with an external application on the basis of their related functionality.
@@ -327,36 +324,36 @@
     - Local Modules
     - Third-party Modules
 
-27. ### **What is the job of the fs module?**
+26. ### **What is the job of the fs module?**
 
     The fs module in Node.js provides an API for interacting with the file
     system. It allows you to perform various operations on the file system, such
     as reading from and writing to files, creating and deleting directories, and
     more.
 
-28. ### **What is the use of the crypto module in Node.js?**
+27. ### **What is the use of the crypto module in Node.js?**
 
     The crypto module is a built-in module that provides cryptographic
     functionality. It allows developers to perform various cryptographic
     operations, such as hashing, encrypting and decrypting data, generating
     random bytes, and working with digital signatures.
 
-29. **Node.js queue phases**  
+28. **Node.js queue phases**  
     ![Queue Phases](./images/phases.png)  
     here it’s more explained \=\>
     [link](https://www.deepintodev.com/blog/how-nodejs-works-behind-the-scenes)
 
-30. ### **What is Libuv?**
+29. ### **What is Libuv?**
 
     [https://www.geeksforgeeks.org/libuv-in-node-js/](https://www.geeksforgeeks.org/libuv-in-node-js/)
 
-31. ### **What is a thread pool and which library handles it in Node.js**
+30. ### **What is a thread pool and which library handles it in Node.js**
 
     The Thread pool is handled by the libuv library. libuv is a multi-platform C
     library that provides support for asynchronous I/O-based operations such as
     file systems, networking, and concurrency.
 
-32. ### **Thread pool?**
+31. ### **Thread pool?**
 
     The **Thread Pool** is a set of worker threads (managed by **libuv**) that
     handle **offloaded I/O and CPU-intensive tasks** to prevent blocking the
@@ -367,7 +364,7 @@
     I/O are inherently blocking. That’s why it offloads these tasks to worker
     threads to keep the event loop free.
 
-33. ### **Enhancing Node.js performance through clustering.**
+32. ### **Enhancing Node.js performance through clustering.**
 
     Node.js applications run on a single processor. Cluster mode is used to
     start up multiple node.js processes thereby having multiple instances of the
@@ -376,7 +373,7 @@
     called the **cluster manager** which is responsible for monitoring the
     health of the individual instances of our application
 
-34. ### **How are worker threads different from clusters?**
+33. ### **How are worker threads different from clusters?**
 
     Through both Worker thread and Clusters are mechanisms for concurrent and
     parallel processing, but still they have different use cases and operate at
@@ -400,16 +397,16 @@
       scalability of networked applications by distribution incoming requests
       among multiple processes
 
-35. ### **Difference between child_process, worker_threads, and cluster?**
+34. ### **Difference between child_process, worker_threads, and cluster?**
 
     ![Cluster vs childProcess vs workerThreads](./images/cluster-vs-childProcess-vs-workerThreads.png)
 
-36. ### **What is fork in node JS?**
+35. ### **What is fork in node JS?**
 
     In general, it’s used to spawn child processes. It creates new instance of
     v8 engine to run multiple workers to execute the code
 
-37. ### **How do you manage packages in your node.js project and tell me more about versioning?**
+36. ### **How do you manage packages in your node.js project and tell me more about versioning?**
 
     It can be managed by npm, pnpm, yarn. And to maintain version we use
     package.json and package-lock.json.
