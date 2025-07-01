@@ -26,3 +26,5 @@ series_
 ## [MongoDB Interview Questions](mongo/README.md)
 
 ## [SQL Interview Questions](sql/README.md)
+
+## [Typescript Interview Questions](typescript/README.md)
