@@ -228,83 +228,83 @@ methods (functions) that operate on that data.
 
 - ## **Polymorphism:**
 
-  _Poly_ \=\> Multiple, _Morphism_ \=\> Form \===\> Multiple Form  
-   _Person_ \=\> Father, Mother, Child, Worker, President, etc..  
-   _OOP_
+_Poly_ \=\> Multiple, _Morphism_ \=\> Form \===\> Multiple Form  
+ _Person_ \=\> Father, Mother, Child, Worker, President, etc..  
+ _OOP_
 
-  - Parent class (sound \=\> ‘parent’)
-  - Child class inherited Parent class (sound \=\> ‘child’)
+- Parent class (sound \=\> ‘parent’)
+- Child class inherited Parent class (sound \=\> ‘child’)
 
-  ```ts
-  // Abstract base class
-  abstract class Shape {
-    constructor(public color: string) {}
+```ts
+// Abstract base class
+abstract class Shape {
+  constructor(public color: string) {}
 
-    abstract getArea(): number
-    abstract draw(): void
+  abstract getArea(): number
+  abstract draw(): void
 
-    displayInfo(): void {
-      console.log(`This is a ${this.color} shape with area ${this.getArea()}`)
-    }
+  displayInfo(): void {
+    console.log(`This is a ${this.color} shape with area ${this.getArea()}`)
+  }
+}
+
+// Concrete implementations
+class Circle extends Shape {
+  constructor(color: string, private radius: number) {
+    super(color)
   }
 
-  // Concrete implementations
-  class Circle extends Shape {
-    constructor(color: string, private radius: number) {
-      super(color)
-    }
-
-    getArea(): number {
-      return Math.PI * this.radius ** 2
-    }
-
-    draw(): void {
-      console.log(`Drawing a ${this.color} circle with radius ${this.radius}`)
-    }
+  getArea(): number {
+    return Math.PI * this.radius ** 2
   }
 
-  class Rectangle extends Shape {
-    constructor(color: string, private width: number, private height: number) {
-      super(color)
-    }
+  draw(): void {
+    console.log(`Drawing a ${this.color} circle with radius ${this.radius}`)
+  }
+}
 
-    getArea(): number {
-      return this.width * this.height
-    }
-
-    draw(): void {
-      console.log(
-        `Drawing a ${this.color} rectangle ${this.width}x${this.height}`
-      )
-    }
+class Rectangle extends Shape {
+  constructor(color: string, private width: number, private height: number) {
+    super(color)
   }
 
-  // Function demonstrating polymorphism
-  function processShapes(shapes: Shape[]): void {
-    shapes.forEach(shape => {
-      shape.draw()
-      shape.displayInfo()
-      console.log('---')
-    })
+  getArea(): number {
+    return this.width * this.height
   }
 
-  // Usage
-  const shapes: Shape[] = [
-    new Circle('red', 5),
-    new Rectangle('blue', 4, 6),
-    new Circle('green', 3)
-  ]
+  draw(): void {
+    console.log(
+      `Drawing a ${this.color} rectangle ${this.width}x${this.height}`
+    )
+  }
+}
 
-  processShapes(shapes)
-  /*
-   Drawing a red circle with radius 5
-   This is a red shape with area 78.53981633974483
-   ---
-   Drawing a blue rectangle 4x6
-   This is a blue shape with area 24
-   ---
-   Drawing a green circle with radius 3
-   This is a green shape with area 28.274333882308138
-   ---
-   */
-  ```
+// Function demonstrating polymorphism
+function processShapes(shapes: Shape[]): void {
+  shapes.forEach(shape => {
+    shape.draw()
+    shape.displayInfo()
+    console.log('---')
+  })
+}
+
+// Usage
+const shapes: Shape[] = [
+  new Circle('red', 5),
+  new Rectangle('blue', 4, 6),
+  new Circle('green', 3)
+]
+
+processShapes(shapes)
+/*
+ Drawing a red circle with radius 5
+ This is a red shape with area 78.53981633974483
+ ---
+ Drawing a blue rectangle 4x6
+ This is a blue shape with area 24
+ ---
+ Drawing a green circle with radius 3
+ This is a green shape with area 28.274333882308138
+ ---
+ */
+```

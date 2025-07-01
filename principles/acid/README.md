@@ -1,6 +1,8 @@
 # <center>ACID</center>
 
-  ACID is a set of properties that guarantee reliable processing of database transactions. These principles ensure data integrity even in cases of system failures or concurrent access.
+ACID is a set of properties that guarantee reliable processing of database
+transactions. These principles ensure data integrity even in cases of system
+failures or concurrent access.
 
 - ## **Automaticity:**
 
