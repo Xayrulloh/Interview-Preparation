@@ -18,3 +18,5 @@ series_
 ## [Network Interview Questions](network/README.md)
 
 ## [REST API Interview Questions](rest/README.md)
+
+## [GraphQL API Interview Questions](graph/README.md)
