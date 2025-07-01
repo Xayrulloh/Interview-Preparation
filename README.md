@@ -24,3 +24,5 @@ series_
 ## [Redis Interview Questions](redis/README.md)
 
 ## [MongoDB Interview Questions](mongo/README.md)
+
+## [SQL Interview Questions](sql/README.md)
