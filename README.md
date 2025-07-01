@@ -16,3 +16,5 @@ series_
 ## [Principles](principles/README.md)
 
 ## [Network Interview Questions](network/README.md)
+
+## [REST API Interview Questions](rest/README.md)
