@@ -20,3 +20,5 @@ series_
 ## [REST API Interview Questions](rest/README.md)
 
 ## [GraphQL API Interview Questions](graph/README.md)
+
+## [Redis Interview Questions](redis/README.md)
