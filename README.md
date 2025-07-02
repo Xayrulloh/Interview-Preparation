@@ -28,3 +28,8 @@ series_
 ## [SQL Interview Questions](sql/README.md)
 
 ## [Typescript Interview Questions](typescript/README.md)
+
+## [Javascript Interview Questions](javascript/README.md)
+
+<!-- FIXME: remove all **example** and just put example it self -->
+<!-- FIXME: remove . and ? in the end of sentence -->
