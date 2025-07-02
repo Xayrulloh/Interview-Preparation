@@ -2,7 +2,7 @@
 
 ## Fundamentals
 
-1. ### **What is TypeScript?**
+1. ### **What is TypeScript**
 
    _TypeScript is a superset of JavaScript that adds static typing to the
    language. It is an open-source programming language developed and maintained
@@ -10,11 +10,11 @@
    development, providing developers with tools to write more reliable and
    maintainable code_
 
-2. ### **What are the differences between JavaScript and TypeScript?**
+2. ### **What are the differences between JavaScript and TypeScript**
 
    ![Js and Ts difference](./images/js-ts-diff.png)
 
-3. ### **What are the advantages of TypeScript over JavaScript?**
+3. ### **What are the advantages of TypeScript over JavaScript**
    _Below are some of the advantages of typescript over javascript_
    - TypeScript is able to find compile time errors at the development time only
    - TypeScript is strongly-typed or supports static typing
@@ -22,7 +22,7 @@
 
 ## Basic Types
 
-4. ### **What are the primitive types in TypeScript?**
+4. ### **What are the primitive types in TypeScript**
 
    - **Built-in types:** String
      - Number
@@ -37,13 +37,12 @@
      - Classes
      - Interfaces
 
-5. ### **What is the difference between never, unknown, and any?**
+5. ### **What is the difference between never, unknown, and any**
 
    - **never:**
 
      - Represents values that never occur
      - Used for functions that always throw or never return
-     - **Example:**
        ```ts
        function throwError(
          message: string = 'What the hell is going on?'
@@ -56,8 +55,6 @@
 
      - Represents values we know nothing about
      - Requires type checking before use
-     - **Example:**
-
        ```ts
        let userInput: unknown
 
@@ -74,8 +71,6 @@
 
      - Opts out of type checking
      - Used for dynamic content or migration
-     - **Example:**
-
        ```ts
        let myValue: any = 42
 
@@ -85,21 +80,19 @@
 
 ## Variables & Functions
 
-6. ### **What are the different keywords to declare variables in TypeScript?**
+6. ### **What are the different keywords to declare variables in TypeScript**
 
    _Like JavaScript, TypeScript has var, let, const_
 
-7. ### **Explain the arrow function syntax in TypeScript.**
+7. ### **Explain the arrow function syntax in TypeScript**
 
    _It's a short way to create a function_
 
-8. ### **Provide the syntax of a function with the type annotations.**
+8. ### **Provide the syntax of a function with the type annotations**
 
    _Functions are blocks of code to perform a specific code. Functions can
    optionally take one or more arguments, process them, and optionally return a
    value_
-
-   **Example:**
 
    ```ts
    // primitives
@@ -126,8 +119,6 @@
    These functions are often used inline, as arguments to other functions
    (callbacks), or assigned to variables_
 
-   **Example:**
-
    ```ts
    // function assigned to add is anonymous
    const add = function (a: number, b: number): number {
@@ -137,11 +128,9 @@
    console.log(add(5, 3)) // Output: 8
    ```
 
-10. ### **What are the rest parameters and arguments in TypeScript?**
+10. ### **What are the rest parameters and arguments in TypeScript**
 
     _Rest parameters allows a function to take all arguments as one array_
-
-    **Example:**
 
     ```ts
     function restF(...args: number[]) {
@@ -149,23 +138,19 @@
     }
     ```
 
-11. ### **What is parameter destructuring?**
+11. ### **What is parameter destructuring**
 
     _It's a way to unpack the object provided as an argument to function_
-
-    **Example:**
 
     ```ts
     const { name, age } = { name: 'deeng', age: 1 } // in objects
     const [first, second, ...others] = [1, 2, 3, 4, 5, 6] // in array
     ```
 
-12. ### **Provide the TypeScript syntax to create function overloads.**
+12. ### **Provide the TypeScript syntax to create function overloads**
 
     _It allows us to create multiple functions with the same name but different
     arguments. Typescript itself defines by argument_
-
-    **Example:**
 
     ```ts
     // Overload signatures
@@ -194,22 +179,20 @@
 
 ## Objects & Interfaces
 
-13. ### **How to create objects in TypeScript?**
+13. ### **How to create objects in TypeScript**
 
     _Objects are collections of keys and values. And the keys must be unique.
     It's the same as Js to create obj in Ts_
 
-14. ### **How to specify optional properties in TypeScript?**
+14. ### **How to specify optional properties in TypeScript**
 
     _By using ? after the property name we can specify it as optional_
 
-15. ### **What is an interface in TypeScript, and how is it different from a class?**
+15. ### **What is an interface in TypeScript, and how is it different from a class**
 
     _In TypeScript, an interface serves as a blueprint for defining how an
     object should look. It outlines the properties an object should have and
     their respective types but doesn't include any actual code_
-
-    **Example:**
 
     ```ts
     interface Person {
@@ -225,7 +208,7 @@
     // the Person interface helps us define what properties a me object should have – in this case, a name of type string and an age of type number
     ```
 
-16. ### **What is the difference between type and interface?**
+16. ### **What is the difference between type and interface**
 
     _Both type and interface are used to define custom types, but there are
     subtle differences in their capabilities and use cases_
@@ -361,7 +344,7 @@
         Both type and interface are powerful tools in TypeScript, and you can
         choose the one that best fits your use case_
 
-17. ### **Declaration merging?**
+17. ### **Declaration merging**
 
 - Declaration merging is a feature in TypeScript that allows you to combine
   multiple declarations of the same name into a single definition. This is
@@ -369,30 +352,30 @@
 
 ## Classes & OOP
 
-18. ### **Explain the TypeScript class syntax.**
+18. ### **Explain the TypeScript class syntax**
 
     _It's same as JavaScript_
 
-19. ### **What are abstract classes? When should you use one?**
+19. ### **What are abstract classes? When should you use one**
 
     _Abstract classes are similar to interfaces in that they specify a contract
     for the objects, and you cannot instantiate them directly_
 
-20. ### **How to make object properties immutable in TypeScript?**
+20. ### **How to make object properties immutable in TypeScript**
 
     _By using **readonly** keyword before the property name_
 
-21. ### **What are the **'implements'** clauses in TypeScript?**
+21. ### **What are the **'implements'** clauses in TypeScript**
 
     _It's used to check that a class satisfies the contract specified by an
     interface_
 
-22. ### **Explain the concept of inheritance in TypeScript.**
+22. ### **Explain the concept of inheritance in TypeScript**
     _It allows us to extend from another class and reuse or modify the behavior_
 
 ## Advanced Types
 
-23. ### **What are Union and Intersection Types?**  
+23. ### **What are Union and Intersection Types**  
     * **Union Type:** *In TypeScript, union types, marked by **|**, allow a variable to have values from different types*
     ```ts
     type Cat = { name: string, meow: () => void };
@@ -411,11 +394,11 @@
     const me: Person = {name: 'me', age: 1}
     ```
 
-24. ### **What are type aliases? How do you create one?**  
+24. ### **What are type aliases? How do you create one**  
     *If we've variable either string or number. We can create type something
     **string | number** and use this type to that variable*
 
-25. ### **What are string literal types?**  
+25. ### **What are string literal types**  
     *You can refer to specific string or numbers as types*
     ```ts
     let status: "active";
@@ -423,7 +406,7 @@
     status = "inactive"; // Error: Type '"inactive"' is not assignable to type '"active"'.
     ```
 
-26. ### **What are template literal types?**  
+26. ### **What are template literal types**  
     *They're like string literal but you can combine them with concrete*
     ```ts
     type Size = "small" | "medium" | "large";
@@ -433,7 +416,7 @@
     let message2: SizeMessage = "The selected size is extra-large."; // Error: Type '"The selected size is extra-large."' is not assignable to type '"The selected size is small." | "The selected size is medium." | "The selected size is large."'.
     ```
 
-27. ### **What are Conditional Types?**  
+27. ### **What are Conditional Types**  
     *Conditional types in TypeScript help us describe different type mappings
     based on certain conditions*
     ```ts
@@ -443,7 +426,7 @@
     type B = IsString<123>;     // type B = false
     ```
 
-28. ### **What are mapped types, and how do they work?**  
+28. ### **What are mapped types, and how do they work**  
     *Mapped types in TypeScript allow you to create new types by changing the
     properties of existing ones*
     ```ts
@@ -466,7 +449,7 @@
 
 ## Special Types
 
-30. ### **What is void, and when to use the void type?**  
+30. ### **What is void, and when to use the void type**  
     *Let's say you've a function which returns nothing, that means it's void
     function*
 
@@ -475,7 +458,7 @@
     properties on the variable or call a method on it. It's more like it's
     nothing*
 
-32. ### **What is undefined in TypeScript?**  
+32. ### **What is undefined in TypeScript**  
     *When a variable is declared without initialization it becomes undefined*
 
 ## Arrays & Tuples
@@ -505,7 +488,7 @@
 
 ## Enums
 
-35. ### **What is enums?**  
+35. ### **What is enums**  
     *In TypeScript, enums work similarly to enums in other programming languages,
     providing a way to define a set of named constants*
     ```ts
@@ -537,7 +520,7 @@
 
 ## Modern Features
 
-36. ### **What is optional chaining?**  
+36. ### **What is optional chaining**  
     *Instead of checking all the way down we can just use a ?. And it returns
     undefined it's not exist*
     ```ts
@@ -568,7 +551,7 @@
     service2.doSomething?.(); // Does nothing, no error
     ```
 
-37. ### **What is the 'in' operator?**  
+37. ### **What is the 'in' operator**  
     *It's used to find if a property is in the specified object*
     ```ts
     const car = { make: 'Toyota', model: 'Corolla' };
@@ -576,7 +559,7 @@
     console.log('year' in car); // false
     ```
 
-38. ### **What are TypeScript decorators, and how do they work?**  
+38. ### **What are TypeScript decorators, and how do they work**  
     *TypeScript decorators are special functions used to modify or add behavior
     to classes, methods, properties, or parameters at runtime*
     ```ts
@@ -609,23 +592,23 @@
 
 ## Configuration
 
-39. ### **What is the purpose of the tsconfig.json file?**  
+39. ### **What is the purpose of the tsconfig.json file**  
     *It provides the compiler options to compile the project*
 
-40. ### **How to enforce strict null checks in TypeScript?**  
+40. ### **How to enforce strict null checks in TypeScript**  
     *It's a way to check all possibilities that can be null. And to enforce it we
     change tsconfig.json file strictNullChecks to true*
 
 ## Type System
 
-41. ### **What is meant by type inference?**  
+41. ### **What is meant by type inference**  
     *When you don't provide an explicit type typescript itself defines type*
     ```ts
     let x = 10; // TypeScript infers 'x' as 'number'
     let message = "Hello"; // TypeScript infers 'message' as 'string'
     ```
 
-42. ### **What is meant by contextual typing?**  
+42. ### **What is meant by contextual typing**  
     *When the typescript compiler uses the location of a variable to infer its
     type, it's called contextual typing*
     ```ts
@@ -635,10 +618,10 @@
     };
     ```
 
-43. ### **What is the typeof operator? How is it used in TypeScript?**  
+43. ### **What is the typeof operator? How is it used in TypeScript**  
     *Like JavaScript, **typeof** identifies type of value and it's used for it*
 
-44. ### **When would you use type assertion?**  
+44. ### **When would you use type assertion**  
     *Type assertion in TypeScript is a mechanism to tell the compiler that you
     know more about the type of a value than TypeScript can infer*
     ```ts
@@ -653,37 +636,37 @@
 
 ## Advanced Concepts
 
-45. ### **Does TypeScript support static classes? If not, why?**  
+45. ### **Does TypeScript support static classes? If not, why**  
     *In Typescript you can create any data and functions as simple objects
     without creating a containing class. Hence typescript doesn't need static
     classes*
 
-46. ### **What is the Function type in TypeScript?**  
+46. ### **What is the Function type in TypeScript**  
     *Function is a global type in typescript and it has properties like bind,
     call and apply with other properties*
 
-47. ### **What is a type declaration file?**  
+47. ### **What is a type declaration file**  
     *It's a file which ends with .d.ts extension providing a way to declare the
     existence of some types or values without actually providing implementations
     for those values*
 
-48. ### **Explain the various ways to control member visibility in TypeScript.**  
+48. ### **Explain the various ways to control member visibility in TypeScript**  
     * **public:** *You can access a public member anywhere outside the class*  
     * **protected:** *It's visible only to the subclasses*  
     * **private:** *It's only visible inside the class*
 
-49. ### **What are Type Guards?**  
+49. ### **What are Type Guards**  
     * **typeof:** *check primitive types*  
     * **keyof:** *check is key available in object*  
     * **instanceof:** *check class instances*  
     * **in:** *check if a property exist in an object*  
     * **is:** *User Defined Type Guard*
 
-50. ### **Explain how TypeScript infers types?**  
+50. ### **Explain how TypeScript infers types**  
     *TypeScript uses type inference to automatically determine the types of
     variables based on their assigned values while declaring*
 
-51. ### **What are generics in TypeScript, and when would you use them?**  
+51. ### **What are generics in TypeScript, and when would you use them**  
     *Generics in TypeScript provide a way to create reusable components and
     functions while maintaining flexibility in the types they work with*
     ```ts
@@ -721,7 +704,7 @@
     }
     ```
 
-52. ### **What is the declare keyword?**  
+52. ### **What is the declare keyword**  
     *The declare keyword in TypeScript is used to inform the compiler that a
     variable, method, or library is defined externally*
     ```ts
@@ -740,10 +723,10 @@
 
 ## Loops
 
-54. ### **Explain the different variants of the for loop in TypeScript.**  
+54. ### **Explain the different variants of the for loop in TypeScript**  
     *for, for in, for of, forEach*
 
 ## Symbols
 
-55. ### **Explain the symbol type in TypeScript.**  
+55. ### **Explain the symbol type in TypeScript**  
     *The way to create unique primitive type value*

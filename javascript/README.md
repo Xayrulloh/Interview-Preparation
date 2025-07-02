@@ -1,11 +1,11 @@
 #                 **Javascript interview questions**
 
-1. ## **Is JavaScript a compiled or interpreted language?**  
+1. ## **Is JavaScript a compiled or interpreted language**  
    *JavaScript is primarily interpreted but uses Just-In-Time (JIT) compilation for optimization:*
     - Code is interpreted line-by-line at runtime
     - Modern engines compile to optimized bytecode
     - Combines benefits of both approaches 
-2. ## **What paradigm is Javascript?**  
+2. ## **What paradigm is Javascript**  
    *JavaScript is a multi-paradigm language supporting:*
 
     | Paradigm | Description | Example |
@@ -14,7 +14,7 @@
     | OOP | Prototype-based inheritance | Constructor functions, classes |
     | Functional | First-class functions, closures | Array.map(), callbacks |
 
-3. ## **Why do we call javascript a dynamic language?**  
+3. ## **Why do we call javascript a dynamic language**  
     - Variables can hold any data type
     - Types are determined at runtime
     - No compile-time type checking
@@ -25,7 +25,7 @@
     value = { id: 1 }; // Now Object
     ```
 
-4. ## **Is JavaScript a pass-by-reference or pass-by-value language?**
+4. ## **Is JavaScript a pass-by-reference or pass-by-value language**
     *JavaScript is always pass-by-value, but:*
     - Primitives pass the actual value
     - Objects pass a copy of the reference
@@ -41,7 +41,7 @@
     update(item); // item.prop now "changed"
     ```
 
-5. ## **What are the different data types present in javascript?**
+5. ## **What are the different data types present in javascript**
     * **Primitive Types:**
         - String, Number, Boolean
         - Null, Undefined
@@ -51,7 +51,7 @@
         - Object
         - Array, Map, Set (specialized objects)
 
-6. ## **What are the differences between primitives and non-primitives?**  
+6. ## **What are the differences between primitives and non-primitives**  
     | Characteristic | Primitives | Non-Primitives |
     |---------------|------------|----------------|
     | Mutability | Immutable | Mutable |
@@ -59,7 +59,7 @@
     | Comparison | Value equality | Reference equality |
     | Methods | No methods | Have methods |
 
-7. ## **What is Symbol primitive?**  
+7. ## **What is Symbol primitive**  
     *Unique identifiers used for:*
     - Creating unique object properties
     - Avoiding naming collisions
@@ -73,7 +73,7 @@
     };
     ```
 
-8. ## **Let, const vs var?**  
+8. ## **Let, const vs var**  
     | Feature | var | let | const |
     |---------|-----|-----|-------|
     | Scope | Function | Block | Block |
@@ -87,7 +87,7 @@
     const z = 3; // Block-scoped constant
     ```
 
-9. ## **What is the Temporal Dead Zone?**  
+9. ## **What is the Temporal Dead Zone**  
     *The **Temporal Dead Zone (TDZ)** is a behavior in JavaScript where variables declared with `let` and `const` cannot be accessed before their declaration. Attempting to do so throws a `ReferenceError`*
 
     ```js
@@ -99,7 +99,7 @@
     - Only applies to `let` and `const` (not `var`).  
     - TDZ ends once the variable is declared.  
 
-10) ## **What is the precedence order between local and global variables?**  
+10) ## **What is the precedence order between local and global variables**  
     *A **local variable** takes precedence over a **global variable** with the same name*
 
     ```js 
@@ -110,7 +110,7 @@
     }  
     greet(); 
     ```
-11. ## **Can I redeclare let and const variables?**
+11. ## **Can I redeclare let and const variables**
     - **`var`:** *Yes redeclaration is possible*
     - **`let`:** *No redeclaration in the same scope.*  
     - **`const`:** *No redeclaration or reassignment.*  
@@ -126,7 +126,7 @@
     var c = 2 // c is equal to 2
     ```
 
-12. ## **Does const variable make the value immutable?**  
+12. ## **Does const variable make the value immutable**  
     *No, `const` only prevents **reassignment** of the variable. For objects/arrays, properties/elements can still be modified*  
 
     ```js
@@ -135,7 +135,7 @@
     arr = [4, 5]; // TypeError  
     ```
 
-13. ## **Explain Scope and Scope Chain in javascript.**
+13. ## **Explain Scope and Scope Chain in javascript**
     **Scope** determines variable accessibility. Types:  
     1. **Global:** Accessible everywhere.  
     2. **Function/Local:** Accessible only inside the function.  
@@ -154,7 +154,7 @@
     }  
     ```
 
-14. ## **Scope and Lexical environment in js?**  
+14. ## **Scope and Lexical environment in js**  
     * **Lexical Environment:** *A Lexical Environment is like a storage system that keeps track of variables and their values during execution*
     * **Scope:** *Scope defines where a variable can be accessed in the code. There are different types of scope*
 
@@ -172,7 +172,7 @@
         child();  
     }  
     ```
-15. ## **What are global variables?**  
+15. ## **What are global variables**  
     *Variables declared without `let`/`const`/`var` or in the global scope*  
 
     ```js
@@ -182,11 +182,11 @@
     foo();  
     console.log(globalVar); // 10   
     ```
-16. ## **What are the problems with global variables?**  
+16. ## **What are the problems with global variables**  
     - **Naming collisions** *(local vs. global).*  
     - **Unpredictable modifications** *across scripts.*  
     - **Harder to debug** *(no isolation).*   
-17. ## **What are template literals?**  
+17. ## **What are template literals**  
     *Strings with embedded expressions using backticks (`)*  
 
     ```js
@@ -194,7 +194,7 @@
     console.log(`Hello, ${name}!`); // "Hello, Alice!"  
     ```
 
-18. ## **Difference between “ \== “ and “ \=== “ operators?**
+18. ## **Difference between “ \== “ and “ \=== “ operators**
     | **`==` (Loose Equality)** | **`===` (Strict Equality)** |  
     |---------------------------|----------------------------|  
     | Converts types if needed. | No type conversion.        |  
@@ -205,7 +205,7 @@
     console.log(0 === false); // false  
     ```
 
-19. ## **Explain Implicit Type Coercion in javascript?**
+19. ## **Explain Implicit Type Coercion in javascript**
     *JavaScript automatically converts types in certain operations*  
     - **String Coercion:** *`+` with strings converts all operands to strings*.  
         ```js 
@@ -231,7 +231,7 @@
         console.log(12 == "12"); // true  
         ```
 
-20. ## **What is an Unary operator?**  
+20. ## **What is an Unary operator**  
     *The unary `+` operator converts a variable to a number. If conversion fails, it returns `NaN`.*  
 
     ```js 
@@ -239,7 +239,7 @@
     console.log(+"Hello"); // NaN
     ```
 
-21. ## **What is the output of prepend additive operator on falsy values?**  
+21. ## **What is the output of prepend additive operator on falsy values**  
     *Using `+` on falsy values (`null`, `undefined`, `false`, `""`) converts them to `0`*
 
     ```js
@@ -247,7 +247,7 @@
     console.log(+false); // 0 
     ```
 
-22. ## **What is the rest parameter and spread operator?**
+22. ## **What is the rest parameter and spread operator**
     | **Rest Parameter (`...args`)**       | **Spread Operator (`...iterable`)**  |  
     |--------------------------------------|--------------------------------------|  
     | Collects function arguments into an array. | Expands iterables into individual elements. |  
@@ -267,7 +267,7 @@
     const arr2 = [...arr1, 3]; // [1, 2, 3]  
     ```
 
-23. ## **What is an arguments object?**   
+23. ## **What is an arguments object**   
     *An array-like object holding function arguments. Cannot use array methods directly.*  
 
     ```js
@@ -280,21 +280,21 @@
 
     **Note:** Use rest parameters (`...args`) instead for modern code.  
 
-24. ## **What happens with negating an array?**  
+24. ## **What happens with negating an array**  
     *Arrays are truthy, so negating them with `!` returns `false`.*  
 
     ```js
     console.log(![]); // false  
     ```
 
-25. ## **What happens if we add two arrays?**  
+25. ## **What happens if we add two arrays**  
     *Arrays are converted to strings and concatenated.*  
 
     ```js
     console.log([1, 2] + [3]); // "1,23"  
     ```
 
-26. ## **What are the placeholders from the console object?**  
+26. ## **What are the placeholders from the console object**  
     | **Placeholder** | **Purpose**          |  
     |-----------------|----------------------|  
     | `%o`            | Object               |  
@@ -305,7 +305,7 @@
     console.log("Name: %s, Age: %d", "Alice", 25);  
     ```
 
-27. ## **What is NaN property in JavaScript?**
+27. ## **What is NaN property in JavaScript**
     - **NaN** ("Not a Number") results from invalid math operations.  
     - Use `isNaN()` to check for NaN.  
 
@@ -314,7 +314,7 @@
     console.log(isNaN("123")); // false (coercible to number) 
     ```
 
-28. ## **Explain WeakSet in javascript.**
+28. ## **Explain WeakSet in javascript**
     - Holds **objects weakly** (garbage collected if no other references).  
     - Methods: `add()`, `delete()`, `has()`.  
 
@@ -330,7 +330,7 @@
     - WeakSet only stores objects.  
     - No iteration/size methods.  
 
-29. ## **Weakset vs Set?**  
+29. ## **Weakset vs Set**  
     | Feature          | WeakSet                          | Set                              |
     |------------------|----------------------------------|----------------------------------|
     | Values           | Only objects                     | Any data type                    |
@@ -351,7 +351,7 @@
     set.add("hello");
     ```
 
-30. ## **Explain WeakMap in javascript.** 
+30. ## **Explain WeakMap in javascript** 
     *Similar to WeakSet but stores key-value pairs (keys must be objects). Values are weakly referenced.*
 
     ```js
@@ -362,7 +362,7 @@
     keyObj = null;  // Entry automatically removed
     ```
 
-31. ## **Null vs Undefined?**  
+31. ## **Null vs Undefined**  
     | Null                          | Undefined                      |
     |-------------------------------|--------------------------------|
     | Intentional absence of value  | Variable declared but not assigned |
@@ -386,7 +386,7 @@
     |Not exist/declared                   |Declared but not assigned               |
     |Error while reading undeclared value |Undefined while reading undefined value |
 
-32. ## **What is global execution context?**  
+32. ## **What is global execution context**  
     *The default context created when JavaScript code first runs:*
     - Creates global object (window in browsers)
     - Sets `this` to the global object
@@ -397,7 +397,7 @@
     var globalVar = "I'm global";
     ```
 
-33. ## **What is function execution context?**  
+33. ## **What is function execution context**  
     *Created each time a function is called:*
     - Has its own variable environment
     - Contains `arguments` object
@@ -410,7 +410,7 @@
     greet("Alice");  // New execution context created
     ```
 
-34. ## **What is the job of ‘this’ keyword?**  
+34. ## **What is the job of ‘this’ keyword**  
     *Behavior depends on context:*
 
     | Context               | `this` Value                  | Example                          |
@@ -421,7 +421,7 @@
     | Constructor           | New instance                  | new Constructor();               |
     | Arrow Function        | Inherits from parent scope    | () => { console.log(this); }     |
 
-35. ## **What is a strict mode in javascript?**
+35. ## **What is a strict mode in javascript**
     *Enables stricter parsing and error handling:*
     - Prevents accidental globals
     - Makes assignments to read-only properties throw errors
@@ -433,7 +433,7 @@
     delete Object.prototype;  // Throws TypeError
     ```
 
-36. ## **What is Hoisting?**![][image36]  
+36. ## **What is Hoisting**![][image36]  
     *JavaScript's behavior of moving declarations to the top:*
 
     - `var`: Hoisted and initialized with `undefined`
@@ -448,7 +448,7 @@
     let y = 10;
     ```
 
-37. ## **What is an IIFE (Immediately Invoked Function Expression)?**  
+37. ## **What is an IIFE (Immediately Invoked Function Expression)**  
     *Self-executing anonymous function for data privacy:*
 
     ```js
@@ -466,7 +466,7 @@
     }
     ```
 
-38. ## **What is a first class function?**  
+38. ## **What is a first class function**  
     *Functions treated like any other variable:*
     1. Can be assigned to variables
     2. Can be passed as arguments
@@ -490,7 +490,7 @@
     double(5);  // 10
     ```
 
-39. ## **What is a first order function?**  
+39. ## **What is a first order function**  
    * A function that:*
     - Does **not** accept another function as an argument
     - Does **not** return a function
@@ -501,7 +501,7 @@
     }
     ```
 
-40. ## **What is a higher order function?**  
+40. ## **What is a higher order function**  
     *A function that:*
     - Accepts a function as an argument **OR**
     - Returns a function **OR**
@@ -522,7 +522,7 @@
     double(5);  // 10
     ```
 
-41. ## **What is a unary function?**  
+41. ## **What is a unary function**  
     A function that accepts exactly **one argument**.
 
     ```js
@@ -530,7 +530,7 @@
     console.log(identity(5)); // 5
     ```
 
-42. ## **What is a pure function?**  
+42. ## **What is a pure function**  
     *Function is pure if:*
     1. Same input **always** produces same output
     2. No side effects (doesn't modify external state)
@@ -548,7 +548,7 @@
     }
     ```
 
-43. ## **What is memoization?**  
+43. ## **What is memoization**  
     *Caching function results to optimize performance.*
 
     ```js
@@ -567,7 +567,7 @@
     });
     ```
 
-44. ## **Memory Management in JavaScript?**  
+44. ## **Memory Management in JavaScript**  
     - **Automatic garbage collection**
     - **Mark-and-sweep algorithm** (removes unreachable objects)
     - **Memory leaks** occur when:
@@ -583,7 +583,7 @@
 
     [https://www.geeksforgeeks.org/memory-management-in-javascript/](https://www.geeksforgeeks.org/memory-management-in-javascript/)  
 
-45. ## **What is an async function?**  
+45. ## **What is an async function**  
     *Declared with `async` keyword, enables `await` syntax.*
 
     ```js
@@ -597,7 +597,7 @@
     }
     ```
 
-46. ## **What is the use of promises in javascript?**
+46. ## **What is the use of promises in javascript**
     *Promises are used to handle asynchronous operations in javascript. Before them callbacks were used to handle asynchronous operations but due to the limited functionality of callbacks, using multiple callbacks leads to unmanageable code*
 
     * **States:**
@@ -634,7 +634,7 @@
 
     *More about [Promises](https://www.deepintodev.com/blog/how-promises-work-in-javascript)*
 
-47. ## **What are callbacks?**  
+47. ## **What are callbacks**  
     *Functions passed as arguments to be executed later*
 
     ```js
@@ -644,7 +644,7 @@
     fetchData(data => console.log(data));  // Logs after 500ms
     ```
 
-48. ## **Callback vs Promise vs Async/Await?**  
+48. ## **Callback vs Promise vs Async/Await**  
     | Feature          | Callbacks               | Promises                 | Async/Await             |
     |------------------|-------------------------|--------------------------|-------------------------|
     | Readability      | Callback hell           | Chained `.then()`        | Synchronous-like        |
@@ -673,7 +673,7 @@
 
     ![Promise and Async/Await](./images/promise-async-await.png)
 
-49. ## **Synchron vs Asynchron vs Parallel?**  
+49. ## **Synchron vs Asynchron vs Parallel**  
     | Type           | Execution Flow               | Key Features                          | Use Cases                     |
     |----------------|------------------------------|---------------------------------------|-------------------------------|
     | **Synchronous** | Line-by-line execution       | Blocks further execution              | Simple scripts, calculations  |
@@ -693,7 +693,7 @@
     console.log("End");  // Logs: Start → End → Middle 
     ```
 
-50. ## **What is a callback hell?**  
+50. ## **What is a callback hell**  
     *Deeply nested callbacks making code hard to read/maintain*
 
     ```js
@@ -708,7 +708,7 @@
 
     **Solution:** Promises or async/await
 
-51. ## **What is callback in callback?**  
+51. ## **What is callback in callback**  
     *Sequential execution of async operations via nesting.*
 
     ```js
@@ -721,7 +721,7 @@
     }
     ```
 
-52. ## **Why do we use callbacks?**
+52. ## **Why do we use callbacks**
     - Handle async operations (file I/O, API calls)
     - Event handling (click handlers, timers)
     - Custom control flow
@@ -732,7 +732,7 @@
     });
     ```
 
-53. ## **What is observables ?**  
+53. ## **What is observables **  
     Streams of values over time (via RxJS library).
 
     ```js
@@ -748,7 +748,7 @@
 
     ![Observable](./images/observer.png)
 
-54. ## **What are the differences between promises and observables?**
+54. ## **What are the differences between promises and observables**
     | Feature         | Promise                | Observable             |
     |-----------------|------------------------|------------------------|
     | Values          | Single value           | Multiple values over time |
@@ -759,7 +759,7 @@
     ![Promise vs Observable](./images/promise-vs-observables.png)
 
 
-55. ## **What are generator functions?**
+55. ## **What are generator functions**
     *Functions that can pause/resume execution using `yield`.*
 
     ```js
@@ -774,7 +774,7 @@
     console.log(gen.next().value);  // 2
     ```
 
-56. ## **What is an anonymous function?**  
+56. ## **What is an anonymous function**  
     *Functions without a name, often used as callbacks.*
 
     ```js
@@ -785,7 +785,7 @@
     [1, 2, 3].map(x => x * 2);
     ```
 
-57. ##  **What is the currying function?**  
+57. ##  **What is the currying function**  
     *Converting multi-argument functions into nested unary functions.*
 
     ```js
@@ -808,7 +808,7 @@
     add5And6(7);  // 18
     ```
 
-58. ## **Regular function vs arrow function?** 
+58. ## **Regular function vs arrow function** 
     *In JavaScript, there are two main ways to define functions: regular functions (also known as function declarations or function expressions) and arrow functions. Each has its own syntax, behavior, and use cases.*
 
     | Feature          | Regular Function        | Arrow Function          |
@@ -831,7 +831,7 @@
     const double = x => x * 2;  // No return needed
     ```  
 
-59. ## **What is the difference between Function constructor and function declaration?**  
+59. ## **What is the difference between Function constructor and function declaration**  
     | Feature            | Function Constructor         | Function Declaration        |
     |--------------------|-----------------------------|----------------------------|
     | Scope              | Always global               | Creates closure            |
@@ -863,7 +863,7 @@
     console.log(createFunction()) // 200 not 100
     ```
 
-60. ## **What are closures?**  
+60. ## **What are closures**  
     *A function that remembers its lexical scope even when executed outside it.*
 
     **Scope Chains:**
@@ -883,7 +883,7 @@
     console.log(myCounter()); // 2
     ```
 
-61. ## **What is recursion in a programming language?**
+61. ## **What is recursion in a programming language**
     *Function that calls itself until a base condition is met.*
 
     ```js
@@ -893,7 +893,7 @@
     console.log(factorial(5)); // 120
     ```
 
-62. ## **Explain call(), apply() and bind() methods.**  
+62. ## **Explain call(), apply() and bind() methods**  
     | Method     | Immediate Execution | Arguments       | Returns                  |
     |------------|---------------------|-----------------|--------------------------|
     | `call()`   | Yes                 | Comma-separated | Function result          |
@@ -914,7 +914,7 @@
     console.log(boundFn()); // "Hey, Alice!"
     ```
 
-63. ## **What is the way to find the number of parameters expected by a function?**  
+63. ## **What is the way to find the number of parameters expected by a function**  
     Use `function.length` to get expected parameter count.
 
     ```js
@@ -922,7 +922,7 @@
     console.log(sum.length); // 3
     ```
 
-64. ## **What are the types of errors in javascript?**
+64. ## **What are the types of errors in javascript**
     | Error Type         | Trigger Example               |
     |--------------------|-------------------------------|
     | SyntaxError        | `function() {}` (missing name)|
@@ -933,7 +933,7 @@
     | AggregateError     | `Promise.any([rejected])`     |
     | InternalError      | Too much recursion            |
 
-65. ## **What is an error object?**  
+65. ## **What is an error object**  
     *Contains error details with:*
     - `name`: Error type
     - `message`: Description
@@ -947,7 +947,7 @@
     }
     ```
 
-66. ## **In JavaScript, how many different methods can you make an object?**
+66. ## **In JavaScript, how many different methods can you make an object**
     1. **Object Literal**  
     `const obj = {};`
     2. **Constructor Function**  
@@ -966,7 +966,7 @@
     const myCar = new Car('Tesla');
     ```
 
-67. ## **Object  vs Map ?**  
+67. ## **Object  vs Map **  
     | Feature          | Object                      | Map                          |
     |------------------|----------------------------|------------------------------|
     | Key Types        | String/Symbol              | Any value (including objects)|
@@ -981,7 +981,7 @@
     console.log(map.size); // 1
     ```
 
-68. ## **What is the difference between native, host and user objects?**  
+68. ## **What is the difference between native, host and user objects**  
     | Type       | Source                     | Examples                     |
     |------------|----------------------------|------------------------------|
     | **Native**  | ECMAScript specification   | `Array`, `Date`, `Math`      |
@@ -994,7 +994,7 @@
         age: 30
     };
     ```
-69. ## **How do you get the prototype of an object?**  
+69. ## **How do you get the prototype of an object**  
     *Use `Object.getPrototypeOf()` to retrieve an object's prototype chain link.*
 
     ```js
@@ -1002,7 +1002,7 @@
     console.log(Object.getPrototypeOf(arr) === Array.prototype); // true
     ```
 
-70. ## **How do you create an object with a prototype?**  
+70. ## **How do you create an object with a prototype**  
     *`Object.create()` lets you create new objects with a specific prototype.*
 
     ```js
@@ -1011,7 +1011,7 @@
     console.log(rabbit.eats); // true (inherited) 
     ```
 
-71. ## **How do you set the prototype of one object to another?**  
+71. ## **How do you set the prototype of one object to another**  
     *`Object.setPrototypeOf()` dynamically changes an object's prototype (not recommended for performance).*
 
     ```js
@@ -1021,7 +1021,7 @@
     console.log(square.area()); // 25
     ```
 
-72. ## **Do all objects have prototypes?**  
+72. ## **Do all objects have prototypes**  
     *Base objects created with `Object.create(null)` have no prototype*
 
     ```js
@@ -1029,7 +1029,7 @@
     console.log("toString" in bareObject); // false
     ```
 
-73. ## **How do you determine two values are the same or not using an object?**  
+73. ## **How do you determine two values are the same or not using an object**  
     *`Object.is()` provides precise value comparison (similar to === but with special cases).*
 
     ```js
@@ -1037,7 +1037,7 @@
     console.log(Object.is(+0, -0)); // false
     ```
 
-74. ## **What are javascript accessors?**  
+74. ## **What are javascript accessors**  
     *Special methods that control property access.*
 
     ```js
@@ -1051,7 +1051,7 @@
     console.log(user.firstName); // "Alice"
     ```
 
-75. ## **Can I add getters and setters using defineProperty method?**  
+75. ## **Can I add getters and setters using defineProperty method**  
     *`Object.defineProperty()` creates configurable property descriptors.*
 
     ```js
@@ -1072,7 +1072,7 @@
     console.log(counter.add = 3) // 4
     ```
 
-76. ## **Prototypes in JS?**  
+76. ## **Prototypes in JS**  
     *JavaScript's inheritance mechanism through prototype chains.*
 
     **Key Concepts:**
@@ -1090,7 +1090,7 @@
 
     ![Prototype Chain](./images/prototype-chaining.png)
 
-77. ## **Can we define properties for functions ?**  
+77. ## **Can we define properties for functions **  
     Since functions are objects, they can have properties.
 
     ```js
@@ -1099,7 +1099,7 @@
     console.log(logger.version); // "1.0" 
     ```
 
-78. ## **What is the difference between proto and prototype?**
+78. ## **What is the difference between proto and prototype**
     | Feature       | `__proto__`                     | `prototype`                     |
     |---------------|---------------------------------|---------------------------------|
     | Exists On     | All objects                     | Only functions                  |
@@ -1112,7 +1112,7 @@
     console.log(tesla.__proto__ === Car.prototype); // true
     ```
 
-79. ## **What happens If I pass string type for getPrototype method?**  
+79. ## **What happens If I pass string type for getPrototype method**  
     *Behavior differs between ES5 and ES2015+:*
 
     - **ES5:** Throws TypeError for non-objects
@@ -1130,7 +1130,7 @@
     console.log(Object.getPrototypeOf("string") === String.prototype); // true
     ```
 
-80. ## **How do you define property on an Object constructor?**  
+80. ## **How do you define property on an Object constructor**  
     *Use `Object.defineProperty()` to configure properties with descriptors.*
 
     ```js
@@ -1145,7 +1145,7 @@
     p.species = "alien"; // Fails silently in strict mode
     ```
 
-81. ## **How do you check whether an object can be extendable or not?**  
+81. ## **How do you check whether an object can be extendable or not**  
     *`Object.isExtensible()` checks if new properties can be added.*
 
     ```js
@@ -1155,7 +1155,7 @@
     console.log(Object.isExtensible(obj)); // false
     ```
 
-82. ## **How do you prevent an object from extending?**![][image84]  
+82. ## **How do you prevent an object from extending**![][image84]  
     | Method                   | Add Properties | Modify Properties | Delete Properties |
     |--------------------------|----------------|--------------------|--------------------|
     | `Object.preventExtensions` | ❌ No          | ✔️ Yes             | ✔️ Yes             |
@@ -1169,7 +1169,7 @@
     console.log(user.name); // "Alice"
     ```
 
-83. ## **How do you define multiple properties on an object?**  
+83. ## **How do you define multiple properties on an object**  
     *`Object.defineProperties()` configures multiple properties at once.*
 
     ```js
@@ -1181,7 +1181,7 @@
     console.log(Object.keys(car)); // ["year"]
     ```
 
-84. ## **What is Object Destructuring?**
+84. ## **What is Object Destructuring**
     *Unpack object properties into distinct variables concisely.*
 
     ```js
@@ -1190,7 +1190,7 @@
     console.log(id, name); // 1 "Alice"
     ```
 
-85. ## **What is a destructuring assignment?**  
+85. ## **What is a destructuring assignment**  
     *Works with both arrays and objects.*
 
     ```js
@@ -1202,7 +1202,7 @@
     const { title, author } = { title: "JS Guide", author: "Alice" };
     ```
  
-86. ## **What are default values in destructuring assignment?**  
+86. ## **What are default values in destructuring assignment**  
     *Fallback values when unpacked value is undefined.*
 
     ```js
@@ -1215,7 +1215,7 @@
     console.log(x, y); // 10 2
     ```
 
-87. ## **What is prototypal inheritence?**  
+87. ## **What is prototypal inheritence**  
     *Objects inherit directly from other objects via prototype chain.*
 
     ```js
@@ -1226,7 +1226,7 @@
     console.log(rabbit.eats); // true (inherited)
     ```
 
-88. ## **Classical inheritance vs Prototypal inheritance?**  
+88. ## **Classical inheritance vs Prototypal inheritance**  
     | Feature              | Classical (Java/C++)          | Prototypal (JavaScript)       |
     |----------------------|-------------------------------|-------------------------------|
     | **Inheritance**      | Class-based                   | Object-based                  |
@@ -1247,7 +1247,7 @@
     ```
     ![Classical Inheritance vs Protypal Inheritance](./images/classical-vs-prototypal-inheritance.png)
 
-89. ## **Es6 class vs es5 function constructors?**  
+89. ## **Es6 class vs es5 function constructors**  
     | Feature          | ES5 Function Constructor       | ES6 Class                     |
     |------------------|--------------------------------|-------------------------------|
     | Syntax           | `function Person() {}`         | `class Person {}`             |
@@ -1272,7 +1272,7 @@
     }
     ```
 
-90. ## **What are classes in javascript?**
+90. ## **What are classes in javascript**
     *Syntactic sugar over prototype-based inheritance. Under the hood, classes still use prototypes.*
 
     ```js
@@ -1286,7 +1286,7 @@
     Animal.prototype.speak = function() { ... };
     ```
 
-91. ## **Shallow copy vs Deep copy?**
+91. ## **Shallow copy vs Deep copy**
     | Method               | Type       | Nested Objects | Functions | Circular Refs |
     |----------------------|------------|----------------|-----------|---------------|
     | `{...obj}`           | Shallow    | ❌ No          | ✔️ Yes    | ✔️ Yes        |
@@ -1309,7 +1309,7 @@
 
     **Note:** JSON.parse(JSON.stringify(obj/arr)) skips functions, symbols and fails with circular references.  
 
-92. ## **What is the difference between function and class declarations?**  
+92. ## **What is the difference between function and class declarations**  
     - **Functions:** *Fully hoisted (can be called before declaration)*
     - **Classes:** *Not hoisted (ReferenceError if accessed before declaration)*
 
@@ -1321,7 +1321,7 @@
     class Animal {}
     ```
 
-93. ## **What are the tools or techniques used for debugging JavaScript code?**  
+93. ## **What are the tools or techniques used for debugging JavaScript code**  
     1. **Chrome DevTools:** Breakpoints, call stack, scope inspection
     2. **debugger statement:** Pauses execution
     3. **console.log():** Quick value inspection
@@ -1335,7 +1335,7 @@
     }
     ```
 
-94. ## **What is the difference between exec () and test () methods in javascript?**  
+94. ## **What is the difference between exec () and test () methods in javascript**  
     | Method   | Returns          | Use Case                     |
     |----------|------------------|------------------------------|
     | `exec()` | Match array/null | Extract matched groups       |
@@ -1347,7 +1347,7 @@
     console.log(regex.exec("123")); // ["123", index: 0, ...]
     ``
 
-95. ## **What are js labels?**  
+95. ## **What are js labels**  
     *Labels identify loops/blocks for `break`/`continue`.*
 
     ```js
@@ -1359,7 +1359,7 @@
     }
     ```
 
-96. ## **Iterator vs Generator function vs loop in js?** 
+96. ## **Iterator vs Generator function vs loop in js** 
     | Feature       | Iterator              | Generator            | Loop            |
     |---------------|-----------------------|----------------------|-----------------|
     | Control       | Manual (next())       | Pausable (yield)     | Automatic       |
@@ -1376,14 +1376,14 @@
     console.log(gen.next().value); // 1
     ```
 
-97. ## **What is DOM?**
+97. ## **What is DOM**
     *Programmatic interface for HTML/XML documents as a tree structure.*
 
     ```js
     document.getElementById("demo").textContent = "Hello";
     ```
 
-98. ## **What is BOM?**  
+98. ## **What is BOM**  
     *Browser-specific objects beyond the document:*
 
     - `window`: Global browser window
@@ -1399,7 +1399,7 @@
 
     ![Browser](./images/browser.png)
 
-99. ## **What is the difference between BOM vs DOM?**  
+99. ## **What is the difference between BOM vs DOM**  
     | Feature          | BOM (Browser Object Model)      | DOM (Document Object Model)       |
     |------------------|---------------------------------|-----------------------------------|
     | Scope            | Browser-level operations        | Document structure manipulation   |
@@ -1415,7 +1415,7 @@
     document.getElementById("header").style.color = "red";
     ```
 
-100. ## **What is the difference between window and document?**
+100. ## **What is the difference between window and document**
     | Feature          | window                          | document                          |
     |------------------|---------------------------------|-----------------------------------|
     | Role            | Global browser container        | Page content container            |
@@ -1424,7 +1424,7 @@
     | Properties      | innerWidth, localStorage        | body, title, URL                  |
 
 
-101. ## **Difference between LocalStorage, SessionStorage vs Cookie?**  
+101. ## **Difference between LocalStorage, SessionStorage vs Cookie**  
     | Feature          | LocalStorage       | SessionStorage     | Cookies            |
     |------------------|--------------------|--------------------|--------------------|
     | Persistence      | Until cleared      | Tab session        | Manual expiry      |
@@ -1437,7 +1437,7 @@
     console.log(localStorage.getItem("theme")); // "dark"
     ```
 
-102. ## **What is ECMAScript?**  
+102. ## **What is ECMAScript**  
     The official standard behind JavaScript:
     - ES5 (2009): Strict mode, JSON support
     - ES6/ES2015: let/const, classes, promises
@@ -1447,7 +1447,7 @@
     const PI = 3.14; // Block-scoped constant
     ```
 
-103. ## **What is a decorator?**  
+103. ## **What is a decorator**  
     *Functions that modify class/class members (requires transpiler).*
 
     ```js
@@ -1461,19 +1461,19 @@
     }
     ```
 
-104. ## **What is V8 JavaScript engine?**  
+104. ## **What is V8 JavaScript engine**  
     *Google's high-performance JS engine that:*
     - Compiles JS to machine code
     - Powers Chrome and Node.js
     - Implements latest ECMAScript
 
-105. ## **What is babel?**  
+105. ## **What is babel**  
     JavaScript transpiler that:
     - Converts modern JS to older versions
     - Supports experimental features
     - Enables cross-browser compatibility
 
-106. ## **What is RxJS?**  
+106. ## **What is RxJS**  
     *Reactive programming library using Observables.*
 
     ```js
@@ -1483,7 +1483,7 @@
     clicks.subscribe(() => console.log('Clicked!'));
     ```
 
-107. ## **What is debouncing?**  
+107. ## **What is debouncing**  
     *Delays execution until pause in events.*
 
     ```js
@@ -1499,7 +1499,7 @@
     searchInput.addEventListener('input', search);
     ```
 
-108. ## **What is throttling?**  
+108. ## **What is throttling**  
     *Limits execution rate.*
 
     ```js
@@ -1520,7 +1520,7 @@
     - [ES2022 Top-Level Await](https://github.com/sudheerj/javascript-interview-questions#how-to-use-await-outside-of-async-function-prior-to-es2022)
     - [JavaScript Questions](https://github.com/lydiahallie/javascript-questions)
  
-110. ## **What is the difference between slice and splice?**  
+110. ## **What is the difference between slice and splice**  
     | Method   | Returns          | Original Array | Arguments               |
     |----------|------------------|----------------|-------------------------|
     | slice()  | New array        | Unchanged      | (start, end)            |

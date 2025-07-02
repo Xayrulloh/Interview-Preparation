@@ -30,6 +30,3 @@ series_
 ## [Network Interview Questions](network/README.md)
 
 ## [Principles](principles/README.md)
-
-<!-- FIXME: remove all **example** and just put example it self -->
-<!-- FIXME: remove . and ? in the end of sentence -->

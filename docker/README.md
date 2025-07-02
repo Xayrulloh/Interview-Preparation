@@ -527,8 +527,6 @@
    that packages multiple operations. This approach reduces additional layer
    creation, resulting in smaller images.
 
-   Here is an example:
-
    ```Dockerfile
    RUN apt-get update && apt-get install -y nginx && apt-get clean
    ```

@@ -1,6 +1,6 @@
 # Nest.js Interview Questions
 
-1. ## **How does the architecture of a Nest.js application differ from other Node.js frameworks like Express.js?**
+1. ## **How does the architecture of a Nest.js application differ from other Node.js frameworks like Express.js**
 
    Nest.js is a popular Node.js framework that uses modern JavaScript and
    TypeScript features to build scalable and efficient applications. The
@@ -38,7 +38,7 @@
    popular Node.js libraries like TypeORM and GraphQL, making it a popular
    choice for building scalable web applications.
 
-2. ## **How do you ensure that your Nest.js applications are scalable and maintainable? What techniques or best practices do you follow?**
+2. ## **How do you ensure that your Nest.js applications are scalable and maintainable? What techniques or best practices do you follow**
 
    **Use modular architecture**: Nest.js encourages a modular architecture that
    separates different parts of the application into modules. Each module should
@@ -80,7 +80,7 @@
    using TypeScript, you can catch errors at compile-time rather than run-time,
    which makes the code more robust and easier to maintain.
 
-3. ## **Can you describe the role of modules in a Nest.js project?**
+3. ## **Can you describe the role of modules in a Nest.js project**
 
    In Nest.js, modules are a fundamental building block of the application
    architecture. Modules help to organize and structure the codebase into
@@ -113,7 +113,7 @@
    the codebase in a modular and maintainable way, which is essential for
    developing robust and scalable applications.
 
-4. ## **What is dependency injection ?**
+4. ## **What is dependency injection **
 
    Dependency Injection (DI) in NestJS is a core concept that allows you to
    manage dependencies efficiently. It uses the built-in **NestJS IoC (Inversion
@@ -200,14 +200,14 @@
    developers to focus on building features rather than managing object
    lifetimes and dependencies manually.
 
-5. ## **What is provider?**
+5. ## **What is provider**
 
    A provider is a term used to describe a class or a value that Nest.js can
    inject into other components (such as controllers, services, or other
    providers). Providers are a fundamental concept in the Nest.js dependency
    injection system.
 
-6. ## **What are decorators in Nest.js?**
+6. ## **What are decorators in Nest.js**
 
    In Nest.js, decorators are a way to enhance or modify the behavior of
    classes, class members (properties and methods), and parameters. Decorators
@@ -300,7 +300,7 @@
    Pipes are used for data transformation and validation before it reaches the
    route handler
 
-10. ## **What are pipes and filters?**
+10. ## **What are pipes and filters**
 
     **Pipes:**  
      Pipes in Nest.js are a way to transform input data before it reaches the route

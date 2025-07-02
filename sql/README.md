@@ -2,18 +2,18 @@
 
 ## Database Fundamentals
 
-1. ### **What is Database?**
+1. ### **What is Database**
 
    _An organized collection of data stored and retrieved digitally from
    remote/local systems_
 
-2. ### **What is RDBMS? How is it different from DBMS?**
+2. ### **What is RDBMS? How is it different from DBMS**
 
    - **DBMS:** _Software to define, create and maintain databases_
    - **RDBMS:** _Advanced version with relational capabilities (tables,
      relations)_
 
-3. ### **Difference between SQL and MySQL?**
+3. ### **Difference between SQL and MySQL**
 
    - **SQL:** _Language for RDBMS_
    - **MySQL:** _Specific RDBMS product using SQL_

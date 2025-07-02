@@ -1,29 +1,29 @@
 # NodeJs Interview Questions
 
-1. ## **What is Node.js and how does it work?**
+1. ## **What is Node.js and how does it work**
 
    Node.js is a server-side platform built on Chrome's JavaScript runtime for
    easily building fast and scalable network applications. It is an event-based,
    non-blocking, asynchronous I/O runtime that uses Google's V8 JavaScript
    engine and libuv library.
 
-2. ## **Why is Node.js single-threaded?**
+2. ## **Why is Node.js single-threaded**
 
    Node.js was created explicitly as an experiment in async processing. This was
    to try a new theory of doing async processing on a single thread over the
    existing thread-based implementation of scaling via different frameworks
 
-3. ## **Explain the steps how “Control Flow” controls the function calls?**
+3. ## **Explain the steps how “Control Flow” controls the function calls**
 
    Control the order of execution, Collect data, Limit concurrency, Call the
    following step in the program
 
-4. ## **If Node.js is single threaded then how does it handle concurrency?**
+4. ## **If Node.js is single threaded then how does it handle concurrency**
 
    The main loop is single-threaded and all async calls are managed by Libuv
    library. Libuv sets up a thread pool to handle such concurrency
 
-5. ## **What is an event-loop in Node JS?**
+5. ## **What is an event-loop in Node JS**
 
    Whatever that is, async is managed by event-loop using a queue and listener.
    So when an async function needs to be executed the main thread sends it to a
@@ -33,17 +33,17 @@
    queues. Also in between iterations it checks for async I/O or timers and
    shuts down cleanly if there aren't any
 
-6. ## **What is REPL?**
+6. ## **What is REPL**
 
    Read, Eval, Print, Loop which further means evaluating code on the go
 
-7. ## **For Node.js, why does Google use a V8 engine?**
+7. ## **For Node.js, why does Google use a V8 engine**
 
    Since it’s open-source, there's a huge community helping in developing
    features and fixing bugs and fastest we got till now as a javascript and Web
    Assembly engine. And it is portable to almost every machine known
 
-8. ## **Explain what a Reactor Pattern is in Node.js?**
+8. ## **Explain what a Reactor Pattern is in Node.js**
 
    Reactor pattern is a pattern for non-blocking I/O operations. But in general,
    this is used in any event-driven architecture.
@@ -52,17 +52,17 @@
 
    **Handler**: Its job is to actually work on those events
 
-9. ## **Describe the exit codes of Node.js?**
+9. ## **Describe the exit codes of Node.js**
 
    Uncaught fatal exception, Unused, Fatal Error, Internal Exception etc..
    because of this errors our codes stops running
 
-10. ## **How does Node.js overcome the problem of blocking of I/O operations?**
+10. ## **How does Node.js overcome the problem of blocking of I/O operations**
 
     Node has an event loop that can be used to handle all the I/O operations in
     an asynchronous manner without blocking the main function
 
-11. ## **Node.js disadvantages?**
+11. ## **Node.js disadvantages**
 
     **Single-Threaded Nature –** Since Node.js operates on a single-threaded
     event loop, it struggles with CPU-intensive tasks like complex calculations
@@ -81,7 +81,7 @@
     applications that require extensive mathematical computations or CPU-heavy
     tasks, as it can block the event loop.
 
-12. ## **What are some commonly used timing features of Node.js?**
+12. ## **What are some commonly used timing features of Node.js**
 
     setTimeout/clearTimeout: Used to implement delays in code execution
     setInterval/clearInterval: Used to run a code block multiple times
@@ -89,19 +89,19 @@
     the next iteration of the event loop process.nextTick: Like setImmediate but
     its executes as soon as current operation ends
 
-13. ## **Differentiate between process.nextTick() and setImmediate()?**
+13. ## **Differentiate between process.nextTick() and setImmediate()**
 
     process.nextTick() sets the callback to execute after current operation but
     setImmediate pushes the callback in the check phase queue
     ![Timers Phases](./images/phases-and-nextTick.png)
 
-14. ## **What are node.js buffers?**
+14. ## **What are node.js buffers**
 
     Buffers is a data structure that provides a way to work with binary data
     directly and it’s temporarily data that is mainly used by stream, network,
     crypto, fs to hold on to some data until consumed
 
-15. ## **What are node.js streams?**
+15. ## **What are node.js streams**
 
     In Node.js, streams are a fundamental concept used to handle input and
     output operations. Streams provide an abstraction that allows you to read
@@ -181,32 +181,32 @@
     fileStream.pipe(uppercase).pipe(transformedData)
     ```
 
-16. ## **What is piping?**
+16. ## **What is piping**
 
     Piping is a mechanism used to connect the output of one stream to another
     stream. It is normally used to retrieve data from one stream and pass output
     to another stream
 
-17. ## **How many types of API functions are there in Node.js?**
+17. ## **How many types of API functions are there in Node.js**
 
     - **Asynchronous, non-blocking:** mostly I/O operations which can be fork
       out of the main loop
     - **Synchronous, blocking function:** mostly operations that influence the
       process running in the main loop
 
-18. ## **Explain the concept of stub in Node.js?**
+18. ## **Explain the concept of stub in Node.js**
 
     Stubs are used in writing tests which are an important part of development.
     It replaces the whole function which is getting tested
 
-19. ## **What does event-driven programming mean?**
+19. ## **What does event-driven programming mean**
 
     An event-driven programming approach uses events to trigger various
     functions. An event can be anything, such as typing a key or clicking a
     mouse button. A call-back function is already registered with the element
     executed whenever an event is triggered.
 
-20. ## **What is an EventEmitter ?**
+20. ## **What is an EventEmitter **
 
     In Node.js, an EventEmitter is a core module that provides an implementation
     of the observer pattern. The observer pattern is a behavioral design pattern
@@ -239,13 +239,13 @@
     myEmitter.emit('event', 'Hello', 'World')
     ```
 
-21. ## **What is WASI and why is it being introduced?**
+21. ## **What is WASI and why is it being introduced**
 
     Browsers understand either javascript or Web Assembly so nodejs is builtin
     on top of javascript thats why it’s very rare to use WASI (Web Assembly
     Server Interface) API in nodejs
 
-22. ## **What is the Process object?**
+22. ## **What is the Process object**
 
     In Node.js, the process object is a global object that provides information
     about, and control over, the current Node.js process. It allows you to
@@ -298,18 +298,18 @@
       It provides a way to interact with the runtime environment, handle events,
       and control the behavior of the Node.js process.
 
-23. ## **What are global objects?**
+23. ## **What are global objects**
 
     Global objects in Node.js are objects that are available in all modules
     without the need for an explicit require statement. Some of the most
     commonly used global objects in Node.js include process, console, and
     buffer.
 
-24. ## **What is the purpose of module.exports?**
+24. ## **What is the purpose of module.exports**
 
     To use our file, module, function etc.. in the other file we can import them
 
-25. ## **What are modules in nodejs?**
+25. ## **What are modules in nodejs**
 
     In Node.js, Modules are the blocks of encapsulated code that communicate
     with an external application on the basis of their related functionality.
@@ -324,14 +324,14 @@
     - Local Modules
     - Third-party Modules
 
-26. ## **What is the job of the fs module?**
+26. ## **What is the job of the fs module**
 
     The fs module in Node.js provides an API for interacting with the file
     system. It allows you to perform various operations on the file system, such
     as reading from and writing to files, creating and deleting directories, and
     more.
 
-27. ## **What is the use of the crypto module in Node.js?**
+27. ## **What is the use of the crypto module in Node.js**
 
     The crypto module is a built-in module that provides cryptographic
     functionality. It allows developers to perform various cryptographic
@@ -343,7 +343,7 @@
     here it’s more explained \=\>
     [link](https://www.deepintodev.com/blog/how-nodejs-works-behind-the-scenes)
 
-29. ## **What is Libuv?**
+29. ## **What is Libuv**
 
     [https://www.geeksforgeeks.org/libuv-in-node-js/](https://www.geeksforgeeks.org/libuv-in-node-js/)
 
@@ -353,7 +353,7 @@
     library that provides support for asynchronous I/O-based operations such as
     file systems, networking, and concurrency.
 
-31. ## **Thread pool?**
+31. ## **Thread pool**
 
     The **Thread Pool** is a set of worker threads (managed by **libuv**) that
     handle **offloaded I/O and CPU-intensive tasks** to prevent blocking the
@@ -364,7 +364,7 @@
     I/O are inherently blocking. That’s why it offloads these tasks to worker
     threads to keep the event loop free.
 
-32. ## **Enhancing Node.js performance through clustering.**
+32. ## **Enhancing Node.js performance through clustering**
 
     Node.js applications run on a single processor. Cluster mode is used to
     start up multiple node.js processes thereby having multiple instances of the
@@ -373,7 +373,7 @@
     called the **cluster manager** which is responsible for monitoring the
     health of the individual instances of our application
 
-33. ## **How are worker threads different from clusters?**
+33. ## **How are worker threads different from clusters**
 
     Through both Worker thread and Clusters are mechanisms for concurrent and
     parallel processing, but still they have different use cases and operate at
@@ -397,16 +397,16 @@
       scalability of networked applications by distribution incoming requests
       among multiple processes
 
-34. ## **Difference between child_process, worker_threads, and cluster?**
+34. ## **Difference between child_process, worker_threads, and cluster**
 
     ![Cluster vs childProcess vs workerThreads](./images/cluster-vs-childProcess-vs-workerThreads.png)
 
-35. ## **What is fork in node JS?**
+35. ## **What is fork in node JS**
 
     In general, it’s used to spawn child processes. It creates new instance of
     v8 engine to run multiple workers to execute the code
 
-36. ## **How do you manage packages in your node.js project and tell me more about versioning?**
+36. ## **How do you manage packages in your node.js project and tell me more about versioning**
 
     It can be managed by npm, pnpm, yarn. And to maintain version we use
     package.json and package-lock.json.

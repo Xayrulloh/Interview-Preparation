@@ -1,6 +1,6 @@
 # Network Interview Question
 
-1. ## **http1 vs http2 vs http3?**
+1. ## **http1 vs http2 vs http3**
 
    - ### http1:
      - **Text based, Persistent connections, No multiplexing:** _Requires
@@ -23,7 +23,7 @@
        Wi-Fi to 5G_
      - **Per-stream flow control:** _No HOL blocking at all_
 
-2. ## **HTTP vs HTTPS?**
+2. ## **HTTP vs HTTPS**
 
    - ### HTTP (Hypertext Transfer Protocol)
      - **Function:** _The foundation of data communication for the World Wide
@@ -46,7 +46,7 @@
      - **Implementation:** _Requires an SSL/TLS certificate, which verifies the
        website's identity and enables encryption_
 
-3. ## **CORS?**
+3. ## **CORS**
 
    _CORS is a browser security mechanism that controls how web pages from one
    **origin** (domain) can request resources (APIs, data) from another origin_
@@ -130,20 +130,20 @@
    - **Reduced data usage** (mobile-friendly)
    - **Lower server costs** (fewer initial requests)
 
-7. ## **CDN?**
+7. ## **CDN**
 
    _A CDN (Content Delivery Network) is a globally distributed network of
    servers that delivers web content (like images, videos, CSS, and JavaScript)
    to users based on their geographic location, improving speed, performance,
    and reliability_
 
-8. ## **WEB3?**
+8. ## **WEB3**
 
    - **Decentralized Internet:** _No central authority (blockchain-based)_
    - **User Ownership:** _Control your data/assets via crypto wallets_
    - **Smart Contracts:** _Self-executing code on blockchains (e.g., Ethereum)_
 
-9. ## **Authentication vs Authorization?**
+9. ## **Authentication vs Authorization**
    - **AuthN (Authentication):** _is to know who you really are (JWT, OAUTH,
      etc…)_
    - **AuthZ (Authorization):** _is to know that you’ve an access or not (RBAC)_

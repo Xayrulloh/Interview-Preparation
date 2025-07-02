@@ -1,6 +1,6 @@
 # Redis Interview Questions
 
-1. ## **What is Redis and why is it used?**
+1. ## **What is Redis and why is it used**
 
    - **Type:** _In-memory data structure store_
    - **Key Features:**

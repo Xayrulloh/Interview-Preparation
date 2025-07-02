@@ -2,7 +2,7 @@
 
 ![GraphQL](./images/main.png)
 
-1. ## **What is a query language?**
+1. ## **What is a query language**
 
    A query language is:
 
@@ -17,7 +17,7 @@
    **Key Point**:  
    GraphQL is a query language **for APIs** (not databases).
 
-2. ## **What is GraphQL?**
+2. ## **What is GraphQL**
 
    - **Type**: Open-source API query language
    - **Purpose**: Lets clients request _exact data needed_ (no over-fetching)
@@ -31,7 +31,7 @@
    | Client-controlled response | Server-controlled response |
    | No versioning needed       | Often requires versioning  |
 
-3. ## **How does GraphQL work?**
+3. ## **How does GraphQL work**
 
    ### **Basic Flow**
 
@@ -83,7 +83,7 @@
    _Client → HTTP POST → GraphQL Server → Resolvers → Data Sources → JSON
    Response_
 
-4. ## **What is Apollo Client/Server?**
+4. ## **What is Apollo Client/Server**
 
    **Apollo Client**
 
@@ -103,7 +103,7 @@
 
    _"Batteries-included GraphQL toolkit"_
 
-5. ## **What are the three types of operations in GraphQL?**
+5. ## **What are the three types of operations in GraphQL**
 
    In GraphQL, there are three main types of operations:
 
@@ -162,7 +162,7 @@
    | **Mutation**     | ✏️ Write data | Yes          | Creating/updating records |
    | **Subscription** | 🔊 Listen     | Possible     | Live notifications, chat  |
 
-6. ## **What are the key components of GraphQL?**
+6. ## **What are the key components of GraphQL**
 
    GraphQL has three fundamental components that work together:
 
@@ -173,8 +173,6 @@
    - All available data types (e.g., User, Product)
    - Relationships between types
    - Allowed operations (queries/mutations/subscriptions)
-
-   **Example Schema:**
 
    ```graphql
    type User {
@@ -195,8 +193,6 @@
    - Contain the actual data-fetching logic
    - Execute when their associated field is requested
    - Can fetch from databases, APIs, or other services
-
-   **Example Resolver:**
 
    ```graphql
    const resolvers = {
@@ -225,20 +221,19 @@
    3. Appropriate Resolvers execute
    4. Data is collected and returned
 
-7. ## **What is the difference between Query and Mutation in GraphQL?**
+7. ## **What is the difference between Query and Mutation in GraphQL**
 
    ### **Query** (Read)
 
    - Operation: Fetch data
    - Effect: No changes to server data
    - Analogous to: GET in REST
-   - Example:
-     ```graphql
-         getUser(id: "123") {
-             name
-             email
-         }
-     ```
+    ```graphql
+        getUser(id: "123") {
+            name
+            email
+        }
+    ```
 
    ### **Mutation** (Write)
 
@@ -263,7 +258,7 @@
    | **Side Effects** | None      | Yes (changes data) |
    | **Caching**      | Cacheable | Not cached         |
 
-8. ## **When to Use GraphQL or REST?**
+8. ## **When to Use GraphQL or REST**
 
    ### **Choose GraphQL When:**
 
@@ -336,13 +331,13 @@
    - Partial responses possible (some data + some errors)
    - Error shapes follow GraphQL spec
 
-10. ## **What are directives in GraphQL, and how do you use them?**
+10. ## **What are directives in GraphQL, and how do you use them**
 
     _Directives are strings prefixed with an **“@”** symbol. They sit beside a
     field in a **query**, **mutation**, or **subscription**.(**@skip** skips the
     field or **@include** includes the field)_
 
-11. ## **Explain the concept of fragments in GraphQL.**
+11. ## **Explain the concept of fragments in GraphQL**
 
     _Fragments in GraphQL allow you to define reusable pieces of a query. They
     help in keeping the query structure modular and make it easier to maintain
@@ -355,8 +350,6 @@
     sets of fields on a GraphQL type, and then include those fields in various
     parts of your queries_
 
-    **Example:**
-
     ```graphql
     fragment UserInfo on User {
       id
@@ -365,22 +358,22 @@
     }
     ```
 
-12. ## **What is federated schemas and microservices architecture in GraphQL.**
+12. ## **What is federated schemas and microservices architecture in GraphQL**
 
     _Federated schemas and microservices architecture in GraphQL play a crucial
     role in the development of scalable and modular applications. **Federated
     schemas enable organizations to split their monolithic GraphQL API into
-    smaller, domain specific services.** Each service defines its part of the
+    smaller, domain specific services** Each service defines its part of the
     GraphQL schema and operates as an individual entity_
 
-13. ## **What are GraphQL subscriptions?**
+13. ## **What are GraphQL subscriptions**
 
     _It’s a way to push real time updates from the server to the client. GraphQL
     subscriptions provide live data to clients when specific events occur.
     Subscriptions differ from queries and mutations. Queries fetch data,
     mutations modify data, and subscriptions listen for data changes_
 
-14. ## **How does GraphQL handle versioning?**
+14. ## **How does GraphQL handle versioning**
 
     _GraphQL itself does not prescribe a specific versioning strategy, and
     versioning in GraphQL APIs is typically handled at the application level.
@@ -410,14 +403,14 @@
     - This approach allows for a gradual transition and provides information to
       clients about deprecated fields.
 
-15. ## **How does GraphQL handle security concerns?**
+15. ## **How does GraphQL handle security concerns**
 
     _GraphQL itself doesn't enforce security directly, but security measures can
     be implemented at various levels, such as validating and sanitizing inputs,
     controlling access through authentication and authorization mechanisms, and
     monitoring and rate-limiting queries_
 
-16. ## **How does GraphQL handle circular dependencies?**
+16. ## **How does GraphQL handle circular dependencies**
 
     _Circular dependencies can occur in GraphQL schemas when types reference
     each other in a circular manner. For example, **Type A** may have a field
@@ -444,7 +437,7 @@
     - Some GraphQL execution engines or libraries allow you to resolve fields
       dynamically, allowing you to resolve circular dependencies as needed.
 
-17. ## **Explain the concept of introspection in GraphQL.**
+17. ## **Explain the concept of introspection in GraphQL**
 
     _Introspection in GraphQL refers to the ability of a GraphQL server to query
     and provide information about its own schema. It allows clients to
@@ -458,8 +451,6 @@
     specific fields that the client wants information about, such as the types
     defined in the schema, the fields of a particular type, or the arguments a
     field accepts_
-
-    Here's a simple example of an introspection query:
 
     ```graphql
     query IntrospectionQuery {

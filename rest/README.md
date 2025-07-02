@@ -1,6 +1,6 @@
 # REST API Interview Questions
 
-1. ## **REST API?**
+1. ## **REST API**
 
    _A REST API (Representational State Transfer API) is a web service that
    follows REST architectural principles for client-server communication over
@@ -13,26 +13,26 @@
    - **Resource-Oriented**: Data accessed via unique URLs.
    - **Lightweight**: Optimized for performance/caching.
 
-2. ## **What is API?**
+2. ## **What is API**
 
    _An **API (Application Programming Interface)** is a set of rules and
    protocols that allows different software applications to communicate with
    each other. It defines how requests and responses should be structured,
    enabling seamless data exchange_
 
-3. ## **How would you implement caching for a REST API?**
+3. ## **How would you implement caching for a REST API**
 
    _Cache API responses for commonly requested data, using HTTP headers like
    Cache-Control or implement server-side caching (e.g., **Redis** or
    **Memcached**)_
 
-4. ## **Define Messaging in terms of RESTful web services.**
+4. ## **Define Messaging in terms of RESTful web services**
 
    _Sending a request from client side with HTTP and taking response from server
    is called messaging and messages contained constitute the data and the
    metadata about the message_
 
-5. ## **Can you tell the disadvantages of RESTful web services?**
+5. ## **Can you tell the disadvantages of RESTful web services**
 
    _It’s not possible to maintain sessions. REST doesn’t impose security
    restrictions inherently_
@@ -72,12 +72,12 @@
      - `502 Bad Gateway`
      - `503 Service Unavailable`
 
-8. ## **What is the concept of statelessness in REST?**
+8. ## **What is the concept of statelessness in REST**
 
    _The REST architecture is designed in such a way that the client state is not
    maintained on the server. This is known as statelessness_
 
-9. ## **What are the features of RESTful Web Services?**
+9. ## **What are the features of RESTful Web Services**
 
    The service is based on the Client Server model The service uses HTTP
    Protocol for fetching data/resources, query execution, or any other
@@ -86,13 +86,13 @@
    These services can also use SOAP services as implementation protocol to REST
    architectural pattern
 
-10. ## **What is URI/URL/URN?**
+10. ## **What is URI/URL/URN**
 
     - **URI:** \<protocol\>://\<service-name\>/\<ResourceType\>/\<ResourceID\>
     - **URL:** `http://abc.com/samplePage.html`
     - **URN:** `urn:mpeg:mpeg7:schema:2001`
 
-11. ## **Can you tell what constitutes the core components of HTTP Request?**
+11. ## **Can you tell what constitutes the core components of HTTP Request**
 
     The 5 essential parts of an HTTP request in REST:
 
@@ -126,7 +126,7 @@
 
     ![Core Components](./images/core-components.png)
 
-12. ## **What constitutes the core components of HTTP Response?**
+12. ## **What constitutes the core components of HTTP Response**
 
     The 4 essential parts of an HTTP response:
 
@@ -155,12 +155,12 @@
        - Contains the actual response data
        - Common formats: JSON, XML, HTML, plain text
 
-13. ## **Define Addressing in terms of RESTful Web Services.**
+13. ## **Define Addressing in terms of RESTful Web Services**
 
     _Addressing is the process of location a single/multiple resources that are
     present on the server_
 
-14. ## **GraphQL vs REST API?**
+14. ## **GraphQL vs REST API**
 
     ### **GraphQL**
 
@@ -203,7 +203,7 @@
     - Low learning curve
     - Widely adopted and understood
 
-    ### **When to Use Which?**
+    ### **When to Use Which**
 
     | **GraphQL**                       | **REST**                    |
     | --------------------------------- | --------------------------- |

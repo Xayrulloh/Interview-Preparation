@@ -114,13 +114,12 @@
 
    - Updates fields if they exist
    - Creates fields if they don't
-   - Example:
-     ```mongo
-     updateOne(
-         {_id:1},
-         {$set:{last_login: new Date()}}
-     )
-     ```
+    ```mongo
+    updateOne(
+        {_id:1},
+        {$set:{last_login: new Date()}}
+    )
+    ```
 
 10. ## **Sharding Process**
 
