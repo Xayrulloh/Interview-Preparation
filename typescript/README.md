@@ -23,7 +23,6 @@
 ## Basic Types
 
 4. ### **What are the primitive types in TypeScript**
-
    - **Built-in types:** String
      - Number
      - Boolean
@@ -38,9 +37,7 @@
      - Interfaces
 
 5. ### **What is the difference between never, unknown, and any**
-
    - **never:**
-
      - Represents values that never occur
      - Used for functions that always throw or never return
        ```ts
@@ -52,7 +49,6 @@
        ```
 
    - **unknown:**
-
      - Represents values we know nothing about
      - Requires type checking before use
 
@@ -69,7 +65,6 @@
        ```
 
    - **any:**
-
      - Opts out of type checking
      - Used for dynamic content or migration
 
@@ -214,9 +209,7 @@
 
     _Both type and interface are used to define custom types, but there are
     subtle differences in their capabilities and use cases_
-
     - **Declaration Syntax:**
-
       - **Interface:** _Interfaces are typically used to define object shapes.
         They can describe the structure of objects, including properties,
         methods, and index signatures_
@@ -239,7 +232,6 @@
       ```
 
     - **Extending and Implementing:**
-
       - **Interface:** _Interfaces can extend other interfaces using the extends
         keyword. They are also used for class implementation_
 
@@ -267,7 +259,6 @@
       ```
 
     - **Declaration Merging:**
-
       - **Interface:** _Interfaces support declaration merging, which allows
         multiple interface declarations with the same name to be merged into a
         single declaration_
@@ -298,7 +289,6 @@
       ```
 
     - **Immutability:**
-
       - **Interface:** _Interfaces are open to extension, meaning you can add
         new properties when extending an interface_
 
@@ -378,7 +368,6 @@
 ## Advanced Types
 
 23. ### **What are Union and Intersection Types**
-
     - **Union Type:** _In TypeScript, union types, marked by **|**, allow a
       variable to have values from different types_
 
@@ -702,13 +691,11 @@
     for those values_
 
 48. ### **Explain the various ways to control member visibility in TypeScript**
-
     - **public:** _You can access a public member anywhere outside the class_
     - **protected:** _It's visible only to the subclasses_
     - **private:** _It's only visible inside the class_
 
 49. ### **What are Type Guards**
-
     - **typeof:** _check primitive types_
     - **keyof:** _check is key available in object_
     - **instanceof:** _check class instances_

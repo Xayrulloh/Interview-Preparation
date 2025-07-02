@@ -554,16 +554,14 @@
 39. ## **What is a first order function**
 
 - A function that:\*
+  - Does **not** accept another function as an argument
+  - Does **not** return a function
 
-
-    - Does **not** accept another function as an argument
-    - Does **not** return a function
-
-    ```js
-    function square(x) {
-        return x * x;  // Takes number, returns number
-    }
-    ```
+  ```js
+  function square(x) {
+    return x * x // Takes number, returns number
+  }
+  ```
 
 40. ## **What is a higher order function**
 
