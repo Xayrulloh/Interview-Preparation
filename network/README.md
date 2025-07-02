@@ -1,7 +1,6 @@
 # Network Interview Question
 
 1. ## **http1 vs http2 vs http3**
-
    - ### http1:
      - **Text based, Persistent connections, No multiplexing:** _Requires
        multiple TCP connections for parallel requests → slower_
@@ -24,7 +23,6 @@
      - **Per-stream flow control:** _No HOL blocking at all_
 
 2. ## **HTTP vs HTTPS**
-
    - ### HTTP (Hypertext Transfer Protocol)
      - **Function:** _The foundation of data communication for the World Wide
        Web, used to transmit text, images, and other web resources_
@@ -50,11 +48,8 @@
 
    _CORS is a browser security mechanism that controls how web pages from one
    **origin** (domain) can request resources (APIs, data) from another origin_
-
    - ### How It Works:
-
      - **Simple Requests (GET, POST)**
-
        - The browser sends the request directly (e.g., to `api.example.com`).
        - The server responds with CORS headers (like
          `Access-Control-Allow-Origin`).
@@ -85,12 +80,10 @@
    | **Congestion Control** | ✅ Adjusts transmission rate to avoid network congestion                | ❌ No congestion control (can flood the network) |
 
    ### Key Differences:
-
    - **TCP** is like a **registered mail**—slow but ensures delivery.
    - **UDP** is like a **postcard**—fast but no guarantees.
 
    ### When to Use?
-
    - **Choose TCP** for data where **accuracy matters** (e.g., bank
      transactions).
    - **Choose UDP** for **real-time speed** (e.g., Zoom calls, online games).
@@ -106,7 +99,6 @@
    | **Use Cases**     | Simple APIs, caching-friendly                            | Complex apps with nested data (e.g., social networks) |
 
    ### TL;DR:
-
    - **REST** = Fixed menu 🍽️ (get what the server gives).
    - **GraphQL** = Buffet 🥘 (ask for exactly what you want).
 
@@ -125,7 +117,6 @@
    | Wastes bandwidth 📶             | Saves bandwidth 💾                      |
 
    ### 💡 Key Benefits:
-
    - **Faster page load times** (better UX & SEO)
    - **Reduced data usage** (mobile-friendly)
    - **Lower server costs** (fewer initial requests)
@@ -138,7 +129,6 @@
    and reliability_
 
 8. ## **WEB3**
-
    - **Decentralized Internet:** _No central authority (blockchain-based)_
    - **User Ownership:** _Control your data/assets via crypto wallets_
    - **Smart Contracts:** _Self-executing code on blockchains (e.g., Ethereum)_

@@ -188,7 +188,6 @@
     to another stream
 
 17. ## **How many types of API functions are there in Node.js**
-
     - **Asynchronous, non-blocking:** mostly I/O operations which can be fork
       out of the main loop
     - **Synchronous, blocking function:** mostly operations that influence the
@@ -253,7 +252,6 @@
     command-line arguments, handle signals, and more.
 
     Here are some common uses and properties of the process object:
-
     - **Accessing Command-Line Arguments** \- The process.argv property is an
       array that contains the command-line arguments used to run the Node.js
       process. The first two elements are the path to the Node.js executable and
@@ -319,7 +317,6 @@
     into manageable chunks.
 
     **Modules are of three types:**
-
     - Core Modules
     - Local Modules
     - Third-party Modules
@@ -379,7 +376,6 @@
     parallel processing, but still they have different use cases and operate at
     different levels of abstraction that differentiates both Worker threads and
     Clusters, which is given below.
-
     - Granularity: Worker thread are thread level, Clusters are process level
     - Communication: Worker thread communicates using postMessage API, Clusters
       using IPC

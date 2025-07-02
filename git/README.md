@@ -52,7 +52,6 @@
     git rebase
 
 11. ## **What is the difference between git stash apply vs git stash pop command**
-
     - **git stash pop:** throws away the specified stash after applying it
     - **git stash apply:** leaves the stash in the stash list for future reuse
 
@@ -63,7 +62,6 @@
     or back port commits from the maintenance branch to the development branch
 
 13. ## **Git pull vs Git fetch**
-
     - **git pull:** pulls new changes from the currently working branch
     - **git fetch:** pulls all commits and changes from desired branch and
       stores them in a new branch and for changes to be reflected in the
@@ -71,7 +69,6 @@
       command
 
 14. ## **Git Merge vs Git Rebase**
-
     - **git merge:** preserves history by creating a new merge commit, keeping
       the branch structure **unchanged**. It’s safer for collaboration but can
       create cluttered history with multiple merge commits.
@@ -80,7 +77,6 @@
       alters history, making it risky for shared branches.
 
 15. ## **Git revert vs Git reset**
-
     - **git revert:** It’s used to creating a new commit that undoes the changes
       of the previous commit
     - **git reset:** It’s used for undoing the local changes done in the git

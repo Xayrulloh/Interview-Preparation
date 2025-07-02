@@ -18,7 +18,6 @@
    Routing, Middleware, HTTP Utility Methods, Static File Serving, Security
 
 4. ## [**Explain the structure of an Express JS application**](https://www.geeksforgeeks.org/how-to-structure-my-application-in-express-js/)
-
    - **Entry point:** It’s a starting point of the application where you set up
      your server, connect to your database, add middleware, and define the main
      routes
@@ -43,7 +42,6 @@
 6. ## **Define the concept of the test pyramid**
 
    The Test Pyramid consist of three levels:
-
    - Unit Tests
    - Integration Tests
    - and End-toEnd (E2E) Tests
@@ -55,14 +53,13 @@
    access your resources by setting HTTP headers
 
 8. **What is middleware**  
-    Middleware comes in between your request and business logic. It is mainly used
-   for logs, rate limit, routing, authentication etc.. There are also third-party
-   middleware such as body-parser etc...
+    Middleware comes in between your request and business logic. It is mainly
+   used for logs, rate limit, routing, authentication etc.. There are also
+   third-party middleware such as body-parser etc...
 
 9. ## **What are the types of middleware**
 
    There are five types of Middleware in Express.js
-
    - Application level
    - Router level
    - Error handling

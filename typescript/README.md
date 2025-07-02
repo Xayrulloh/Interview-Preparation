@@ -55,6 +55,7 @@
 
      - Represents values we know nothing about
      - Requires type checking before use
+
        ```ts
        let userInput: unknown
 
@@ -71,6 +72,7 @@
 
      - Opts out of type checking
      - Used for dynamic content or migration
+
        ```ts
        let myValue: any = 42
 
@@ -375,8 +377,11 @@
 
 ## Advanced Types
 
-23. ### **What are Union and Intersection Types**  
-    * **Union Type:** *In TypeScript, union types, marked by **|**, allow a variable to have values from different types*
+23. ### **What are Union and Intersection Types**
+
+    - **Union Type:** _In TypeScript, union types, marked by **|**, allow a
+      variable to have values from different types_
+
     ```ts
     type Cat = { name: string, meow: () => void };
     type Dog = { name: string, bark: () => void };
@@ -384,203 +389,238 @@
     const pet: Cat | Dog = // Either Cat or Dog
     ```
 
-    * **Intersection Type:** *Intersection types, shown by **&**, bring together multiple types to form a new type with all the properties of each individual type*
+    - **Intersection Type:** _Intersection types, shown by **&**, bring together
+      multiple types to form a new type with all the properties of each
+      individual type_
+
     ```ts
     type Name = string
     type Age = number
 
     type Person = Name & Age
 
-    const me: Person = {name: 'me', age: 1}
+    const me: Person = { name: 'me', age: 1 }
     ```
 
-24. ### **What are type aliases? How do you create one**  
-    *If we've variable either string or number. We can create type something
-    **string | number** and use this type to that variable*
+24. ### **What are type aliases? How do you create one**
 
-25. ### **What are string literal types**  
-    *You can refer to specific string or numbers as types*
+    _If we've variable either string or number. We can create type something
+    **string | number** and use this type to that variable_
+
+25. ### **What are string literal types**
+
+    _You can refer to specific string or numbers as types_
+
     ```ts
-    let status: "active";
-    status = "active"; // Valid
-    status = "inactive"; // Error: Type '"inactive"' is not assignable to type '"active"'.
+    let status: 'active'
+    status = 'active' // Valid
+    status = 'inactive' // Error: Type '"inactive"' is not assignable to type '"active"'.
     ```
 
-26. ### **What are template literal types**  
-    *They're like string literal but you can combine them with concrete*
+26. ### **What are template literal types**
+
+    _They're like string literal but you can combine them with concrete_
+
     ```ts
-    type Size = "small" | "medium" | "large";
-    type SizeMessage = `The selected size is ${Size}.`;
+    type Size = 'small' | 'medium' | 'large'
+    type SizeMessage = `The selected size is ${Size}.`
 
-    let message1: SizeMessage = "The selected size is small."; // Valid
-    let message2: SizeMessage = "The selected size is extra-large."; // Error: Type '"The selected size is extra-large."' is not assignable to type '"The selected size is small." | "The selected size is medium." | "The selected size is large."'.
+    let message1: SizeMessage = 'The selected size is small.' // Valid
+    let message2: SizeMessage = 'The selected size is extra-large.' // Error: Type '"The selected size is extra-large."' is not assignable to type '"The selected size is small." | "The selected size is medium." | "The selected size is large."'.
     ```
 
-27. ### **What are Conditional Types**  
-    *Conditional types in TypeScript help us describe different type mappings
-    based on certain conditions*
+27. ### **What are Conditional Types**
+
+    _Conditional types in TypeScript help us describe different type mappings
+    based on certain conditions_
+
     ```ts
-    type IsString<T> = T extends string ? true : false;
+    type IsString<T> = T extends string ? true : false
 
-    type A = IsString<"hello">; // type A = true
-    type B = IsString<123>;     // type B = false
+    type A = IsString<'hello'> // type A = true
+    type B = IsString<123> // type B = false
     ```
 
-28. ### **What are mapped types, and how do they work**  
-    *Mapped types in TypeScript allow you to create new types by changing the
-    properties of existing ones*
+28. ### **What are mapped types, and how do they work**
+
+    _Mapped types in TypeScript allow you to create new types by changing the
+    properties of existing ones_
+
     ```ts
     type OriginalType = {
-        propA: string;
-        propB: number;
-    };
+      propA: string
+      propB: number
+    }
 
     // Example of a mapped type making all properties optional
     type OptionalType<T> = {
-        [K in keyof T]?: T[K];
-    };
+      [K in keyof T]?: T[K]
+    }
 
-    type MyOptionalType = OptionalType<OriginalType>;
+    type MyOptionalType = OptionalType<OriginalType>
     // MyOptionalType will be: { propA?: string; propB?: number; }
     ```
 
-29. ### **List some of the utility types provided by TypeScript and explain their usage**  
-    *Partial, Required, Readonly, Record, Promise, Awaited etc...*
+29. ### **List some of the utility types provided by TypeScript and explain their usage**
+    _Partial, Required, Readonly, Record, Promise, Awaited etc..._
 
 ## Special Types
 
-30. ### **What is void, and when to use the void type**  
-    *Let's say you've a function which returns nothing, that means it's void
-    function*
+30. ### **What is void, and when to use the void type**
 
-31. ### **Explain the concept of null and its use in TypeScript**  
-    *Null value indicates an absence of value, hence you cannot access any
+    _Let's say you've a function which returns nothing, that means it's void
+    function_
+
+31. ### **Explain the concept of null and its use in TypeScript**
+
+    _Null value indicates an absence of value, hence you cannot access any
     properties on the variable or call a method on it. It's more like it's
-    nothing*
+    nothing_
 
-32. ### **What is undefined in TypeScript**  
-    *When a variable is declared without initialization it becomes undefined*
+32. ### **What is undefined in TypeScript**
+    _When a variable is declared without initialization it becomes undefined_
 
 ## Arrays & Tuples
 
-33. ### **Explain how the arrays work in TypeScript**  
-    *We use arrays to store values of the same type. Arrays are ordered and
-    indexed collections of values*
+33. ### **Explain how the arrays work in TypeScript**
 
-34. ### **Explain how tuple destructuring works in TypeScript**  
-    *Instead of giving one type to array elements we can separate them one by
+    _We use arrays to store values of the same type. Arrays are ordered and
+    indexed collections of values_
+
+34. ### **Explain how tuple destructuring works in TypeScript**
+
+    _Instead of giving one type to array elements we can separate them one by
     one, this is why we need tuples. And it's works pretty easy like
-    destructuring*
+    destructuring_
+
     ```ts
     // Define a tuple type
-    type UserInfo = [number, string, boolean];
+    type UserInfo = [number, string, boolean]
 
     // Create a tuple instance
-    const user: UserInfo = [101, "Alice", true];
+    const user: UserInfo = [101, 'Alice', true]
 
     // Destructure the tuple into individual variables
-    const [id, name, isActive] = user;
+    const [id, name, isActive] = user
 
-    console.log(id);       // Output: 101
-    console.log(name);     // Output: Alice
-    console.log(isActive); // Output: true
+    console.log(id) // Output: 101
+    console.log(name) // Output: Alice
+    console.log(isActive) // Output: true
     ```
 
 ## Enums
 
-35. ### **What is enums**  
-    *In TypeScript, enums work similarly to enums in other programming languages,
-    providing a way to define a set of named constants*
+35. ### **What is enums**
+
+    _In TypeScript, enums work similarly to enums in other programming
+    languages, providing a way to define a set of named constants_
+
     ```ts
     // Numeric Enum
     enum DaysOfWeek {
-        Sunday,
-        Monday,
-        Tuesday,
-        Wednesday,
-        Thursday,
-        Friday,
-        Saturday
+      Sunday,
+      Monday,
+      Tuesday,
+      Wednesday,
+      Thursday,
+      Friday,
+      Saturday
     }
 
     let today: DaysOfWeek = DaysOfWeek.Monday // 1
     // ------
     // String Enum
     enum DaysOfWeek {
-        Sunday = 'Sunday',
-        Monday = 'Monday',
-        Tuesday = 'Tuesday',
-        Wednesday = 'Wednesday',
-        Thursday = 'Thursday',
-        Friday = 'Friday',
-        Saturday = 'Saturday'
+      Sunday = 'Sunday',
+      Monday = 'Monday',
+      Tuesday = 'Tuesday',
+      Wednesday = 'Wednesday',
+      Thursday = 'Thursday',
+      Friday = 'Friday',
+      Saturday = 'Saturday'
     }
     let today: DaysOfWeek = DaysOfWeek.Monday // Monday
     ```
 
 ## Modern Features
 
-36. ### **What is optional chaining**  
-    *Instead of checking all the way down we can just use a ?. And it returns
-    undefined it's not exist*
+36. ### **What is optional chaining**
+
+    _Instead of checking all the way down we can just use a ?. And it returns
+    undefined it's not exist_
+
     ```ts
     interface User {
-        name: string;
-        address?: {
-            street: string;
-            city?: string; // city is optional
-        };
+      name: string
+      address?: {
+        street: string
+        city?: string // city is optional
+      }
     }
 
-    const user1: User = { name: "Alice", address: { street: "Main St" } };
-    const user2: User = { name: "Bob" }; // No address property
+    const user1: User = { name: 'Alice', address: { street: 'Main St' } }
+    const user2: User = { name: 'Bob' } // No address property
 
     // Accessing a potentially nested property safely
-    const city1 = user1.address?.city; // "undefined" (because city is optional and not provided)
-    const city2 = user2.address?.city; // "undefined" (because address is missing)
+    const city1 = user1.address?.city // "undefined" (because city is optional and not provided)
+    const city2 = user2.address?.city // "undefined" (because address is missing)
 
     // Calling a method safely
     interface Service {
-        doSomething?(): void;
+      doSomething?(): void
     }
 
-    const service1: Service = { doSomething: () => console.log("Doing something") };
-    const service2: Service = {};
+    const service1: Service = {
+      doSomething: () => console.log('Doing something')
+    }
+    const service2: Service = {}
 
-    service1.doSomething?.(); // Calls the method
-    service2.doSomething?.(); // Does nothing, no error
+    service1.doSomething?.() // Calls the method
+    service2.doSomething?.() // Does nothing, no error
     ```
 
-37. ### **What is the 'in' operator**  
-    *It's used to find if a property is in the specified object*
+37. ### **What is the 'in' operator**
+
+    _It's used to find if a property is in the specified object_
+
     ```ts
-    const car = { make: 'Toyota', model: 'Corolla' };
-    console.log('make' in car); // true
-    console.log('year' in car); // false
+    const car = { make: 'Toyota', model: 'Corolla' }
+    console.log('make' in car) // true
+    console.log('year' in car) // false
     ```
 
-38. ### **What are TypeScript decorators, and how do they work**  
-    *TypeScript decorators are special functions used to modify or add behavior
-    to classes, methods, properties, or parameters at runtime*
+38. ### **What are TypeScript decorators, and how do they work**
+
+    _TypeScript decorators are special functions used to modify or add behavior
+    to classes, methods, properties, or parameters at runtime_
+
     ```ts
     function first() {
-        console.log("first(): factory evaluated");
-        return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-            console.log("first(): called");
-        };
+      console.log('first(): factory evaluated')
+      return function (
+        target: any,
+        propertyKey: string,
+        descriptor: PropertyDescriptor
+      ) {
+        console.log('first(): called')
+      }
     }
-    
+
     function second() {
-        console.log("second(): factory evaluated");
-        return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-            console.log("second(): called");
-        };
+      console.log('second(): factory evaluated')
+      return function (
+        target: any,
+        propertyKey: string,
+        descriptor: PropertyDescriptor
+      ) {
+        console.log('second(): called')
+      }
     }
-    
+
     class ExampleClass {
-        @first()
-        @second()
-        method() {}
+      @first()
+      @second()
+      method() {}
     }
 
     // output:
@@ -592,141 +632,157 @@
 
 ## Configuration
 
-39. ### **What is the purpose of the tsconfig.json file**  
-    *It provides the compiler options to compile the project*
+39. ### **What is the purpose of the tsconfig.json file**
 
-40. ### **How to enforce strict null checks in TypeScript**  
-    *It's a way to check all possibilities that can be null. And to enforce it we
-    change tsconfig.json file strictNullChecks to true*
+    _It provides the compiler options to compile the project_
+
+40. ### **How to enforce strict null checks in TypeScript**
+    _It's a way to check all possibilities that can be null. And to enforce it
+    we change tsconfig.json file strictNullChecks to true_
 
 ## Type System
 
-41. ### **What is meant by type inference**  
-    *When you don't provide an explicit type typescript itself defines type*
+41. ### **What is meant by type inference**
+
+    _When you don't provide an explicit type typescript itself defines type_
+
     ```ts
-    let x = 10; // TypeScript infers 'x' as 'number'
-    let message = "Hello"; // TypeScript infers 'message' as 'string'
+    let x = 10 // TypeScript infers 'x' as 'number'
+    let message = 'Hello' // TypeScript infers 'message' as 'string'
     ```
 
-42. ### **What is meant by contextual typing**  
-    *When the typescript compiler uses the location of a variable to infer its
-    type, it's called contextual typing*
+42. ### **What is meant by contextual typing**
+
+    _When the typescript compiler uses the location of a variable to infer its
+    type, it's called contextual typing_
+
     ```ts
-    window.onmousedown = function(mouseEvent) {
-        console.log(mouseEvent.button); // No error, TypeScript infers mouseEvent as MouseEvent
-        console.log(mouseEvent.kangaroo); // Error: Property 'kangaroo' does not exist on type 'MouseEvent'
-    };
+    window.onmousedown = function (mouseEvent) {
+      console.log(mouseEvent.button) // No error, TypeScript infers mouseEvent as MouseEvent
+      console.log(mouseEvent.kangaroo) // Error: Property 'kangaroo' does not exist on type 'MouseEvent'
+    }
     ```
 
-43. ### **What is the typeof operator? How is it used in TypeScript**  
-    *Like JavaScript, **typeof** identifies type of value and it's used for it*
+43. ### **What is the typeof operator? How is it used in TypeScript**
 
-44. ### **When would you use type assertion**  
-    *Type assertion in TypeScript is a mechanism to tell the compiler that you
-    know more about the type of a value than TypeScript can infer*
+    _Like JavaScript, **typeof** identifies type of value and it's used for it_
+
+44. ### **When would you use type assertion**
+
+    _Type assertion in TypeScript is a mechanism to tell the compiler that you
+    know more about the type of a value than TypeScript can infer_
+
     ```ts
     // as keyword
-    let someValue: any = "this is a string";
-    let strLength: number = (someValue as string).length;
+    let someValue: any = 'this is a string'
+    let strLength: number = (someValue as string).length
 
     // <> syntax
-    let someValue: any = "this is a string";
-    let strLength: number = (<string>someValue).length;
+    let someValue: any = 'this is a string'
+    let strLength: number = (<string>someValue).length
     ```
 
 ## Advanced Concepts
 
-45. ### **Does TypeScript support static classes? If not, why**  
-    *In Typescript you can create any data and functions as simple objects
+45. ### **Does TypeScript support static classes? If not, why**
+
+    _In Typescript you can create any data and functions as simple objects
     without creating a containing class. Hence typescript doesn't need static
-    classes*
+    classes_
 
-46. ### **What is the Function type in TypeScript**  
-    *Function is a global type in typescript and it has properties like bind,
-    call and apply with other properties*
+46. ### **What is the Function type in TypeScript**
 
-47. ### **What is a type declaration file**  
-    *It's a file which ends with .d.ts extension providing a way to declare the
+    _Function is a global type in typescript and it has properties like bind,
+    call and apply with other properties_
+
+47. ### **What is a type declaration file**
+
+    _It's a file which ends with .d.ts extension providing a way to declare the
     existence of some types or values without actually providing implementations
-    for those values*
+    for those values_
 
-48. ### **Explain the various ways to control member visibility in TypeScript**  
-    * **public:** *You can access a public member anywhere outside the class*  
-    * **protected:** *It's visible only to the subclasses*  
-    * **private:** *It's only visible inside the class*
+48. ### **Explain the various ways to control member visibility in TypeScript**
 
-49. ### **What are Type Guards**  
-    * **typeof:** *check primitive types*  
-    * **keyof:** *check is key available in object*  
-    * **instanceof:** *check class instances*  
-    * **in:** *check if a property exist in an object*  
-    * **is:** *User Defined Type Guard*
+    - **public:** _You can access a public member anywhere outside the class_
+    - **protected:** _It's visible only to the subclasses_
+    - **private:** _It's only visible inside the class_
 
-50. ### **Explain how TypeScript infers types**  
-    *TypeScript uses type inference to automatically determine the types of
-    variables based on their assigned values while declaring*
+49. ### **What are Type Guards**
 
-51. ### **What are generics in TypeScript, and when would you use them**  
-    *Generics in TypeScript provide a way to create reusable components and
-    functions while maintaining flexibility in the types they work with*
+    - **typeof:** _check primitive types_
+    - **keyof:** _check is key available in object_
+    - **instanceof:** _check class instances_
+    - **in:** _check if a property exist in an object_
+    - **is:** _User Defined Type Guard_
+
+50. ### **Explain how TypeScript infers types**
+
+    _TypeScript uses type inference to automatically determine the types of
+    variables based on their assigned values while declaring_
+
+51. ### **What are generics in TypeScript, and when would you use them**
+
+    _Generics in TypeScript provide a way to create reusable components and
+    functions while maintaining flexibility in the types they work with_
+
     ```ts
     // functions
     function identity<T>(arg: T): T {
-      return arg;
+      return arg
     }
-    let output = identity<string>("hello"); // T is inferred as string
+    let output = identity<string>('hello') // T is inferred as string
 
     // interfaces
     interface Box<T> {
-      value: T;
+      value: T
     }
-    let stringBox: Box<string> = { value: "text" };
+    let stringBox: Box<string> = { value: 'text' }
 
     // classes
     class GenericContainer<T> {
-      private data: T;
+      private data: T
       constructor(data: T) {
-        this.data = data;
+        this.data = data
       }
       getData(): T {
-        return this.data;
+        return this.data
       }
     }
-    let numberContainer = new GenericContainer<number>(123);
+    let numberContainer = new GenericContainer<number>(123)
 
     // constraints
     interface Lengthwise {
-      length: number;
+      length: number
     }
     function loggingIdentity<T extends Lengthwise>(arg: T): T {
-      console.log(arg.length); // Now 'arg' is guaranteed to have a 'length' property
-      return arg;
+      console.log(arg.length) // Now 'arg' is guaranteed to have a 'length' property
+      return arg
     }
     ```
 
-52. ### **What is the declare keyword**  
-    *The declare keyword in TypeScript is used to inform the compiler that a
-    variable, method, or library is defined externally*
+52. ### **What is the declare keyword**
+    _The declare keyword in TypeScript is used to inform the compiler that a
+    variable, method, or library is defined externally_
     ```ts
-    declare const jQuery: (selector: string) => any;
-    declare function myFunction(arg: number): string;
+    declare const jQuery: (selector: string) => any
+    declare function myFunction(arg: number): string
     declare class MyGlobalClass {
-        constructor(name: string);
-        method(): void;
+      constructor(name: string)
+      method(): void
     }
     ```
 
 ## Enums vs Types
 
-53. ### **Enums vs type declaration (type and interface)**  
-    *Enum exists in JS but type declaration erased and used only for TS checks*
+53. ### **Enums vs type declaration (type and interface)**
+    _Enum exists in JS but type declaration erased and used only for TS checks_
 
 ## Loops
 
-54. ### **Explain the different variants of the for loop in TypeScript**  
-    *for, for in, for of, forEach*
+54. ### **Explain the different variants of the for loop in TypeScript**
+    _for, for in, for of, forEach_
 
 ## Symbols
 
-55. ### **Explain the symbol type in TypeScript**  
-    *The way to create unique primitive type value*
+55. ### **Explain the symbol type in TypeScript**
+    _The way to create unique primitive type value_

@@ -7,7 +7,6 @@
    HTTP. It's stateless (each request is independent) and typically uses JSON_
 
    ### Key Features:
-
    - **Stateless**: No client session data stored on server.
    - **HTTP Methods**: Uses GET, POST, PUT, PATCH, DELETE.
    - **Resource-Oriented**: Data accessed via unique URLs.
@@ -40,7 +39,6 @@
 6. ## **HTTP Methods**
 
    Standard actions for interacting with resources via **HTTP**:
-
    - **GET** - Fetch data (read-only)
    - **POST** - Create new data
    - **PUT** - Update existing data (full replacement)
@@ -53,7 +51,6 @@
 7. ## **HTTP Status Codes**
 
    Quick reference for HTTP response status codes:
-
    - **1xx (Informational)**: Request received, continuing process
    - **2xx (Success)**: Request successfully processed
      - `200 OK` - Standard success response
@@ -87,7 +84,6 @@
    architectural pattern
 
 10. ## **What is URI/URL/URN**
-
     - **URI:** \<protocol\>://\<service-name\>/\<ResourceType\>/\<ResourceID\>
     - **URL:** `http://abc.com/samplePage.html`
     - **URN:** `urn:mpeg:mpeg7:schema:2001`
@@ -95,22 +91,17 @@
 11. ## **Can you tell what constitutes the core components of HTTP Request**
 
     The 5 essential parts of an HTTP request in REST:
-
     1. **Method/Verb**
-
        - Specifies the action type (GET, POST, PUT, etc.)
 
     2. **URI (Uniform Resource Identifier)**
-
        - Identifies the target resource on the server
        - Example: `/api/users/123`
 
     3. **HTTP Version**
-
        - Specifies protocol version (e.g., `HTTP/1.1` or `HTTP/2`)
 
     4. **Request Header**
-
        - Contains metadata about the request:
          - `Content-Type` (format of body data)
          - `Accept` (response formats client can handle)
@@ -129,13 +120,10 @@
 12. ## **What constitutes the core components of HTTP Response**
 
     The 4 essential parts of an HTTP response:
-
     1. **HTTP Version**
-
        - Indicates protocol version (e.g., `HTTP/1.1` or `HTTP/2`)
 
     2. **Response Status Code**
-
        - 3-digit code indicating request outcome:
          - `1xx`: Informational
          - `2xx`: Success (e.g., `200 OK`)
@@ -144,7 +132,6 @@
          - `5xx`: Server errors (e.g., `500 Internal Server Error`)
 
     3. **Response Headers**
-
        - Metadata about the response:
          - `Content-Type`: Format of response body (e.g., `application/json`)
          - `Content-Length`: Size of response body
@@ -165,41 +152,34 @@
     ### **GraphQL**
 
     ✅ **Flexible Data Querying**
-
     - Clients specify exact data requirements
     - Eliminates over-fetching/under-fetching
     - Better for complex queries
 
     ✅ **Efficient Data Loading**
-
     - Fetch multiple resources in single query
     - Reduces network overhead
 
     ✅ **Versioning**
-
     - Schema-based approach simplifies versioning
     - Changes don't break existing clients
 
     ✅ **Self-Documenting**
-
     - Built-in schema exploration
     - Clients can discover API capabilities
 
     ### **REST API**
 
     ✅ **Simplicity**
-
     - Easy to understand and implement
     - Well-established standard
     - Large developer community
 
     ✅ **Caching**
-
     - Designed to be cacheable
     - Straightforward caching strategies
 
     ✅ **Familiarity**
-
     - Low learning curve
     - Widely adopted and understood
 

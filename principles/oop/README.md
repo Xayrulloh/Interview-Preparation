@@ -6,7 +6,6 @@ code into reusable modules called classes that encapsulate data (attributes) and
 methods (functions) that operate on that data.
 
 - ## **Encapsulation:**
-
   - **private** (accessible only within class)
   - **protected** (accessible within or subclass)
   - **public** (accessible anywhere)
@@ -173,7 +172,10 @@ methods (functions) that operate on that data.
   ```ts
   // Base class
   class Animal {
-    constructor(public name: string, protected age: number) {}
+    constructor(
+      public name: string,
+      protected age: number
+    ) {}
 
     makeSound(): void {
       console.log('Some generic animal sound')
@@ -250,7 +252,10 @@ abstract class Shape {
 
 // Concrete implementations
 class Circle extends Shape {
-  constructor(color: string, private radius: number) {
+  constructor(
+    color: string,
+    private radius: number
+  ) {
     super(color)
   }
 
@@ -264,7 +269,11 @@ class Circle extends Shape {
 }
 
 class Rectangle extends Shape {
-  constructor(color: string, private width: number, private height: number) {
+  constructor(
+    color: string,
+    private width: number,
+    private height: number
+  ) {
     super(color)
   }
 

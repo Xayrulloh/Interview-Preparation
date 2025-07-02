@@ -8,13 +8,11 @@
    remote/local systems_
 
 2. ### **What is RDBMS? How is it different from DBMS**
-
    - **DBMS:** _Software to define, create and maintain databases_
    - **RDBMS:** _Advanced version with relational capabilities (tables,
      relations)_
 
 3. ### **Difference between SQL and MySQL**
-
    - **SQL:** _Language for RDBMS_
    - **MySQL:** _Specific RDBMS product using SQL_
 
@@ -25,7 +23,6 @@
 ## SQL Commands & Operations
 
 5. ### **SQL Command Categories**
-
    - DDL (CREATE, ALTER, DROP, TRUNCATE) \- _to work with tables_
    - DML (INSERT, UPDATE, DELETE) \- _to work with data actions_
    - DQL (SELECT) \- _to retrieve data_
@@ -33,7 +30,6 @@
    - DCL (GRANT, REVOKE) \- _to grant/provoke permission_
 
 6. ### **SELECT Statement Fundamentals**
-
    - Retrieves data from tables
    - Common clauses:
      - **WHERE** _(filtering)_
@@ -90,7 +86,6 @@
 15. ### **Join Types**
 
     ![Joins](./images/joins.png)
-
     - **INNER:** _Matching rows only_
     - **LEFT/RIGHT:** _All rows from one side_
     - **FULL:** _All rows from both_
@@ -108,7 +103,6 @@
 17. ### **Subqueries**
 
     Nested queries used in:
-
     - **WHERE** clauses
     - **FROM** clauses
     - **SELECT** expressions
@@ -121,7 +115,6 @@
 ## Data Modification
 
 19. ### **Data Modification Commands**
-
     - **INSERT:** _Add new rows_
     - **UPDATE:** _Modify existing rows_
     - **DELETE:** _Remove rows_
@@ -137,14 +130,12 @@
 ## PostgreSQL Specifics
 
 21. ### **Database Management**
-
     - **CREATE DATABASE:** _New database_
     - **\l:** _List all databases_
 
 22. ### **ACID Compliance**
 
     PostgreSQL fully supports:
-
     - **Atomicity**
     - **Consistency**
     - **Isolation**
@@ -159,7 +150,6 @@
 24. ### **Data Normalization**
 
     Process to:
-
     - Reduce redundancy
     - Improve integrity  
       Through normal forms (1NF, 2NF, 3NF etc.)

@@ -58,7 +58,6 @@ failures or concurrent access.
   ```
 
   **Isolation levels** (from weakest to strongest):
-
   - **Read Uncommitted**
   - **Read Committed (default in most databases)**
   - **Repeatable Read**
@@ -79,7 +78,6 @@ failures or concurrent access.
   ```
 
   **Implementation mechanisms:**
-
   - **Write-ahead logging (WAL)**
   - **Battery-backed RAM caches**
   - **Replication** to standby servers
