@@ -435,6 +435,7 @@
 
     **Difference between undefined and undeclared**
     |Undeclared |Undefined |
+    |-----------|----------|
     |Not exist/declared |Declared but not assigned |
     |Error while reading undeclared value |Undefined while reading undefined value |
 
