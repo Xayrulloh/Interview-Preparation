@@ -433,11 +433,12 @@
     document.getElementById('nonexistent') // returns null
     ```
 
-    **Difference between undefined and undeclared** |Undeclared |Undefined |
-    |Not exist/declared |Declared but not assigned | |Error while reading
-    undeclared value |Undefined while reading undefined value |
+    **Difference between undefined and undeclared**
+    |Undeclared |Undefined |
+    |Not exist/declared |Declared but not assigned |
+    |Error while reading undeclared value |Undefined while reading undefined value |
 
-32. ## **What is global execution context**
+33. ## **What is global execution context**
 
     _The default context created when JavaScript code first runs:_
     - Creates global object (window in browsers)
@@ -449,7 +450,7 @@
     var globalVar = "I'm global"
     ```
 
-33. ## **What is function execution context**
+34. ## **What is function execution context**
 
     _Created each time a function is called:_
     - Has its own variable environment
@@ -463,7 +464,7 @@
     greet('Alice') // New execution context created
     ```
 
-34. ## **What is the job of ‘this’ keyword**
+35. ## **What is the job of ‘this’ keyword**
 
     _Behavior depends on context:_
 
@@ -475,7 +476,7 @@
     | Constructor           | New instance                  | new Constructor();                  |
     | Arrow Function        | Inherits from parent scope    | () => { console.log(this); }        |
 
-35. ## **What is a strict mode in javascript**
+36. ## **What is a strict mode in javascript**
 
     _Enables stricter parsing and error handling:_
     - Prevents accidental globals
@@ -488,7 +489,7 @@
     delete Object.prototype // Throws TypeError
     ```
 
-36. ## **What is Hoisting**![][image36]
+37. ## **What is Hoisting**![][image36]
 
     _JavaScript's behavior of moving declarations to the top:_
     - `var`: Hoisted and initialized with `undefined`
@@ -503,7 +504,7 @@
     let y = 10
     ```
 
-37. ## **What is an IIFE (Immediately Invoked Function Expression)**
+38. ## **What is an IIFE (Immediately Invoked Function Expression)**
 
     _Self-executing anonymous function for data privacy:_
 
@@ -522,7 +523,7 @@
     }
     ```
 
-38. ## **What is a first class function**
+39. ## **What is a first class function**
 
     _Functions treated like any other variable:_
     1. Can be assigned to variables
@@ -551,7 +552,7 @@
     double(5) // 10
     ```
 
-39. ## **What is a first order function**
+40. ## **What is a first order function**
 
 - A function that:\*
   - Does **not** accept another function as an argument
