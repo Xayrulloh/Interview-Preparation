@@ -490,7 +490,7 @@
     delete Object.prototype // Throws TypeError
     ```
 
-37. ## **What is Hoisting**![][image36]
+37. ## **What is Hoisting**
 
     _JavaScript's behavior of moving declarations to the top:_
     - `var`: Hoisted and initialized with `undefined`
