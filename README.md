@@ -29,4 +29,6 @@ series_
 
 ## [Network Interview Questions](network/README.md)
 
+## [Cloud Interview Questions](cloud/README.md)
+
 ## [Principles](principles/README.md)
