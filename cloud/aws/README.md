@@ -122,7 +122,164 @@ physical hardware_
     resources._
 
 15. ## **What is AWS Lambda?**
+
     _**AWS Lambda** is a serverless compute service that allows you to run code
     without provisioning or managing servers. You can run your code in response
     to events, such as changes to data in an S3 bucket or an update to a
     DynamoDB table._
+
+16. ## **What is Auto Scaling?**
+
+    _**Auto Scaling** is an AWS service that automatically adjusts the number of
+    EC2 instances in response to changing application demand. This ensures that
+    you have the right number of instances running to handle the current load on
+    your application._
+
+    **Example:** _You can configure an Auto Scaling group to automatically add
+    more EC2 instances when the CPU utilization exceeds a specified threshold,
+    and remove instances when the utilization drops below the threshold._
+
+17. ## **How does Elastic Load Balancing work?**
+
+    _Elastic Load Balancing (ELB) automatically distributes incoming application
+    traffic across multiple targets, such as EC2 instances, containers, and IP
+    addresses. It helps ensure that no single instance is overwhelmed, improving
+    fault tolerance and availability._
+
+    **Example:** _A web application can use an ELB to distribute incoming HTTP
+    requests across a group of EC2 instances in multiple Availability Zones._
+
+18. ## **Explain the different types of load balancers in AWS.**
+
+    _AWS offers **three types** of load balancers:_
+
+    - **Application Load Balancer (ALB):** _Operates at the application layer
+      (HTTP/HTTPS), ideal for web applications_
+    - **Network Load Balancer (NLB):** _Operates at the transport layer
+      (TCP/UDP), suited for high-performance and low-latency applications._
+    - **Classic Load Balancer (CLB):** _Operates at both the application and
+      transport layers, used for applications built within the EC2-Classic
+      network._
+
+19. ## **What is Amazon RDS?**
+
+    _**Amazon Relational Database Service (RDS)** is a managed database service
+    that simplifies the setup, operation, and scaling of relational databases in
+    the cloud. It supports multiple database engines, including MySQL,
+    PostgreSQL, MariaDB, Oracle, and Microsoft SQL Server_
+
+20. ## **What are Security Groups and Network ACLs?**
+
+    - **Security Groups:** _Virtual firewalls for your EC2 instances that
+      control inbound and outbound traffic. They operate at the instance level._
+    - **Network ACLs (Access Control Lists):** _Stateless traffic filters that
+      control inbound and outbound traffic for subnets within your VPC. They
+      operate at the subnet level._
+
+    **Example:** _**A security group** can be configured to allow SSH access
+    (port 22) only from a specific IP address, while **a Network ACL** can allow
+    HTTP and HTTPS traffic (ports 80 and 443) for a specific subnet_
+
+21. ## **How do you monitor AWS resources?**
+
+    _You can monitor AWS resources using:_
+
+    - **Amazon CloudWatch:** _Collects and tracks metrics, monitors log files,
+      and sets alarms._
+    - **AWS CloudTrail:** _Provides governance, compliance, and operational and
+      risk auditing by recording AWS API calls._
+
+22. ## **What is Amazon CloudWatch?**
+
+    _**Amazon CloudWatch** is a monitoring and observability service that
+    provides data and actionable insights to monitor applications, understand
+    and respond to system-wide performance changes, and optimize resource
+    utilization._
+
+    **Example:** _You can use CloudWatch to create alarms that trigger
+    notifications when the CPU utilization of an EC2 instance exceeds a defined
+    threshold_
+
+23. ## **What is AWS Route 53?**
+
+    _**AWS Route 53** is a scalable **Domain Name System (DNS)** web service
+    designed to route end-user requests to internet applications by translating
+    domain names into IP addresses._
+
+    **Example:** _You can use Route 53 to route traffic to different endpoints,
+    such as Amazon S3 buckets, EC2 instances, and ELBs, based on DNS queries._
+
+24. ## **Explain the concept of elasticity in AWS.**
+
+    _**Elasticity** refers to the ability of AWS resources to automatically
+    scale up or down based on demand. This ensures that the infrastructure can
+    handle varying levels of load without over-provisioning or
+    under-provisioning resources._
+
+    **Example:** _Using Auto Scaling and ELB together provides elasticity by
+    dynamically adjusting the number of EC2 instances handling incoming traffic
+    based on real-time demand._
+
+25. ## **What is the difference between RDS and DynamoDB?**
+
+    - **Amazon RDS:** _A managed relational database service supporting
+      structured query language (SQL) databases. _
+    - **Amazon DynamoDB:** _A managed NoSQL database service designed for fast
+      and predictable performance with seamless scalability._
+
+    **Example:** _Use RDS for applications requiring complex queries and
+    transactions (e.g., e-commerce platforms), and DynamoDB for applications
+    needing low-latency access to large datasets (e.g., real-time analytics)._
+
+26. ## **What is the purpose of AWS Elastic Beanstalk?**
+
+    _**AWS Elastic Beanstalk** is an easy-to-use service for deploying and
+    scaling web applications and services. It automatically handles the
+    deployment, capacity provisioning, load balancing, auto-scaling, and
+    monitoring of applications._
+
+    **Example:** _Developers can deploy a web application by uploading the
+    application code, and Elastic Beanstalk handles the rest, including
+    launching the necessary infrastructure._
+
+27. ## **How do you use AWS CloudTrail?**
+
+    _**AWS CloudTrail** records AWS API calls and delivers log files to an
+    Amazon S3 bucket. It provides visibility into user activity by recording
+    actions taken on your account_
+
+    **Example:** _You can use CloudTrail to track changes to your AWS resources,
+    such as modifications to security group rules or the creation of new IAM
+    users._
+
+28. ## **What is AWS Snowball?**
+
+    _**AWS Snowball** is a data transport solution that uses secure physical
+    devices to transfer large amounts of data into and out of AWS. It helps with
+    data migration, disaster recovery, and content distribution._
+
+    **Example:** _A company can use Snowball to move petabytes of data from
+    their on-premises data center to AWS without using the internet,
+    significantly reducing transfer times._
+
+29. ## **What is Amazon ElastiCache?**
+
+    _**Amazon ElastiCache** is a managed in-memory data store and cache service
+    that supports Redis and Memcached. It helps improve the performance of
+    applications by allowing you to retrieve data from high-throughput and
+    low-latency in-memory caches._
+
+    **Example:** _A web application can use ElastiCache to store session data,
+    reducing the load on the backend database and improving response times._
+
+30. ## **How do you implement multi-region deployments in AWS?**
+
+    _**Multi-region deployments** involve deploying your application across
+    multiple AWS regions to achieve higher availability, fault tolerance, and
+    disaster recovery. This can be done using services like Route 53 for DNS
+    routing, RDS for cross-region read replicas, and S3 for cross-region
+    replication._
+
+    **Example:** _An e-commerce application can be deployed in multiple regions
+    using Route 53 for global traffic management, RDS for database replication,
+    and S3 for storing and replicating product images._
