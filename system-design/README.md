@@ -295,3 +295,190 @@
 
     - _DNS-based discovery_
     - _etcd, Consul, Eureka_
+
+- ## 🧱 Technical Building Blocks in System Design
+
+  _This section explores the essential components used to build scalable,
+  reliable, and efficient systems. These concepts are the "building materials"
+  of modern architecture._
+
+  - ### APIs and API Gateway
+
+    **What is it?** _An API (Application Programming Interface) defines how
+    components interact. An API Gateway is a single entry point that routes
+    client requests to different backend services._
+
+    **When to Use:**
+
+    - _To decouple frontend and backend._
+    - _To manage microservices._
+    - _To apply rate-limiting, authentication, and logging in one place._
+
+    **Common Patterns:**
+
+    - _REST_
+    - _GraphQL_
+    - _gRPC_
+
+    **Tools:**
+
+    - _Kong, NGINX, AWS API Gateway, Apigee_
+
+  - ### Databases
+
+    **What is it?** _A database stores, organizes, and retrieves data
+    efficiently._
+
+    **Types:**
+
+    - **Relational (SQL):** _PostgreSQL, MySQL_
+    - **Non-Relational (NoSQL):** _MongoDB, DynamoDB, Cassandra_
+
+    **When to Use:**
+
+    - **SQL:** _Structured, transactional data (e.g., user records)_
+    - **NoSQL:** _Flexible, large-scale data (e.g., user activity logs)_
+
+    **Design Concepts:**
+
+    - _Indexing_
+    - _Joins_
+    - _Transactions (ACID vs BASE)_
+    - _Data modeling_
+
+  - ### Caching Systems
+
+    **What is it?** _Fast-access storage layer to reduce database or computation
+    load._
+
+    **When to Use:**
+
+    - _Frequently accessed or expensive-to-calculate data_
+
+    **Types:**
+
+    - **In-memory:** _Redis, Memcached_
+    - **Distributed caches:** _Hazelcast, Couchbase_
+
+    **Challenges:**
+
+    - _Cache invalidation_
+    - _Eviction strategies (LRU, LFU, TTL)_
+    - _Write-through vs write-back vs write-around_
+
+  - ### Content Delivery Networks (CDNs)
+
+    **What is it?** _A CDN delivers static content (e.g., images, JS, CSS) from
+    geographically distributed edge servers._
+
+    **When to Use:**
+
+    - _Global apps with heavy media_
+    - _To reduce latency and origin load_
+
+    **Providers:**
+
+    - _Cloudflare, Akamai, Fastly, Amazon CloudFront_
+
+  - ### Load Balancers
+
+    **What is it?** _A system that evenly distributes incoming network traffic
+    across backend servers._
+
+    **When to Use:**
+
+    - _Scale horizontally_
+    - _Ensure high availability and failover_
+
+    **Types:**
+
+    - _Layer 4 (Transport) vs Layer 7 (Application)_
+    - _Active-Passive vs Active-Active_
+
+    **Examples:**
+
+    - _NGINX, HAProxy, AWS ELB_
+
+  - ### Message Brokers / Queues
+
+    **What is it?** _Tools that enable asynchronous communication by queuing
+    messages between components._
+
+    **When to Use:**
+
+    - _Decouple producers and consumers_
+    - _Buffer high-load tasks (e.g., notifications, processing)_
+
+    **Types:**
+
+    - _Kafka (stream), RabbitMQ, SQS, NATS_
+
+    **Considerations:**
+
+    - _Message ordering_
+    - _Durability_
+    - _Delivery guarantees (at-most-once, at-least-once, exactly-once)_
+
+  - ### Distributed Storage Systems
+
+    **What is it?** _Storage systems that span across multiple machines or data
+    centers._
+
+    **When to Use:**
+
+    - _Large-scale data (e.g., videos, backups, logs)_
+    - _High availability_
+
+    **Examples:**
+
+    - _Amazon S3, Google Cloud Storage, HDFS, Ceph_
+
+    **Features:**
+
+    - _Replication_
+    - _Erasure coding_
+    - _Tiered storage_
+
+  - ### Configuration Management
+
+    **What is it?** _Tools and techniques to manage software configuration
+    across environments._
+
+    **When to Use:**
+
+    - _Multi-env deployments (dev/stage/prod)_
+    - _Infrastructure as Code (IaC)_
+
+    **Tools:**
+
+    - _Ansible, Terraform, Chef, Puppet_
+
+  - ### Service Mesh
+
+    **What is it?** _A layer to handle service-to-service communication,
+    observability, and security in microservices._
+
+    **When to Use:**
+
+    - _Kubernetes or microservices architectures_
+    - _Need for tracing, retries, mTLS, policies_
+
+    **Examples:**
+
+    - _Istio, Linkerd, Consul Connect_
+
+  - ### Observability Stack
+
+    **What is it?** _Collecting and analyzing logs, metrics, and traces to
+    understand system behavior._
+
+    **When to Use:**
+
+    - _Always (especially in prod)_
+    - _Debugging or performance optimization_
+
+    **Tools:**
+
+    - _Prometheus + Grafana_
+    - _ELK stack (Elasticsearch, Logstash, Kibana)_
+    - _Jaeger, OpenTelemetry, Datadog_
