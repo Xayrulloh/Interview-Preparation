@@ -772,3 +772,102 @@
 
     - _Be explicit when choosing one side_
     - _Mention fallback strategies_
+
+- ## 🧪 Self-Preparation & Practice
+
+  _This section offers practical tips, study resources, and exercises to help
+  you master system design through consistent and focused practice._
+
+  - ### How to Structure Your Preparation
+
+    **Why It Matters:** _System design is a skill best built over time through
+    repetition and exposure to real-world problems._
+
+    **Preparation Strategy:**
+
+    - _Start with fundamentals (latency, throughput, CAP theorem, caching,
+      etc.)_
+    - _Learn key components (load balancers, databases, queues, etc.)_
+    - _Study real-world systems (Twitter, Dropbox, Uber, etc.)_
+    - _Practice designing systems on paper/whiteboard_
+    - _Get feedback from peers or mentors_
+    - _Reflect and improve from mock interviews_
+
+  - ### Must-Read Resources
+
+    **1. System Design Primer (GitHub)** _One of the most comprehensive
+    resources with explanations, strategies, and practice problems._
+    [System Design Primer Github](https://github.com/donnemartin/system-design-primer)
+
+    **2. System Design Handbook** _Step-by-step guides, questions, and
+    architecture walkthroughs._
+    [System Design Handbook](https://www.systemdesignhandbook.com/guides/system-design-interview)
+
+    **3. Interviewing.io System Design Guide** _Clear breakdown of design
+    concepts and interview approach._
+    [Interviewing.io System Design Guide](https://interviewing.io/guides/system-design-interview/part-two)
+
+    **4. High Scalability Blog (Archive)** _Chronological lessons learned from
+    real-world architecture._
+    [High Scalability Blog (Archive)](https://web.archive.org/web/20221030091841/http://www.lecloud.net/tagged/scalability/chrono)
+
+    **5. System Design Interview Questions (Handbook)** _Curated list of
+    open-ended design questions and variations._
+    [System Design Interview Questions (Handbook)](https://www.systemdesignhandbook.com/blog/system-design-interview-questions/)
+
+    **6. Useful You Tube Videos**
+
+    - **[Google SWE System Design](https://www.youtube.com/playlist?list=PLjTveVh7FakKjb4UYzUazqBNNF-WGurXp)**
+    - **[System Design by Gaurav Sen](https://youtube.com/playlist?list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&feature=shared)**
+    - **[Harvard Lecture](https://www.youtube.com/watch?v=-W9F__D3oY4)**
+
+  - ### Practice Techniques
+
+    **1. Paper & Whiteboard Practice** _Draw architecture diagrams by hand to
+    simulate interview conditions._
+
+    **2. Timed Mock Sessions** _Limit yourself to 45–60 minutes per problem._
+
+    **3. Peer Reviews & Feedback** _Explain your designs to others and get
+    critical feedback._
+
+    **4. Flashcards for Concepts** _Use flashcards to memorize latency numbers,
+    protocols, consistency models._
+
+    **5. Reverse Engineering** _Pick any popular product and try to imagine how
+    it’s built._
+
+  - ### Systems to Try Designing (Sorted by Complexity)
+
+    **Beginner:**
+
+    - _URL shortener_
+    - _Rate limiter_
+    - _Image upload service_
+
+    **Intermediate:**
+
+    - _Chat/messaging app_
+    - _Feed system (Instagram, Twitter)_
+    - _Video streaming platform_
+
+    **Advanced:**
+
+    - _Distributed file storage (Dropbox)_
+    - _Ride-sharing app (Uber)_
+    - _E-commerce marketplace_
+    - _Analytics pipeline_
+
+  - ### Tracking Progress
+
+    **What to Track:**
+
+    - _Number of designs practiced_
+    - _Feedback and mistakes_
+    - _Knowledge gaps (e.g., protocols, algorithms)_
+
+    **How to Stay Consistent:**
+
+    - _Use Notion, Obsidian, or a simple doc to journal lessons_
+    - _Build a “System Design Portfolio” with your drawings_
+    - _Revisit hard problems monthly to reinforce learning_
