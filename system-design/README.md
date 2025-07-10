@@ -482,3 +482,293 @@
     - _Prometheus + Grafana_
     - _ELK stack (Elasticsearch, Logstash, Kibana)_
     - _Jaeger, OpenTelemetry, Datadog_
+
+- ## 🏗 Designing Real-World Systems
+
+  _This section covers common system design interview questions that require
+  end-to-end architecture thinking. Each example highlights critical components,
+  trade-offs, and justifications._
+
+  - ### URL Shortener (e.g., bit.ly)
+
+    **What is it?** _A service that takes a long URL and returns a shortened
+    version._
+
+    **Key Requirements:**
+
+    - _Short unique ID generation_
+    - _Fast redirection (low latency)_
+    - _Analytics (click count, geo info)_
+
+    **Components:**
+
+    - _Hashing or Base62 ID generator_
+    - _Database to store mappings (URL ↔ ID)_
+    - _Caching for hot links_
+    - _Load balancer, API gateway_
+
+    **Challenges:**
+
+    - _Collision handling_
+    - _Database scalability (partitioning by hash)_
+
+  - ### Rate Limiter
+
+    **What is it?** _A system to limit how frequently a user can make requests._
+
+    **Use Cases:**
+
+    - _Prevent abuse (login attempts, API usage)_
+    - _Ensure fairness in multi-tenant systems_
+
+    **Techniques:**
+
+    - _Token Bucket, Leaky Bucket, Fixed Window, Sliding Log_
+    - _Redis or in-memory store for counters_
+
+    **Key Design Points:**
+
+    - _Per-user/IP throttling_
+    - _Global vs per-endpoint limits_
+
+  - ### Messaging/Chat System (e.g., WhatsApp)
+
+    **What is it?** _Real-time or asynchronous message exchange between users._
+
+    **Core Features:**
+
+    - _Message queues (Kafka, RabbitMQ)_
+    - _Delivery receipts, read status_
+    - _User presence tracking_
+
+    **Challenges:**
+
+    - _Message ordering & consistency_
+    - _Offline message delivery_
+    - _Scalability under high fan-out (group chats)_
+
+  - ### Social Feed (e.g., Twitter, Instagram)
+
+    **What is it?** _A personalized feed of posts/tweets/images based on follows
+    or interests._
+
+    **Feed Generation Models:**
+
+    - _Pull-based (on read)_
+    - _Push-based (on write)_
+    - _Hybrid (pre-generate feed for active users)_
+
+    **Scalability Considerations:**
+
+    - _Fan-out writes vs reads_
+    - _Use of queues, denormalized storage_
+    - _Caching & timeline sharding_
+
+  - ### File Storage System (e.g., Dropbox, Google Drive)
+
+    **What is it?** _A system to upload, store, and retrieve user files with
+    metadata._
+
+    **Core Components:**
+
+    - _Distributed storage (S3, HDFS, GCS)_
+    - _Metadata service (file names, structure)_
+    - _Chunking large files_
+    - _Versioning & access control_
+
+    **Challenges:**
+
+    - _Data deduplication_
+    - _Secure sharing and permissions_
+
+  - ### Video Streaming Platform (e.g., YouTube, Netflix)
+
+    **What is it?** _A platform that allows users to stream video content._
+
+    **Design Focus:**
+
+    - _Upload pipeline: transcoding, chunking, storage_
+    - _CDN distribution for low latency_
+    - _Playback buffering, adaptive bitrate (ABR)_
+
+    **Scaling Challenges:**
+
+    - _Storage costs for replicas_
+    - _Live streaming vs on-demand differences_
+
+  - ### Notification System (e.g., push/email/SMS alerts)
+
+    **What is it?** _System to send time-sensitive messages across multiple
+    channels._
+
+    **Key Features:**
+
+    - _Multi-channel dispatch (email, push, SMS)_
+    - _User preferences & retries_
+    - _Asynchronous processing via queues_
+
+    **Challenges:**
+
+    - _Idempotency for retries_
+    - _Rate limiting for third-party APIs_
+
+  - ### Ride-Sharing Platform (e.g., Uber, Lyft)
+
+    **What is it?** _A platform to connect drivers and riders in real time._
+
+    **Core Components:**
+
+    - _Real-time location tracking_
+    - _Matching engine (drivers ↔ riders)_
+    - _Pricing algorithm (surge, distance)_
+    - _Trip lifecycle management_
+
+    **Scaling Challenges:**
+
+    - _Geospatial indexing (e.g., Uber's H3)_
+    - _Low-latency event systems_
+
+  - ### E-commerce Platform (e.g., Amazon)
+
+    **What is it?** _Online system to display, sell, and manage products._
+
+    **Key Subsystems:**
+
+    - _Product catalog (search, filter)_
+    - _Shopping cart_
+    - _Checkout flow & payment_
+    - _Order fulfillment, warehouse updates_
+
+    **Tech Concerns:**
+
+    - _Inventory consistency_
+    - _User personalization_
+    - _Search scalability (Typesense, Elasticsearch)_
+
+  - ### Analytics System (e.g., Google Analytics, Amplitude)
+
+    **What is it?** _Tracks user behavior and aggregates it for reporting._
+
+    **Key Features:**
+
+    - _Real-time event ingestion (Kafka, Flink)_
+    - _Data pipeline (ETL → Data Warehouse)_
+    - _User-level metrics, dashboards_
+
+    **Storage Options:**
+
+    - _ClickHouse, BigQuery, Redshift_
+
+    **Challenges:**
+
+    - _Data volume and deduplication_
+    - _Event schema evolution_
+
+  - ### Payment System (e.g., Stripe, PayPal)
+
+    **What is it?** _Handles transactions, fraud detection, and payment
+    processing._
+
+    **Components:**
+
+    - _PCI-compliant storage_
+    - _Idempotent transaction creation_
+    - _Webhook system for external notification_
+
+    **Concerns:**
+
+    - _Atomicity (debit one account, credit another)_
+    - _Rollbacks and reconciliation_
+    - _Third-party API errors_
+
+- ## 📝 Interview Strategy & Frameworks
+
+  _This section provides a structured approach to cracking system design
+  interviews, including preparation strategies, frameworks, and evaluation
+  criteria._
+
+  - ### Understanding the Interview Format
+
+    **What is it?** _System design interviews assess your ability to design
+    large-scale, distributed systems under constraints._
+
+    **Common Settings:**
+
+    - _45–60 minute sessions_
+    - _Whiteboard or virtual design tools_
+    - _Focus on trade-offs, scalability, and clarity_
+
+    **What Interviewers Look For:**
+
+    - _Communication & structure_
+    - _Technical depth & breadth_
+    - _Handling edge cases & trade-offs_
+
+  - ### The 4-Step Design Process
+
+    **What is it?** _A consistent method to approach any system design problem._
+
+    **Steps:**
+
+    1. **Clarify Requirements** _Ask questions to define core vs. optional
+       features._
+    2. **High-Level Design** _Draw components: clients, services, databases,
+       queues, etc._
+    3. **Deep Dive** _Zoom into a few components (e.g., DB schema, cache
+       logic)._
+    4. **Bottlenecks & Trade-offs** _Discuss scaling, failure handling,
+       consistency, etc._
+
+  - ### Common Frameworks
+
+    **What is it?** _Mental models that help you structure design questions._
+
+    **1. RISE (Requirements, Interfaces, Storage, Estimate):**
+
+    - _Start with user goals and system constraints_
+    - _Define APIs and user interactions_
+    - _Design data storage and structure_
+    - _Estimate usage, traffic, and scale_
+
+    **2. SCALE (Storage, Cache, Availability, Load balancing, Elasticity):**
+
+    - _Focus on scaling a known system_
+    - _Drives discussion on performance bottlenecks_
+
+    **3. SPACE (Security, Performance, Availability, Cost, Experience):**
+
+    - _Balance system goals beyond just scalability_
+    - _Great for open-ended or product-oriented systems_
+
+  - ### Estimation Questions
+
+    **What is it?** _Quick back-of-the-envelope calculations to ground your
+    assumptions._
+
+    **Common Examples:**
+
+    - _How many requests/sec will the system serve?_
+    - _How much storage per user per day?_
+    - _Data retention costs over 1 year?_
+
+    **Why It Matters:**
+
+    - _Justifies architecture choices_
+    - _Shows realism and engineering maturity_
+
+  - ### Handling Trade-offs
+
+    **What is it?** _All real-world systems involve compromises. Interviewers
+    want to see you reason through them._
+
+    **Typical Trade-offs:**
+
+    - _Consistency vs Availability (CAP) and Latency_
+    - _Read vs Write optimization_
+    - _Cost vs Performance_
+    - _Speed to build vs Long-term scalability_
+
+    **Best Practices:**
+
+    - _Be explicit when choosing one side_
+    - _Mention fallback strategies_
