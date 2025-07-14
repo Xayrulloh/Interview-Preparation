@@ -2,20 +2,26 @@
 
 1. ## [**What is Express.Js**](https://www.geeksforgeeks.org/introduction-to-express/)
 
-   Express is a small framework that sits on top of Node.js’s web server
-   functionality to simplify its APIs and add helpful new features. It makes it
-   easier to organize your application’s functionality with middleware and
-   routing; it adds helpful utilities to Node.js’s HTTP objects; it facilities
-   the rendering of dynamic HTTP objects
+   Express is a lightweight framework built on top of Node.js to enhance its web
+   server capabilities. It simplifies APIs, introduces useful features, and
+   facilitates application organization through middleware and routing. Express
+   also enriches Node.js HTTP objects with valuable utilities and supports
+   dynamic rendering.
 
 2. ## **Why use Express.Js**
 
-   Its simplicity, minimalism, flexibility and scalability characteristics. It
-   provides easy to set up for middlewares and routing
+   It is a lightweight and flexible framework, which makes it a preferred choice
+   for web applications. It is easy to set up and use middlewares and routing.
 
-3. ## **Mention a few features of Express.js**
+3. ## **Explain the features of Express.js**
 
-   Routing, Middleware, HTTP Utility Methods, Static File Serving, Security
+   Express.js is a powerful and popular Node.js web framework, which offers a
+   wide range of features to ease the development of web applications. Some of
+   the key features of Express.js include: routing, middleware, HTTP utility
+   methods, static file serving, and built-in security features, such as
+   protection against cross-site scripting (XSS) and cross-site request forgery
+   (CSRF). Additionally, Express.js is highly extensible through its support for
+   a wide range of third-party packages and plugins.
 
 4. ## [**Explain the structure of an Express JS application**](https://www.geeksforgeeks.org/how-to-structure-my-application-in-express-js/)
    - **Entry point:** It’s a starting point of the application where you set up
@@ -52,8 +58,9 @@
    your application. This allows the application to control which domains can
    access your resources by setting HTTP headers
 
-8. **What is middleware**  
-    Middleware comes in between your request and business logic. It is mainly
+8. ## **What is middleware**
+
+   Middleware comes in between your request and business logic. It is mainly
    used for logs, rate limit, routing, authentication etc.. There are also
    third-party middleware such as body-parser etc...
 

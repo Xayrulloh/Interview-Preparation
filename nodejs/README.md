@@ -93,6 +93,7 @@
 
     process.nextTick() sets the callback to execute after current operation but
     setImmediate pushes the callback in the check phase queue
+
     ![Timers Phases](./images/phases-and-nextTick.png)
 
 14. ## **What are node.js buffers**
@@ -205,7 +206,7 @@
     mouse button. A call-back function is already registered with the element
     executed whenever an event is triggered.
 
-20. ## **What is an EventEmitter **
+20. ## **What is an EventEmitter**
 
     In Node.js, an EventEmitter is a core module that provides an implementation
     of the observer pattern. The observer pattern is a behavioral design pattern

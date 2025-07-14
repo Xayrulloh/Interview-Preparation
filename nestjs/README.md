@@ -111,7 +111,7 @@
    the codebase in a modular and maintainable way, which is essential for
    developing robust and scalable applications.
 
-4. ## **What is dependency injection **
+4. ## **What is dependency injection**
 
    Dependency Injection (DI) in NestJS is a core concept that allows you to
    manage dependencies efficiently. It uses the built-in **NestJS IoC (Inversion
@@ -291,64 +291,59 @@
    meaningful error responses, they can be globally using exception filters or
    at the route level using the @UseFilters decorator
 
-9. ## **Explain the concept of Pipes in Nest.js**
+9. ## **What are pipes and filters**
 
-   Pipes are used for data transformation and validation before it reaches the
-   route handler
+   **Pipes:**  
+    Pipes in Nest.js are a way to transform input data before it reaches the
+   route handler or after it leaves the route handler. They are used to validate
+   and transform data. Pipes can be applied to parameters at the controller
+   level, method level, or globally.  
+    There are several built-in pipes in Nest.js, and you can also create custom
+   pipes. Examples of built-in pipes include:
 
-10. ## **What are pipes and filters**
+   **ValidationPipe** \- Automatically performs validation on incoming request
+   payloads using validation decorators.
 
-    **Pipes:**  
-     Pipes in Nest.js are a way to transform input data before it reaches the
-    route handler or after it leaves the route handler. They are used to
-    validate and transform data. Pipes can be applied to parameters at the
-    controller level, method level, or globally.  
-     There are several built-in pipes in Nest.js, and you can also create custom
-    pipes. Examples of built-in pipes include:
+   **ParseIntPipe** \- Converts a string to an integer
 
-    **ValidationPipe** \- Automatically performs validation on incoming request
-    payloads using validation decorators.
+   **ParseBoolPipe** \- Converts a string to a boolean
 
-    **ParseIntPipe** \- Converts a string to an integer
+   **Filters:**  
+    Filters in Nest.js are used to handle exceptions globally. When an unhandled
+   exception occurs during the execution of a route handler, filters can be used
+   to customize the response that is sent back to the client. Filters are
+   applied at the global level or can be scoped to specific controllers or
+   routes.
 
-    **ParseBoolPipe** \- Converts a string to a boolean
+   There are a few types of filters in Nest.js, including exception filters,
+   which handle unhandled exceptions.
 
-    **Filters:**  
-     Filters in Nest.js are used to handle exceptions globally. When an
-    unhandled exception occurs during the execution of a route handler, filters
-    can be used to customize the response that is sent back to the client.
-    Filters are applied at the global level or can be scoped to specific
-    controllers or routes.
+   ```ts
+   import { Catch, ExceptionFilter, ArgumentsHost } from '@nestjs/common'
 
-    There are a few types of filters in Nest.js, including exception filters,
-    which handle unhandled exceptions.
+   @Catch(MyException)
+   export class MyExceptionFilter implements ExceptionFilter {
+     catch(exception: MyException, host: ArgumentsHost) {
+       const response = host.switchToHttp().getResponse()
+       response.status(500).json({
+         statusCode: 500,
+         message: 'Something went wrong'
+       })
+     }
+   }
+   ```
 
-    ```ts
-    import { Catch, ExceptionFilter, ArgumentsHost } from '@nestjs/common'
-
-    @Catch(MyException)
-    export class MyExceptionFilter implements ExceptionFilter {
-      catch(exception: MyException, host: ArgumentsHost) {
-        const response = host.switchToHttp().getResponse()
-        response.status(500).json({
-          statusCode: 500,
-          message: 'Something went wrong'
-        })
-      }
-    }
-    ```
-
-11. ## **Explain the role of Guards in Nest.js**
+10. ## **Explain the role of Guards in Nest.js**
     Guards are used to control access to routes and protect them from
     unauthorized access
-12. ## **What is the purpose of the Nest.js Guards and Pipes combination and how does it enhance the request processing flow**
+11. ## **What is the purpose of the Nest.js Guards and Pipes combination and how does it enhance the request processing flow**
     Combining Guards and Pipes allows you to perform authorization and data
     validation in a structured and sequential manner in the request processing
     flow
-13. ## **What is Middleware in Nest.js**
+12. ## **What is Middleware in Nest.js**
     Middleware functions in Nest.js are used to process requests before they
     reach the route handler
-14. ## **What is the purpose of Interceptors in Nest.js**
+13. ## **What is the purpose of Interceptors in Nest.js**
 
     In Nest.js, an interceptor is a middleware that can intercept incoming
     requests and outgoing responses. Interceptors provide a way to modify the
@@ -360,7 +355,7 @@
     globally, per module, or per controller and can be synchronous or
     asynchronous.
 
-15. ## **Explain Nest.js lifecycle request**
+14. ## **Explain Nest.js lifecycle request**
     1\. Request Received  
     2\. Routing  
     3\. Middleware Execution  
