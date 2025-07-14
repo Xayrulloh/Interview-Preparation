@@ -1582,12 +1582,13 @@
 
 100.  ## **What is the difference between window and document**
 
-      | Feature    | window                   | document                          |
-      | ---------- | ------------------------ | --------------------------------- |
-      | Role       | Global browser container | Page content container            |
-      | Access     | Top-level object         | window.document                   |
-      | Methods    | setTimeout(), alert()    | getElementById(), querySelector() |
-      | Properties | innerWidth, localStorage | body, title, URL                  |
+
+    | Feature    | window                   | document                          |
+    | ---------- | ------------------------ | --------------------------------- |
+    | Role       | Global browser container | Page content container            |
+    | Access     | Top-level object         | window.document                   |
+    | Methods    | setTimeout(), alert()    | getElementById(), querySelector() |
+    | Properties | innerWidth, localStorage | body, title, URL                  |
 
 101.  ## **Difference between LocalStorage, SessionStorage vs Cookie**
       | Feature       | LocalStorage      | SessionStorage | Cookies         |
@@ -1598,105 +1599,106 @@
       | Use Case      | Long-term storage | Temporary data | Authentication  |
 
 
-   ```js
-   localStorage.setItem("theme", "dark");
-   console.log(localStorage.getItem("theme")); // "dark"
-   ```
+    ```js
+    localStorage.setItem('theme', 'dark')
+    console.log(localStorage.getItem('theme')) // "dark"
+    ```
 
 102. ## **What is ECMAScript**
-   The official standard behind JavaScript:
+     The official standard behind JavaScript:
 
 
-   - ES5 (2009): Strict mode, JSON support
-   - ES6/ES2015: let/const, classes, promises
-   - ES2022: Top-level await, private fields
+    - ES5 (2009): Strict mode, JSON support
+    - ES6/ES2015: let/const, classes, promises
+    - ES2022: Top-level await, private fields
 
-   ```js
-   const PI = 3.14; // Block-scoped constant
-   ```
+    ```js
+    const PI = 3.14 // Block-scoped constant
+    ```
 
 103. ## **What is a decorator**
      _Functions that modify class/class members (requires transpiler)._
 
 
-   ```js
-   function log(target, key) {
-      console.log(`Method ${key} called`);
-   }
+    ```js
+    function log(target, key) {
+      console.log(`Method ${key} called`)
+    }
 
-   class Calculator {
+    class Calculator {
       @log
-      add(a, b) { return a + b; }
-   }
-   ```
+      add(a, b) {
+        return a + b
+      }
+    }
+    ```
 
 104. ## **What is V8 JavaScript engine**
      _Google's high-performance JS engine that:_
 
 
-   - Compiles JS to machine code
-   - Powers Chrome and Node.js
-   - Implements latest ECMAScript
+    - Compiles JS to machine code
+    - Powers Chrome and Node.js
+    - Implements latest ECMAScript
 
 105. ## **What is babel**
      JavaScript transpiler that:
 
 
-   - Converts modern JS to older versions
-   - Supports experimental features
-   - Enables cross-browser compatibility
+    - Converts modern JS to older versions
+    - Supports experimental features
+    - Enables cross-browser compatibility
 
 106. ## **What is RxJS**
      _Reactive programming library using Observables._
 
 
-   ```js
-   import { fromEvent } from 'rxjs';
+    ```js
+    import { fromEvent } from 'rxjs'
 
-   const clicks = fromEvent(document, 'click');
-   clicks.subscribe(() => console.log('Clicked!'));
-   ```
+    const clicks = fromEvent(document, 'click')
+    clicks.subscribe(() => console.log('Clicked!'))
+    ```
 
 107. ## **What is debouncing**
      _Delays execution until pause in events._
 
 
-   ```js
-   function debounce(fn, delay) {
-      let timer;
-      return function() {
-         clearTimeout(timer);
-         timer = setTimeout(() => fn.apply(this, arguments), delay);
-      };
-   }
+    ```js
+    function debounce(fn, delay) {
+      let timer
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => fn.apply(this, arguments), delay)
+      }
+    }
 
-   const search = debounce(() => fetchResults(), 300);
-   searchInput.addEventListener('input', search);
-   ```
+    const search = debounce(() => fetchResults(), 300)
+    searchInput.addEventListener('input', search)
+    ```
 
 108. ## **What is throttling**
      _Limits execution rate._
 
 
-   ```js
-   function throttle(fn, limit) {
-      let lastRun;
-      return function() {
-         if (!lastRun || Date.now() - lastRun >= limit) {
-         fn.apply(this, arguments);
-         lastRun = Date.now();
-         }
-      };
-   }
+    ```js
+    function throttle(fn, limit) {
+      let lastRun
+      return function () {
+        if (!lastRun || Date.now() - lastRun >= limit) {
+          fn.apply(this, arguments)
+          lastRun = Date.now()
+        }
+      }
+    }
 
-   window.addEventListener('scroll', throttle(updateUI, 100));
-   ```
+    window.addEventListener('scroll', throttle(updateUI, 100))
+    ```
 
 109. ## **Coding exercise**
 
-
-   - [ES2022 Top-Level Await](https://github.com/sudheerj/javascript-interview-questions#how-to-use-await-outside-of-async-function-prior-to-es2022)
-   - [JavaScript Questions](https://github.com/lydiahallie/javascript-questions)
+- [ES2022 Top-Level Await](https://github.com/sudheerj/javascript-interview-questions#how-to-use-await-outside-of-async-function-prior-to-es2022)
+- [JavaScript Questions](https://github.com/lydiahallie/javascript-questions)
 
 110. ## **What is the difference between slice and splice**
      | Method   | Returns       | Original Array | Arguments                |
@@ -1705,9 +1707,9 @@
      | splice() | Removed items | Modified       | (start, count, newItems) |
 
 
-   ```js
-   const arr = [1, 2, 3, 4];
-   console.log(arr.slice(1, 3)); // [2, 3]
-   console.log(arr.splice(1, 2, 5)); // [2, 3]
-   console.log(arr); // [1, 5, 4]
-   ```
+    ```js
+    const arr = [1, 2, 3, 4]
+    console.log(arr.slice(1, 3)) // [2, 3]
+    console.log(arr.splice(1, 2, 5)) // [2, 3]
+    console.log(arr) // [1, 5, 4]
+    ```
