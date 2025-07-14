@@ -23,7 +23,8 @@
 ## Basic Types
 
 4. ### **What are the primitive types in TypeScript**
-   - **Built-in types:** String
+   - **Built-in types:**
+     - String
      - Number
      - Boolean
      - Null
@@ -31,7 +32,8 @@
      - Any
      - Void
      - Symbol
-   - **User-defined types:** Arrays
+   - **User-defined types:**
+     - Arrays
      - Enums
      - Classes
      - Interfaces
