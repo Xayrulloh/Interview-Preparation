@@ -12,7 +12,6 @@ physical hardware_
     the key_
 
     **services include:**
-
     - **Compute:** _Amazon EC2, AWS Lambda_
     - **Storage:** _Amazon S3, Amazon EBS_
     - **Databases:** _Amazon RDS, Amazon DynamoDB_
@@ -27,7 +26,6 @@ physical hardware_
     applications on the AWS infrastructure_
 
 4.  ## **How do you launch an EC2 instance?**
-
     1. Open the Amazon EC2 console.
     2. Click “Launch Instance.”
     3. Choose an Amazon Machine Image (AMI).
@@ -47,7 +45,6 @@ physical hardware_
     durability._
 
 6.  ## **Explain the difference between S3 and EBS**
-
     - **S3 (Simple Storage Service):** _Object storage service, used for storing
       and retrieving any amount of data. It is highly durable and accessible
       over the internet._
@@ -62,7 +59,6 @@ physical hardware_
     includes the operating system, application server, and applications._
 
 8.  ## **What is the difference between stopping and terminating an EC2 instance?**
-
     - **Stopping an EC2 instance:** _The instance is shut down, and you will not
       be billed for hourly usage, but the instance’s EBS volume remains and you
       can restart the instance later._
@@ -78,7 +74,6 @@ physical hardware_
     networking environment._
 
 10. ## **What are the benefits of using AWS?**
-
     - **Scalability:** _Easily scale resources up or down as needed._
     - **Cost-effective:** _Pay only for the resources you use._
     - **Security:** _Offers robust security features and compliance
@@ -88,7 +83,6 @@ physical hardware_
     - **Global Reach:** _Availability zones in multiple regions worldwide._
 
 11. ## **What is the difference between public and private subnets?**
-
     - **Public Subnet:** _A subnet that is associated with a route table that
       has a route to an internet gateway. Resources in a public subnet can
       communicate with the internet._
@@ -104,7 +98,6 @@ physical hardware_
     deny their access to AWS resources._
 
 13. ## **How do you secure data in S3?**
-
     - **Enable server-side encryption:** _Encrypt data at rest._
     - **Use IAM policies:** _Control access to your S3 resources._
     - **Enable S3 bucket policies:** _Define rules to grant or deny access to
@@ -152,7 +145,6 @@ physical hardware_
 18. ## **Explain the different types of load balancers in AWS.**
 
     _AWS offers **three types** of load balancers:_
-
     - **Application Load Balancer (ALB):** _Operates at the application layer
       (HTTP/HTTPS), ideal for web applications_
     - **Network Load Balancer (NLB):** _Operates at the transport layer
@@ -169,7 +161,6 @@ physical hardware_
     PostgreSQL, MariaDB, Oracle, and Microsoft SQL Server_
 
 20. ## **What are Security Groups and Network ACLs?**
-
     - **Security Groups:** _Virtual firewalls for your EC2 instances that
       control inbound and outbound traffic. They operate at the instance level._
     - **Network ACLs (Access Control Lists):** _Stateless traffic filters that
@@ -183,7 +174,6 @@ physical hardware_
 21. ## **How do you monitor AWS resources?**
 
     _You can monitor AWS resources using:_
-
     - **Amazon CloudWatch:** _Collects and tracks metrics, monitors log files,
       and sets alarms._
     - **AWS CloudTrail:** _Provides governance, compliance, and operational and
@@ -221,7 +211,6 @@ physical hardware_
     based on real-time demand._
 
 25. ## **What is the difference between RDS and DynamoDB?**
-
     - **Amazon RDS:** _A managed relational database service supporting
       structured query language (SQL) databases. _
     - **Amazon DynamoDB:** _A managed NoSQL database service designed for fast
@@ -311,7 +300,6 @@ physical hardware_
     whenever a specific API request is made._
 
 33. ## **What is the difference between AWS OpsWorks and AWS Elastic Beanstalk?**
-
     - **AWS OpsWorks:** _is a configuration management service that provides
       managed instances of Chef and Puppet, which are automation platforms that
       allow you to automate server configuration, deployment, and management
@@ -330,7 +318,6 @@ physical hardware_
 34. ## **How do you optimize costs in AWS?**
 
     _To optimize costs in AWS, you can:_
-
     - **Use Reserved Instances:** _Purchase reserved capacity for predictable
       workloads._
     - **Auto-scaling:** _Automatically scale your resources based on demand to
@@ -374,7 +361,6 @@ physical hardware_
     and recovery in the event of a disaster._
 
     **Techniques include:**
-
     - **Backups:** _Regularly back up data using AWS services like S3, RDS, and
       EBS snapshots._
     - **Multi-region deployments:** _Deploy applications across multiple AWS
@@ -390,7 +376,6 @@ physical hardware_
     real-time, streaming data._
 
     **It consists of four services:**
-
     - **Kinesis Data Streams:** _For building custom real-time applications._
     - **Kinesis Data Firehose:** _For loading streaming data into AWS data
       stores._
@@ -413,7 +398,6 @@ physical hardware_
 40. ## **How do you secure AWS environments?**
 
     **To secure AWS environments, you can:**
-
     - **Use IAM roles and policies:** _Implement the principle of least
       privilege._
     - **Enable MFA:** _Use multi-factor authentication for secure access._
@@ -472,7 +456,6 @@ physical hardware_
     and best practices to meet regulatory requirements._
 
     **Key strategies include:**
-
     - **AWS Artifact:** _Access AWS compliance reports and agreements._
     - **AWS Config:** _Continuously monitor and record configuration changes._
     - **AWS CloudTrail:** _Record AWS API calls for auditing._

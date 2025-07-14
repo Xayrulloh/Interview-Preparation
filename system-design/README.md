@@ -5,51 +5,43 @@
   _This step covers foundational system design concepts that are essential for
   technical interviews, designing scalable systems, and making architectural
   decisions_
-
   - ### Scalability
 
     **What is it?** _Scalability is the system's ability to handle increased
     load without degrading performance._
 
     **Types:**
-
     - **Vertical Scaling (Scale-Up):** _Add more resources (CPU, RAM) to a
       single machine._
     - **Horizontal Scaling (Scale-Out):** _Add more machines to distribute the
       load._
 
     **When to Use:**
-
     - _When your user base or data volume is growing._
     - _When performance bottlenecks arise due to limited hardware._
 
     **Trade-offs:**
-
     - _Vertical scaling is simple but has limits._
     - _Horizontal scaling requires distributed coordination (e.g., sharding,
       replication)._
 
     **Examples:**
-
     - _Adding more web servers behind a load balancer._
     - _Splitting a monolithic database by user ID._
 
   - ### Latency vs Throughput
 
     **What is it?**
-
     - **Latency:** _Time it takes to process a single request._
     - **Throughput:** _Number of requests processed per unit time._
 
     **When to Focus On:**
-
     - **Latency:** _Real-time applications like chat, video calls._
     - **Throughput:** _Background processing, analytics systems._
 
     **Trade-off:** _Batching requests increases throughput but adds latency._
 
     **Examples:**
-
     - **Kafka:** _Streams can process millions of events per second (high
       throughput)._
     - **REST APIs** _Should respond within 200ms for good user experience (low
@@ -59,19 +51,16 @@
 
     **What is it?** _In distributed systems, you can only have two out of
     three:_
-
     - **Consistency:** _All nodes see the same data._
     - **Availability:** _Every request gets a response (even during failures)._
     - **Partition Tolerance:** _System continues working even with network
       splits._
 
     **When to Use:**
-
     - **Consistency:** _Banking, inventory systems._
     - **Availability:** _Social networks, logging systems._
 
     **Examples:**
-
     - **CP:** _HBase, MongoDB (strong consistency mode)._
     - **AP:** _DynamoDB, CouchDB._
 
@@ -81,19 +70,16 @@
     to ensure reliability and responsiveness._
 
     **When to Use:**
-
     - _Any multi-server system._
     - _To prevent bottlenecks or server crashes._
 
     **Common Strategies:**
-
     - _Round Robin_
     - _Least Connections_
     - _Weighted Routing_
     - _IP Hashing_
 
     **Benefits:**
-
     - _Fault tolerance_
     - _Better resource utilization_
     - _Zero-downtime deployments_
@@ -104,18 +90,15 @@
     memory)._
 
     **When to Use:**
-
     - _Repeated queries with same response._
     - _Reduce database or API load._
 
     **Types:**
-
     - _In-memory (Redis, Memcached)_
     - _CDN (Cloudflare, Akamai)_
     - _Browser caching_
 
     **Challenges:**
-
     - _Cache invalidation_
     - _Stale data_
     - _Cache stampedes_
@@ -126,18 +109,15 @@
     pieces (shards)._
 
     **When to Use:**
-
     - _Single DB can't handle the volume._
     - _Faster access to subsets of data._
 
     **Partitioning Strategies:**
-
     - _Hash-based (e.g., user ID)_
     - _Range-based (e.g., date ranges)_
     - _Directory-based (lookup table)_
 
     **Challenges:**
-
     - _Cross-shard queries_
     - _Re-sharding_
     - _Hot partitions_
@@ -148,17 +128,14 @@
     tolerance._
 
     **When to Use:**
-
     - _To serve more read traffic._
     - _For disaster recovery._
 
     **Types:**
-
     - _Master-Slave (Primary-Replica)_
     - _Multi-Master_
 
     **Challenges:**
-
     - _Replication lag_
     - _Write conflicts in multi-master_
 
@@ -168,14 +145,12 @@
     distributed system._
 
     **Models:**
-
     - **Strong Consistency:** _All users see the same data._
     - **Eventual Consistency:** _Data becomes consistent over time._
     - **Causal Consistency, Read-Your-Writes, Monotonic Reads:** _Middle-ground
       models._
 
     **When to Use:**
-
     - _Strong: Financial systems_
     - _Eventual: Social media feeds_
 
@@ -185,17 +160,14 @@
     process them asynchronously._
 
     **When to Use:**
-
     - _Background tasks (e.g., sending emails)_
     - _Buffering burst traffic_
     - _Decoupling services_
 
     **Examples:**
-
     - _Kafka, RabbitMQ, Amazon SQS_
 
     **Challenges:**
-
     - _Message ordering_
     - _Retry and duplication_
     - _Dead-letter queues_
@@ -205,12 +177,10 @@
     **What is it?** _Restricting how often a client can make a request._
 
     **When to Use:**
-
     - _Preventing abuse (e.g., login brute force)_
     - _Protecting services from overload_
 
     **Techniques:**
-
     - _Token Bucket_
     - _Leaky Bucket_
     - _Fixed/Sliding Window Counters_
@@ -220,12 +190,10 @@
     **What is it?** _Backup systems that take over when a primary system fails._
 
     **When to Use:**
-
     - _Mission-critical applications_
     - _Disaster recovery setups_
 
     **Examples:**
-
     - _Active-passive database setup_
     - _Load balancers with multiple backends_
 
@@ -235,17 +203,14 @@
     in real-time._
 
     **When to Use:**
-
     - _Always, especially in production_
 
     **Tools:**
-
     - _Prometheus, Grafana, Datadog_
     - _ELK Stack (Elasticsearch, Logstash, Kibana)_
     - _OpenTelemetry_
 
     **Components:**
-
     - _Metrics (CPU, memory, requests/sec)_
     - _Logs (structured, error logs)_
     - _Traces (request flows across services)_
@@ -256,13 +221,11 @@
     the result._
 
     **When to Use:**
-
     - _Payment systems_
     - _Account creation APIs_
     - _Retry logic_
 
     **Techniques:**
-
     - _Use unique request IDs or tokens_
     - _Store operation history_
 
@@ -272,12 +235,10 @@
     overwhelmed._
 
     **When to Use:**
-
     - _High-throughput stream processing_
     - _Queued systems_
 
     **Strategies:**
-
     - _Drop or delay messages_
     - _Pause upstream producers_
 
@@ -287,12 +248,10 @@
     dynamic environments._
 
     **When to Use:**
-
     - _Microservice architecture_
     - _Container orchestration (e.g., Kubernetes)_
 
     **Tools:**
-
     - _DNS-based discovery_
     - _etcd, Consul, Eureka_
 
@@ -301,7 +260,6 @@
   _This section explores the essential components used to build scalable,
   reliable, and efficient systems. These concepts are the "building materials"
   of modern architecture._
-
   - ### APIs and API Gateway
 
     **What is it?** _An API (Application Programming Interface) defines how
@@ -309,19 +267,16 @@
     client requests to different backend services._
 
     **When to Use:**
-
     - _To decouple frontend and backend._
     - _To manage microservices._
     - _To apply rate-limiting, authentication, and logging in one place._
 
     **Common Patterns:**
-
     - _REST_
     - _GraphQL_
     - _gRPC_
 
     **Tools:**
-
     - _Kong, NGINX, AWS API Gateway, Apigee_
 
   - ### Databases
@@ -330,17 +285,14 @@
     efficiently._
 
     **Types:**
-
     - **Relational (SQL):** _PostgreSQL, MySQL_
     - **Non-Relational (NoSQL):** _MongoDB, DynamoDB, Cassandra_
 
     **When to Use:**
-
     - **SQL:** _Structured, transactional data (e.g., user records)_
     - **NoSQL:** _Flexible, large-scale data (e.g., user activity logs)_
 
     **Design Concepts:**
-
     - _Indexing_
     - _Joins_
     - _Transactions (ACID vs BASE)_
@@ -352,16 +304,13 @@
     load._
 
     **When to Use:**
-
     - _Frequently accessed or expensive-to-calculate data_
 
     **Types:**
-
     - **In-memory:** _Redis, Memcached_
     - **Distributed caches:** _Hazelcast, Couchbase_
 
     **Challenges:**
-
     - _Cache invalidation_
     - _Eviction strategies (LRU, LFU, TTL)_
     - _Write-through vs write-back vs write-around_
@@ -372,12 +321,10 @@
     geographically distributed edge servers._
 
     **When to Use:**
-
     - _Global apps with heavy media_
     - _To reduce latency and origin load_
 
     **Providers:**
-
     - _Cloudflare, Akamai, Fastly, Amazon CloudFront_
 
   - ### Load Balancers
@@ -386,17 +333,14 @@
     across backend servers._
 
     **When to Use:**
-
     - _Scale horizontally_
     - _Ensure high availability and failover_
 
     **Types:**
-
     - _Layer 4 (Transport) vs Layer 7 (Application)_
     - _Active-Passive vs Active-Active_
 
     **Examples:**
-
     - _NGINX, HAProxy, AWS ELB_
 
   - ### Message Brokers / Queues
@@ -405,16 +349,13 @@
     messages between components._
 
     **When to Use:**
-
     - _Decouple producers and consumers_
     - _Buffer high-load tasks (e.g., notifications, processing)_
 
     **Types:**
-
     - _Kafka (stream), RabbitMQ, SQS, NATS_
 
     **Considerations:**
-
     - _Message ordering_
     - _Durability_
     - _Delivery guarantees (at-most-once, at-least-once, exactly-once)_
@@ -425,16 +366,13 @@
     centers._
 
     **When to Use:**
-
     - _Large-scale data (e.g., videos, backups, logs)_
     - _High availability_
 
     **Examples:**
-
     - _Amazon S3, Google Cloud Storage, HDFS, Ceph_
 
     **Features:**
-
     - _Replication_
     - _Erasure coding_
     - _Tiered storage_
@@ -445,12 +383,10 @@
     across environments._
 
     **When to Use:**
-
     - _Multi-env deployments (dev/stage/prod)_
     - _Infrastructure as Code (IaC)_
 
     **Tools:**
-
     - _Ansible, Terraform, Chef, Puppet_
 
   - ### Service Mesh
@@ -459,12 +395,10 @@
     observability, and security in microservices._
 
     **When to Use:**
-
     - _Kubernetes or microservices architectures_
     - _Need for tracing, retries, mTLS, policies_
 
     **Examples:**
-
     - _Istio, Linkerd, Consul Connect_
 
   - ### Observability Stack
@@ -473,12 +407,10 @@
     understand system behavior._
 
     **When to Use:**
-
     - _Always (especially in prod)_
     - _Debugging or performance optimization_
 
     **Tools:**
-
     - _Prometheus + Grafana_
     - _ELK stack (Elasticsearch, Logstash, Kibana)_
     - _Jaeger, OpenTelemetry, Datadog_
@@ -488,27 +420,23 @@
   _This section covers common system design interview questions that require
   end-to-end architecture thinking. Each example highlights critical components,
   trade-offs, and justifications._
-
   - ### URL Shortener (e.g., bit.ly)
 
     **What is it?** _A service that takes a long URL and returns a shortened
     version._
 
     **Key Requirements:**
-
     - _Short unique ID generation_
     - _Fast redirection (low latency)_
     - _Analytics (click count, geo info)_
 
     **Components:**
-
     - _Hashing or Base62 ID generator_
     - _Database to store mappings (URL ↔ ID)_
     - _Caching for hot links_
     - _Load balancer, API gateway_
 
     **Challenges:**
-
     - _Collision handling_
     - _Database scalability (partitioning by hash)_
 
@@ -517,17 +445,14 @@
     **What is it?** _A system to limit how frequently a user can make requests._
 
     **Use Cases:**
-
     - _Prevent abuse (login attempts, API usage)_
     - _Ensure fairness in multi-tenant systems_
 
     **Techniques:**
-
     - _Token Bucket, Leaky Bucket, Fixed Window, Sliding Log_
     - _Redis or in-memory store for counters_
 
     **Key Design Points:**
-
     - _Per-user/IP throttling_
     - _Global vs per-endpoint limits_
 
@@ -536,13 +461,11 @@
     **What is it?** _Real-time or asynchronous message exchange between users._
 
     **Core Features:**
-
     - _Message queues (Kafka, RabbitMQ)_
     - _Delivery receipts, read status_
     - _User presence tracking_
 
     **Challenges:**
-
     - _Message ordering & consistency_
     - _Offline message delivery_
     - _Scalability under high fan-out (group chats)_
@@ -553,13 +476,11 @@
     or interests._
 
     **Feed Generation Models:**
-
     - _Pull-based (on read)_
     - _Push-based (on write)_
     - _Hybrid (pre-generate feed for active users)_
 
     **Scalability Considerations:**
-
     - _Fan-out writes vs reads_
     - _Use of queues, denormalized storage_
     - _Caching & timeline sharding_
@@ -570,14 +491,12 @@
     metadata._
 
     **Core Components:**
-
     - _Distributed storage (S3, HDFS, GCS)_
     - _Metadata service (file names, structure)_
     - _Chunking large files_
     - _Versioning & access control_
 
     **Challenges:**
-
     - _Data deduplication_
     - _Secure sharing and permissions_
 
@@ -586,13 +505,11 @@
     **What is it?** _A platform that allows users to stream video content._
 
     **Design Focus:**
-
     - _Upload pipeline: transcoding, chunking, storage_
     - _CDN distribution for low latency_
     - _Playback buffering, adaptive bitrate (ABR)_
 
     **Scaling Challenges:**
-
     - _Storage costs for replicas_
     - _Live streaming vs on-demand differences_
 
@@ -602,13 +519,11 @@
     channels._
 
     **Key Features:**
-
     - _Multi-channel dispatch (email, push, SMS)_
     - _User preferences & retries_
     - _Asynchronous processing via queues_
 
     **Challenges:**
-
     - _Idempotency for retries_
     - _Rate limiting for third-party APIs_
 
@@ -617,14 +532,12 @@
     **What is it?** _A platform to connect drivers and riders in real time._
 
     **Core Components:**
-
     - _Real-time location tracking_
     - _Matching engine (drivers ↔ riders)_
     - _Pricing algorithm (surge, distance)_
     - _Trip lifecycle management_
 
     **Scaling Challenges:**
-
     - _Geospatial indexing (e.g., Uber's H3)_
     - _Low-latency event systems_
 
@@ -633,14 +546,12 @@
     **What is it?** _Online system to display, sell, and manage products._
 
     **Key Subsystems:**
-
     - _Product catalog (search, filter)_
     - _Shopping cart_
     - _Checkout flow & payment_
     - _Order fulfillment, warehouse updates_
 
     **Tech Concerns:**
-
     - _Inventory consistency_
     - _User personalization_
     - _Search scalability (Typesense, Elasticsearch)_
@@ -650,17 +561,14 @@
     **What is it?** _Tracks user behavior and aggregates it for reporting._
 
     **Key Features:**
-
     - _Real-time event ingestion (Kafka, Flink)_
     - _Data pipeline (ETL → Data Warehouse)_
     - _User-level metrics, dashboards_
 
     **Storage Options:**
-
     - _ClickHouse, BigQuery, Redshift_
 
     **Challenges:**
-
     - _Data volume and deduplication_
     - _Event schema evolution_
 
@@ -670,13 +578,11 @@
     processing._
 
     **Components:**
-
     - _PCI-compliant storage_
     - _Idempotent transaction creation_
     - _Webhook system for external notification_
 
     **Concerns:**
-
     - _Atomicity (debit one account, credit another)_
     - _Rollbacks and reconciliation_
     - _Third-party API errors_
@@ -686,20 +592,17 @@
   _This section provides a structured approach to cracking system design
   interviews, including preparation strategies, frameworks, and evaluation
   criteria._
-
   - ### Understanding the Interview Format
 
     **What is it?** _System design interviews assess your ability to design
     large-scale, distributed systems under constraints._
 
     **Common Settings:**
-
     - _45–60 minute sessions_
     - _Whiteboard or virtual design tools_
     - _Focus on trade-offs, scalability, and clarity_
 
     **What Interviewers Look For:**
-
     - _Communication & structure_
     - _Technical depth & breadth_
     - _Handling edge cases & trade-offs_
@@ -709,7 +612,6 @@
     **What is it?** _A consistent method to approach any system design problem._
 
     **Steps:**
-
     1. **Clarify Requirements** _Ask questions to define core vs. optional
        features._
     2. **High-Level Design** _Draw components: clients, services, databases,
@@ -724,19 +626,16 @@
     **What is it?** _Mental models that help you structure design questions._
 
     **1. RISE (Requirements, Interfaces, Storage, Estimate):**
-
     - _Start with user goals and system constraints_
     - _Define APIs and user interactions_
     - _Design data storage and structure_
     - _Estimate usage, traffic, and scale_
 
     **2. SCALE (Storage, Cache, Availability, Load balancing, Elasticity):**
-
     - _Focus on scaling a known system_
     - _Drives discussion on performance bottlenecks_
 
     **3. SPACE (Security, Performance, Availability, Cost, Experience):**
-
     - _Balance system goals beyond just scalability_
     - _Great for open-ended or product-oriented systems_
 
@@ -746,13 +645,11 @@
     assumptions._
 
     **Common Examples:**
-
     - _How many requests/sec will the system serve?_
     - _How much storage per user per day?_
     - _Data retention costs over 1 year?_
 
     **Why It Matters:**
-
     - _Justifies architecture choices_
     - _Shows realism and engineering maturity_
 
@@ -762,14 +659,12 @@
     want to see you reason through them._
 
     **Typical Trade-offs:**
-
     - _Consistency vs Availability (CAP) and Latency_
     - _Read vs Write optimization_
     - _Cost vs Performance_
     - _Speed to build vs Long-term scalability_
 
     **Best Practices:**
-
     - _Be explicit when choosing one side_
     - _Mention fallback strategies_
 
@@ -777,14 +672,12 @@
 
   _This section offers practical tips, study resources, and exercises to help
   you master system design through consistent and focused practice._
-
   - ### How to Structure Your Preparation
 
     **Why It Matters:** _System design is a skill best built over time through
     repetition and exposure to real-world problems._
 
     **Preparation Strategy:**
-
     - _Start with fundamentals (latency, throughput, CAP theorem, caching,
       etc.)_
     - _Learn key components (load balancers, databases, queues, etc.)_
@@ -816,7 +709,6 @@
     [System Design Interview Questions (Handbook)](https://www.systemdesignhandbook.com/blog/system-design-interview-questions/)
 
     **6. Useful You Tube Videos**
-
     - **[Google SWE System Design](https://www.youtube.com/playlist?list=PLjTveVh7FakKjb4UYzUazqBNNF-WGurXp)**
     - **[System Design by Gaurav Sen](https://youtube.com/playlist?list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&feature=shared)**
     - **[Harvard Lecture](https://www.youtube.com/watch?v=-W9F__D3oY4)**
@@ -840,19 +732,16 @@
   - ### Systems to Try Designing (Sorted by Complexity)
 
     **Beginner:**
-
     - _URL shortener_
     - _Rate limiter_
     - _Image upload service_
 
     **Intermediate:**
-
     - _Chat/messaging app_
     - _Feed system (Instagram, Twitter)_
     - _Video streaming platform_
 
     **Advanced:**
-
     - _Distributed file storage (Dropbox)_
     - _Ride-sharing app (Uber)_
     - _E-commerce marketplace_
@@ -861,13 +750,11 @@
   - ### Tracking Progress
 
     **What to Track:**
-
     - _Number of designs practiced_
     - _Feedback and mistakes_
     - _Knowledge gaps (e.g., protocols, algorithms)_
 
     **How to Stay Consistent:**
-
     - _Use Notion, Obsidian, or a simple doc to journal lessons_
     - _Build a “System Design Portfolio” with your drawings_
     - _Revisit hard problems monthly to reinforce learning_
