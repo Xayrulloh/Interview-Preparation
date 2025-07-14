@@ -27,7 +27,7 @@
    - DML (INSERT, UPDATE, DELETE) \- _to work with data actions_
    - DQL (SELECT) \- _to retrieve data_
    - TCL (COMMIT, ROLLBACK) \- _to work with transactions_
-   - DCL (GRANT, REVOKE) \- _to grant/provoke permission_
+   - DCL (GRANT, REVOKE) \- _to grant/revoke permission_
 
 6. ### **SELECT Statement Fundamentals**
    - Retrieves data from tables
@@ -56,7 +56,7 @@
    _Saved SQL queries acting as virtual tables_
 
 10. ### **Indexes in PostgreSQL**
-    - **B-Tree:\*** Default ordered index\*
+    - **B-Tree:** _Default ordered index_
     - **Hash:** _Fast equality checks_
     - **Composite:** _Multiple columns_
     - **Partial:** _Conditional indexing_
