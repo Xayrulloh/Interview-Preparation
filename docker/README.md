@@ -2,143 +2,144 @@
 
 1. ## What is _Docker_, and how is it different from _virtual machines_?
 
-   **Docker** is a **containerization** platform that simplifies application
+   _**Docker** is a **containerization** platform that simplifies application
    deployment by ensuring software and its dependencies run uniformly on any
-   infrastructure, from laptops to servers to the cloud.
+   infrastructure, from laptops to servers to the cloud._
 
-   Using Docker allows you to **bundle code and dependencies** into a container
+   _Using Docker allows you to **bundle code and dependencies** into a container
    image you can then run on any Docker-compatible environment. This approach is
    a significant improvement over traditional virtual machines, which are less
-   efficient and come with higher overheads.
+   efficient and come with higher overheads._
 
    ### Key Docker Components
-   - **Docker Daemon**: A persistent background process that manages and
-     executes containers.
-   - **Docker Engine**: The CLI and API for interacting with the daemon.
-   - **Docker Registry**: A repository for Docker images.
+   - **Docker Daemon**: _A persistent background process that manages and
+     executes containers._
+   - **Docker Engine**: _The CLI and API for interacting with the daemon._
+   - **Docker Registry**: _A repository for Docker images._
 
    ### Core Building Blocks
-   - **Dockerfile**: A text document containing commands that assemble a
-     container image.
-   - **Image**: A standalone, executable package containing everything required
-     to run a piece of software.
-   - **Container**: A runtime instance of an image.
+   - **Dockerfile**: _A text document containing commands that assemble a
+     container image._
+   - **Image**: _A standalone, executable package containing everything required
+     to run a piece of software._
+   - **Container**: _A runtime instance of an image._
 
    ### Virtual Machines vs. Docker Containers
 
    #### Virtual Machines
    - **Advantages**:
-   - Isolation: VMs run separate operating systems, providing strict application
-     isolation.
+     - **Isolation:** VMs run separate operating systems, providing strict
+       application isolation.
 
    - **Inefficiencies**:
-   - Resource Overhead: Each VM requires its operating system, consuming RAM,
-     storage, and CPU. Running multiple VMs can lead to redundant resource use.
-   - Slow Boot Times: Booting a VM involves starting an entire OS, slowing down
-     deployment.
+     - **Resource Overhead:** _Each VM requires its operating system, consuming
+       RAM, storage, and CPU. Running multiple VMs can lead to redundant
+       resource use._
+     - **Slow Boot Times:** _Booting a VM involves starting an entire OS,
+       slowing down deployment._
 
    #### Containers
    - **Efficiencies**:
-   - Resource Optimizations: As containers share the host OS kernel, they are
-     exceptionally lightweight, requiring minimal RAM and storage.
-   - Rapid Deployment: Containers start almost instantaneously, accelerating
-     both development and production.
+     - **Resource Optimizations:** _As containers share the host OS kernel, they
+       are exceptionally lightweight, requiring minimal RAM and storage._
+     - **Rapid Deployment:** _Containers start almost instantaneously,
+       accelerating both development and production._
 
    - **Isolation Caveats**:
-   - Application-Level Isolation: While Docker ensures the separation of
-     containers from the host and other containers, it relies on the host OS for
-     underlying resources.
+     - **Application-Level Isolation:** _While Docker ensures the separation of
+       containers from the host and other containers, it relies on the host OS
+       for underlying resources._
 
    ### Core Unique Features of Docker
-   - **Layered File System**: Docker images are composed of layers, each
+   - **Layered File System**: _Docker images are composed of layers, each
      representing a set of file changes. This structure aids in minimizing image
-     size and optimizing builds.
+     size and optimizing builds._
 
-   - **Container Orchestration**: Technologies such as Kubernetes and Docker
+   - **Container Orchestration**: _Technologies such as Kubernetes and Docker
      Swarm enable the management of clusters of containers, providing features
-     like load balancing, scaling, and automated roll-outs and rollbacks.
+     like load balancing, scaling, and automated roll-outs and rollbacks._
 
-   - **Interoperability**: Docker containers are portable, running consistently
+   - **Interoperability**: _Docker containers are portable, running consistently
      across diverse environments. Additionally, Docker complements numerous
      other tools and platforms, including Jenkins for CI/CD pipelines and AWS
-     for cloud services. <br>
+     for cloud services._ <br>
 
 2. ## Can you explain what a _Docker image_ is?
 
-   A **Docker image** is a lightweight, standalone, and executable software
+   _A **Docker image** is a lightweight, standalone, and executable software
    package that includes everything needed to run a piece of software, including
    the code, a runtime, libraries, environment variables, and configuration
-   files.
+   files._
 
-   It provides consistency across environments by ensuring that each instance of
-   an image is identical, a key principle of **Docker's
-   build-once-run-anywhere** philosophy.
+   _It provides consistency across environments by ensuring that each instance
+   of an image is identical, a key principle of **Docker's
+   build-once-run-anywhere** philosophy._
 
    ### Image vs. Container
-   - **Image**: A static package that encompasses everything the application
-     requires to run.
-   - **Container**: An operating instance of an image, running as a process on
-     the host machine.
+   - **Image**: _A static package that encompasses everything the application
+     requires to run._
+   - **Container**: _An operating instance of an image, running as a process on
+     the host machine._
 
    ### Layered File System
 
-   Docker images comprise multiple layers, each representing a distinct file
+   _Docker images comprise multiple layers, each representing a distinct file
    system modification. Layers are read-only, and the final container layer is
-   read/write, which allows for efficiency and flexibility.
+   read/write, which allows for efficiency and flexibility._
 
    ### Key Components
-   - **Operating System**: Traditional images have a full or bespoke OS tailored
-     for the application's needs. Recent developments like "distro-less" images,
-     however, focus solely on application dependencies.
-   - **Application Code**: Your code and files, which are specified during the
-     image build.
+   - **Operating System**: _Traditional images have a full or bespoke OS
+     tailored for the application's needs. Recent developments like
+     "distro-less" images, however, focus solely on application dependencies._
+   - **Application Code**: _Your code and files, which are specified during the
+     image build._
 
    ### Image Registries
 
-   Images are stored in **Docker image registries** like Docker Hub, which
+   _Images are stored in **Docker image registries** like Docker Hub, which
    provides a central location for image management and sharing. You can
    download existing images, modify them, and upload the modified versions,
-   allowing teams to collaborate efficiently.
+   allowing teams to collaborate efficiently._
 
    ### How to Build an Image
-   1. **Dockerfile**: Describes the steps and actions required to set up the
-      image, from selecting the base OS to copying the application code.
-   2. **Build Command**: Docker's build command uses the Dockerfile as a
-      blueprint to create the image.
+   1. **Dockerfile**: _Describes the steps and actions required to set up the
+      image, from selecting the base OS to copying the application code._
+   2. **Build Command**: _Docker's build command uses the Dockerfile as a
+      blueprint to create the image._
 
    ### Advantages of Docker Images
-   - **Portability**: Docker images ensure consistent behavior across different
-     environments, from development to production.
-   - **Reproducibility**: If you're using the same image, you can expect the
-     same application behavior.
-   - **Efficiency**: The layered filesystem reduces redundancy and accelerates
-     deployment.
-   - **Security**: Distinct layers permit granular security control.
+   - **Portability**: _Docker images ensure consistent behavior across different
+     environments, from development to production._
+   - **Reproducibility**: _If you're using the same image, you can expect the
+     same application behavior._
+   - **Efficiency**: _The layered filesystem reduces redundancy and accelerates
+     deployment._
+   - **Security**: _Distinct layers permit granular security control._
 
    ### Best Practices for Docker files
-   - Use the official base image if possible.
-   - Aim for minimal layers for better efficiency.
-   - Regularly update the base image to ensure security and feature updates.
-   - Reduce the number of packages installed to minimize security risks. <br>
+   - _Use the official base image if possible._
+   - _Aim for minimal layers for better efficiency._
+   - _Regularly update the base image to ensure security and feature updates._
+   - _Reduce the number of packages installed to minimize security risks._ <br>
 
 3. ## How does a _Docker container_ differ from a _Docker image_?
 
-   **Docker images** serve as templates for containers, whereas **Docker
-   containers** are running instances of those images.
+   _**Docker images** serve as templates for containers, whereas **Docker
+   containers** are running instances of those images._
 
    ### Key Distinctions
-   - **State**: Containers encapsulate both the application code and its runtime
-     environment in a stable and consistent **state**. In contrast, images are
-     passive and don't change once created.
+   - **State**: _Containers encapsulate both the application code and its
+     runtime environment in a stable and consistent **state**. In contrast,
+     images are passive and don't change once created._
 
-   - **Mutable vs Immutable**: Containers, like any running process, can modify
+   - **Mutable vs Immutable**: _Containers, like any running process, can modify
      their state. In contrast, images are **immutable** and do not change once
-     built.
+     built._
 
-   - **Disk Usage**: Containers have both writable layers (such as logs or
+   - **Disk Usage**: _Containers have both writable layers (such as logs or
      configuration files) and read-only layers (the image layers), potentially
      leading to increased disk usage over time. Docker's use of layered storage,
-     however, limits this growth.
+     however, limits this growth._
 
    Images, on the other hand, are solely read-only, meaning each instance based
    on the same image doesn't consume additional disk space.

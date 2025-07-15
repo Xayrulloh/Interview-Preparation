@@ -76,10 +76,10 @@
 
 9. ## **What are the features of RESTful Web Services**
 
-   The service is based on the Client Server model The service uses HTTP
+   The service is based on the Client Server model. The service uses HTTP
    Protocol for fetching data/resources, query execution, or any other
    functions. The medium of communication between the client and server is
-   called “Messaging” Resources are accessible to the service by means of URIs
+   called “Messaging”. Resources are accessible to the service by means of URIs.
    These services can also use SOAP services as implementation protocol to REST
    architectural pattern
 

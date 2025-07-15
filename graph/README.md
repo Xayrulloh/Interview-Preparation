@@ -78,16 +78,16 @@
    **Apollo Client**
    - Frontend GraphQL library
    - Features:
-   - Smart caching
-   - Local state management
-   - Optimized data fetching
+     - Smart caching
+     - Local state management
+     - Optimized data fetching
 
    **Apollo Server**
    - Backend GraphQL server
    - Supports:
-   - All major Node.js frameworks
-   - Easy schema setup
-   - Data source integrations
+     - All major Node.js frameworks
+     - Easy schema setup
+     - Data source integrations
 
    _"Batteries-included GraphQL toolkit"_
 
