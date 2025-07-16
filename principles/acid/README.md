@@ -17,16 +17,16 @@ failures or concurrent access.
   COMMIT;
   ```
 
-  Real-world analogy: Imagine a bank transfer between two accounts. The money
-  must both leave one account and arrive in the other - it can't just disappear
-  from the source without reaching the destination.
+  **Real-world analogy:** _Imagine a bank transfer between two accounts. The
+  money must both leave one account and arrive in the other - it can't just
+  disappear from the source without reaching the destination._
 
 <br>
 
 - ## **Consistency:**
 
-  **Follow the rules** - A transaction brings the database from one valid state
-  to another, maintaining all defined rules (constraints, cascades, triggers).
+  **Follow the rules** - _A transaction brings the database from one valid state
+  to another, maintaining all defined rules (constraints, cascades, triggers)._
 
   ```sql
   -- Database has constraint: balance >= 0
@@ -36,16 +36,14 @@ failures or concurrent access.
   COMMIT;
   ```
 
-  **Example:** If a database requires that every order must have a customer, the
-  consistency property prevents adding an order without a valid customer
-  reference.
-
-<br>
+  **Example:** _If a database requires that every order must have a customer,
+  the consistency property prevents adding an order without a valid customer
+  reference. _ <br>
 
 - ## **Isolation:**
 
-  **Concurrent transactions don't interfere:** Transactions execute as if they
-  were sequential, even when running concurrently.
+  **Concurrent transactions don't interfere:** _Transactions execute as if they
+  were sequential, even when running concurrently._
 
   ```sql
   -- Transaction 1
@@ -67,8 +65,8 @@ failures or concurrent access.
 
 - ## **Durability:**
 
-  **Once committed, always there:** Once a transaction is committed, it remains
-  committed even in the event of system failure.
+  **Once committed, always there:** _Once a transaction is committed, it remains
+  committed even in the event of system failure._
 
   ```sql
   BEGIN;

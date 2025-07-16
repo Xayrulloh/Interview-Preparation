@@ -1,14 +1,14 @@
 # <center>OOP</center>
 
-Object-oriented programming (OOP) is a programming paradigm that structures
+_Object-oriented programming (OOP) is a programming paradigm that structures
 software design around objects, rather than functions and logic. It organizes
 code into reusable modules called classes that encapsulate data (attributes) and
-methods (functions) that operate on that data.
+methods (functions) that operate on that data._
 
 - ## **Encapsulation:**
-  - **private** (accessible only within class)
-  - **protected** (accessible within or subclass)
-  - **public** (accessible anywhere)
+  - **private** _(accessible only within class)_
+  - **protected** _(accessible within or subclass)_
+  - **public** _(accessible anywhere)_
 
   ```ts
   class BankAccount {
@@ -66,9 +66,9 @@ methods (functions) that operate on that data.
 
 - ## **Abstraction:**
 
-  Like interface and other classes which are implementing don’t need to know
+  _Like interface and other classes which are implementing don’t need to know
   what’s going on inside it. (Do you really know what happens when you press on
-  button to switch on your TV)
+  button to switch on your TV)_
 
   ```ts
   // Interface
@@ -166,8 +166,8 @@ methods (functions) that operate on that data.
 
 - ## **Inheritance:**
 
-  Inherit other classes (Person \-\> Father, Person \-\> Mather, Son \-\>
-  Father, Mother)
+  _Inherit other classes (Person \-\> Father, Person \-\> Mather, Son \-\>
+  Father, Mother)_
 
   ```ts
   // Base class

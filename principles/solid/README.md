@@ -2,9 +2,9 @@
 
 - ## **S:** _Single Responsibility_
 
-  Imagine a baker who is responsible for baking bread. The baker’s role is to
+  _Imagine a baker who is responsible for baking bread. The baker’s role is to
   focus on the task of baking bread, ensuring that the bread is of high quality,
-  properly baked, and meets the bakery’s standards.
+  properly baked, and meets the bakery’s standards._
 
   ```ts
   // Bad: A class with multiple responsibilities
@@ -56,13 +56,13 @@
 
 - ## **O:** _Open/Closed_
 
-  This principle states that “**Software entities (classes, modules, functions,
+  _This principle states that “**Software entities (classes, modules, functions,
   etc.) should be open for extension, but closed for modification**” which means
-  you should be able to extend a class behavior, without modifying it.Imagine
+  you should be able to extend a class behavior, without modifying it. Imagine
   you have a class called `PaymentProcessor` that processes payments for an
   online store. Initially, the `PaymentProcessor` class only supports processing
   payments using credit cards. However, you want to extend its functionality to
-  also support processing payments using PayPal.
+  also support processing payments using PayPal._
 
   ```ts
   // Bad: Not open for extension
@@ -119,13 +119,13 @@
 
 - ## **L:** _Liskov’s Substitution_
 
-  The principle was introduced by Barbara Liskov in 1987 and according to this
+  _The principle was introduced by Barbara Liskov in 1987 and according to this
   principle “**Derived or child classes must be substitutable for their base or
   parent classes**“. One of the classic examples of this principle is a
   rectangle having four sides. A rectangle’s height can be any value and width
   can be any value. A square is a rectangle with equal width and height. So we
   can say that we can extend the properties of the rectangle class into square
-  class.
+  class._
 
   ```ts
   // Bad: Violates LSP
@@ -210,7 +210,7 @@
 
 - ## **I:** _Interface Segregation_
 
-  This principle is the first principle that applies to Interfaces instead of
+  _This principle is the first principle that applies to Interfaces instead of
   classes in SOLID and it is similar to the single responsibility principle. It
   states that “**do not force any client to implement an interface which is
   irrelevant to them**“.Suppose if you enter a restaurant and you are a pure
@@ -218,7 +218,7 @@
   includes vegetarian items, non-vegetarian items, drinks, and sweets. In this
   case, as a customer, you should have a menu card which includes only
   vegetarian items, not everything which you don’t eat in your food. Here the
-  menu should be different for different types of customers.
+  menu should be different for different types of customers._
 
   ```ts
   // Bad: One large interface
@@ -296,13 +296,13 @@
 
 - ## **D:** _Dependency Inversion_
 
-  The Dependency Inversion Principle (DIP) is a principle in object-oriented
+  _The Dependency Inversion Principle (DIP) is a principle in object-oriented
   design that states that “**High-level modules should not depend on low-level
   modules. Both should depend on abstractions**“. Let’s understand the
   Dependency Inversion Principle using an example: In a software development
   team, developers depend on an abstract version control system (e.g., Git) to
   manage and track changes to the codebase. They don’t depend on specific
-  details of how Git works internally.
+  details of how Git works internally._
 
   ```ts
   // Bad: High-level module depends on low-level module
