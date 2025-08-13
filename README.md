@@ -34,3 +34,5 @@ series_
 ## [Principles](principles/README.md)
 
 ## [System Design Interview Preparation](system-design/README.md)
+
+## [Behavioral Interview Preparation](behavioral/README.md)
