@@ -17,6 +17,7 @@
    | Functional | First-class functions, closures | Array.map(), callbacks         |
 
 3. ## **Why do we call javascript a dynamic language**
+
    - Variables can hold any data type
    - Types are determined at runtime
    - No compile-time type checking
@@ -30,6 +31,7 @@
 4. ## **Is JavaScript a pass-by-reference or pass-by-value language**
 
    _JavaScript is always pass-by-value, but:_
+
    - Primitives pass the actual value
    - Objects pass a copy of the reference
 
@@ -50,7 +52,9 @@
    ```
 
 5. ## **What are the different data types present in javascript**
+
    - **Primitive Types:**
+
      - String, Number, Boolean
      - Null, Undefined
      - Symbol, BigInt (ES6+)
@@ -71,6 +75,7 @@
 7. ## **What is Symbol primitive**
 
    _Unique identifiers used for:_
+
    - Creating unique object properties
    - Avoiding naming collisions
    - Defining well-known symbols
@@ -110,6 +115,7 @@
    ```
 
    **Key Points:**
+
    - Only applies to `let` and `const` (not `var`).
    - TDZ ends once the variable is declared.
 
@@ -128,6 +134,7 @@
     ```
 
 11. ## **Can I redeclare let and const variables**
+
     - **`var`:** _Yes redeclaration is possible_
     - **`let`:** _No redeclaration in the same scope._
     - **`const`:** _No redeclaration or reassignment._
@@ -157,6 +164,7 @@
 13. ## **Explain Scope and Scope Chain in javascript**
 
     **Scope** determines variable accessibility. Types:
+
     1. **Global:** Accessible everywhere.
     2. **Function/Local:** Accessible only inside the function.
     3. **Block:** Limited to `{}` (only for `let`/`const`).
@@ -176,6 +184,7 @@
     ```
 
 14. ## **Scope and Lexical environment in js**
+
     - **Lexical Environment:** _A Lexical Environment is like a storage system
       that keeps track of variables and their values during execution_
     - **Scope:** _Scope defines where a variable can be accessed in the code.
@@ -236,6 +245,7 @@
 19. ## **Explain Implicit Type Coercion in javascript**
 
     _JavaScript automatically converts types in certain operations_
+
     - **String Coercion:** _`+` with strings converts all operands to strings_.
 
       ```js
@@ -252,6 +262,7 @@
       ```
 
     - **Logical Operators:**
+
       - `||` _returns the first truthy value._
       - `&&` _returns the last truthy value if all are truthy._
 
@@ -292,6 +303,7 @@
     | ------------------------------------------ | ------------------------------------------- |
     | Collects function arguments into an array. | Expands iterables into individual elements. |
     | Must be the last parameter.                | Works in arrays/objects/function calls.     |
+
     - **Rest:**
 
     ```js
@@ -352,6 +364,7 @@
     ```
 
 27. ## **What is NaN property in JavaScript**
+
     - **NaN** ("Not a Number") results from invalid math operations.
     - Use `isNaN()` to check for NaN.
 
@@ -361,6 +374,7 @@
     ```
 
 28. ## **Explain WeakSet in javascript**
+
     - Holds **objects weakly** (garbage collected if no other references).
     - Methods: `add()`, `delete()`, `has()`.
 
@@ -373,6 +387,7 @@
     ```
 
     **Key Difference vs. Set:**
+
     - WeakSet only stores objects.
     - No iteration/size methods.
 
@@ -433,14 +448,17 @@
     document.getElementById('nonexistent') // returns null
     ```
 
-    **Difference between undefined and undeclared** |Undeclared |Undefined |
-    |-----------|----------| |Not exist/declared |Declared but not assigned |
-    |Error while reading undeclared value |Undefined while reading undefined
-    value |
+    **Difference between undefined and undeclared**
+
+    | Undeclared                           | Undefined                               |
+    | ------------------------------------ | --------------------------------------- |
+    | Not exist/declared                   | Declared but not assigned               |
+    | Error while reading undeclared value | Undefined while reading undefined value |
 
 32. ## **What is global execution context**
 
     _The default context created when JavaScript code first runs:_
+
     - Creates global object (window in browsers)
     - Sets `this` to the global object
     - All non-function code executes here
@@ -453,6 +471,7 @@
 33. ## **What is function execution context**
 
     _Created each time a function is called:_
+
     - Has its own variable environment
     - Contains `arguments` object
     - `this` depends on invocation
@@ -479,6 +498,7 @@
 35. ## **What is a strict mode in javascript**
 
     _Enables stricter parsing and error handling:_
+
     - Prevents accidental globals
     - Makes assignments to read-only properties throw errors
     - Requires unique parameter names
@@ -492,6 +512,7 @@
 36. ## **What is Hoisting**
 
     _JavaScript's behavior of moving declarations to the top:_
+
     - `var`: Hoisted and initialized with `undefined`
     - `let/const`: Hoisted but not initialized (TDZ)
     - Functions: Fully hoisted
@@ -526,6 +547,7 @@
 38. ## **What is a first class function**
 
     _Functions treated like any other variable:_
+
     1. Can be assigned to variables
     2. Can be passed as arguments
     3. Can be returned from functions
@@ -555,6 +577,7 @@
 39. ## **What is a first order function**
 
 - A function that:\*
+
   - Does **not** accept another function as an argument
   - Does **not** return a function
 
@@ -567,6 +590,7 @@
 40. ## **What is a higher order function**
 
     _A function that:_
+
     - Accepts a function as an argument **OR**
     - Returns a function **OR**
     - Both
@@ -598,6 +622,7 @@
 42. ## **What is a pure function**
 
     _Function is pure if:_
+
     1. Same input **always** produces same output
     2. No side effects (doesn't modify external state)
 
@@ -635,6 +660,7 @@
     ```
 
 44. ## **Memory Management in JavaScript**
+
     - **Automatic garbage collection**
     - **Mark-and-sweep algorithm** (removes unreachable objects)
     - **Memory leaks** occur when:
@@ -671,6 +697,7 @@
     them callbacks were used to handle asynchronous operations but due to the
     limited functionality of callbacks, using multiple callbacks leads to
     unmanageable code_
+
     - **States:**
       - **Pending:** _Initial state_
       - **Fulfilled:** _This state represents that the async operation is
@@ -800,6 +827,7 @@
     ```
 
 52. ## **Why do we use callbacks**
+
     - Handle async operations (file I/O, API calls)
     - Event handling (click handlers, timers)
     - Custom control flow
@@ -810,7 +838,7 @@
     })
     ```
 
-53. ## **What is observables **
+53. ## **What is observables**
 
     Streams of values over time (via RxJS library).
 
@@ -960,6 +988,7 @@
     _A function that remembers its lexical scope even when executed outside it._
 
     **Scope Chains:**
+
     1. Own variables
     2. Outer function's variables
     3. Global variables
@@ -1035,6 +1064,7 @@
 65. ## **What is an error object**
 
     _Contains error details with:_
+
     - `name`: Error type
     - `message`: Description
 
@@ -1048,6 +1078,7 @@
     ```
 
 66. ## **In JavaScript, how many different methods can you make an object**
+
     1. **Object Literal**  
        `const obj = {};`
     2. **Constructor Function**  
@@ -1068,7 +1099,7 @@
     const myCar = new Car('Tesla')
     ```
 
-67. ## **Object vs Map **
+67. ## **Object vs Map**
 
     | Feature     | Object                  | Map                           |
     | ----------- | ----------------------- | ----------------------------- |
@@ -1204,6 +1235,7 @@
     _JavaScript's inheritance mechanism through prototype chains._
 
     **Key Concepts:**
+
     1. Every object has a `[[Prototype]]` (accessed via `__proto__`)
     2. Functions have a `prototype` property (used when called as constructors)
     3. Properties are looked up through the prototype chain
@@ -1251,6 +1283,7 @@
 79. ## **What happens If I pass string type for getPrototype method**
 
     _Behavior differs between ES5 and ES2015+:_
+
     - **ES5:** Throws TypeError for non-objects
     - **ES2015+:** Coerces to object wrapper
 
@@ -1469,6 +1502,7 @@
     fails with circular references.
 
 92. ## **What is the difference between function and class declarations**
+
     - **Functions:** _Fully hoisted (can be called before declaration)_
     - **Classes:** _Not hoisted (ReferenceError if accessed before declaration)_
 
@@ -1481,6 +1515,7 @@
     ```
 
 93. ## **What are the tools or techniques used for debugging JavaScript code**
+
     1. **Chrome DevTools:** Breakpoints, call stack, scope inspection
     2. **debugger statement:** Pauses execution
     3. **console.log():** Quick value inspection
@@ -1550,6 +1585,7 @@
 98. ## **What is BOM**
 
     _Browser-specific objects beyond the document:_
+
     - `window`: Global browser window
     - `navigator`: Browser info (userAgent)
     - `location`: URL manipulation
@@ -1582,118 +1618,117 @@
 
 100.  ## **What is the difference between window and document**
 
-
-    | Feature    | window                   | document                          |
-    | ---------- | ------------------------ | --------------------------------- |
-    | Role       | Global browser container | Page content container            |
-    | Access     | Top-level object         | window.document                   |
-    | Methods    | setTimeout(), alert()    | getElementById(), querySelector() |
-    | Properties | innerWidth, localStorage | body, title, URL                  |
+| Feature    | window                   | document                          |
+| ---------- | ------------------------ | --------------------------------- |
+| Role       | Global browser container | Page content container            |
+| Access     | Top-level object         | window.document                   |
+| Methods    | setTimeout(), alert()    | getElementById(), querySelector() |
+| Properties | innerWidth, localStorage | body, title, URL                  |
 
 101.  ## **Difference between LocalStorage, SessionStorage vs Cookie**
-      | Feature       | LocalStorage      | SessionStorage | Cookies         |
-      | ------------- | ----------------- | -------------- | --------------- |
-      | Persistence   | Until cleared     | Tab session    | Manual expiry   |
-      | Size Limit    | ~5MB              | ~5MB           | ~4KB            |
-      | Server Access | No                | No             | Yes (auto-sent) |
-      | Use Case      | Long-term storage | Temporary data | Authentication  |
 
+| Feature       | LocalStorage      | SessionStorage | Cookies         |
+| ------------- | ----------------- | -------------- | --------------- |
+| Persistence   | Until cleared     | Tab session    | Manual expiry   |
+| Size Limit    | ~5MB              | ~5MB           | ~4KB            |
+| Server Access | No                | No             | Yes (auto-sent) |
+| Use Case      | Long-term storage | Temporary data | Authentication  |
 
-    ```js
-    localStorage.setItem('theme', 'dark')
-    console.log(localStorage.getItem('theme')) // "dark"
-    ```
+```js
+localStorage.setItem('theme', 'dark')
+console.log(localStorage.getItem('theme')) // "dark"
+```
 
 102. ## **What is ECMAScript**
-     The official standard behind JavaScript:
 
+**The official standard behind JavaScript:**
 
-    - ES5 (2009): Strict mode, JSON support
-    - ES6/ES2015: let/const, classes, promises
-    - ES2022: Top-level await, private fields
+- ES5 (2009): Strict mode, JSON support
+- ES6/ES2015: let/const, classes, promises
+- ES2022: Top-level await, private fields
 
-    ```js
-    const PI = 3.14 // Block-scoped constant
-    ```
+```js
+const PI = 3.14 // Block-scoped constant
+```
 
 103. ## **What is a decorator**
-     _Functions that modify class/class members (requires transpiler)._
 
+_Functions that modify class/class members (requires transpiler)._
 
-    ```js
-    function log(target, key) {
-      console.log(`Method ${key} called`)
-    }
+```js
+function log(target, key) {
+  console.log(`Method ${key} called`)
+}
 
-    class Calculator {
-      @log
-      add(a, b) {
-        return a + b
-      }
-    }
-    ```
+class Calculator {
+  @log
+  add(a, b) {
+    return a + b
+  }
+}
+```
 
 104. ## **What is V8 JavaScript engine**
-     _Google's high-performance JS engine that:_
 
+_Google's high-performance JS engine that:_
 
-    - Compiles JS to machine code
-    - Powers Chrome and Node.js
-    - Implements latest ECMAScript
+- Compiles JS to machine code
+- Powers Chrome and Node.js
+- Implements latest ECMAScript
 
 105. ## **What is babel**
-     JavaScript transpiler that:
 
+**JavaScript transpiler that:**
 
-    - Converts modern JS to older versions
-    - Supports experimental features
-    - Enables cross-browser compatibility
+- Converts modern JS to older versions
+- Supports experimental features
+- Enables cross-browser compatibility
 
 106. ## **What is RxJS**
-     _Reactive programming library using Observables._
 
+_Reactive programming library using Observables._
 
-    ```js
-    import { fromEvent } from 'rxjs'
+```js
+import { fromEvent } from 'rxjs'
 
-    const clicks = fromEvent(document, 'click')
-    clicks.subscribe(() => console.log('Clicked!'))
-    ```
+const clicks = fromEvent(document, 'click')
+clicks.subscribe(() => console.log('Clicked!'))
+```
 
 107. ## **What is debouncing**
-     _Delays execution until pause in events._
 
+_Delays execution until pause in events._
 
-    ```js
-    function debounce(fn, delay) {
-      let timer
-      return function () {
-        clearTimeout(timer)
-        timer = setTimeout(() => fn.apply(this, arguments), delay)
-      }
-    }
+```js
+function debounce(fn, delay) {
+  let timer
+  return function () {
+    clearTimeout(timer)
+    timer = setTimeout(() => fn.apply(this, arguments), delay)
+  }
+}
 
-    const search = debounce(() => fetchResults(), 300)
-    searchInput.addEventListener('input', search)
-    ```
+const search = debounce(() => fetchResults(), 300)
+searchInput.addEventListener('input', search)
+```
 
 108. ## **What is throttling**
-     _Limits execution rate._
 
+_Limits execution rate._
 
-    ```js
-    function throttle(fn, limit) {
-      let lastRun
-      return function () {
-        if (!lastRun || Date.now() - lastRun >= limit) {
-          fn.apply(this, arguments)
-          lastRun = Date.now()
-        }
-      }
+```js
+function throttle(fn, limit) {
+  let lastRun
+  return function () {
+    if (!lastRun || Date.now() - lastRun >= limit) {
+      fn.apply(this, arguments)
+      lastRun = Date.now()
     }
+  }
+}
 
-    window.addEventListener('scroll', throttle(updateUI, 100))
-    ```
+window.addEventListener('scroll', throttle(updateUI, 100))
+```
 
 109. ## **Coding exercise**
 
@@ -1701,15 +1736,15 @@
 - [JavaScript Questions](https://github.com/lydiahallie/javascript-questions)
 
 110. ## **What is the difference between slice and splice**
-     | Method   | Returns       | Original Array | Arguments                |
-     | -------- | ------------- | -------------- | ------------------------ |
-     | slice()  | New array     | Unchanged      | (start, end)             |
-     | splice() | Removed items | Modified       | (start, count, newItems) |
 
+| Method   | Returns       | Original Array | Arguments                |
+| -------- | ------------- | -------------- | ------------------------ |
+| slice()  | New array     | Unchanged      | (start, end)             |
+| splice() | Removed items | Modified       | (start, count, newItems) |
 
-    ```js
-    const arr = [1, 2, 3, 4]
-    console.log(arr.slice(1, 3)) // [2, 3]
-    console.log(arr.splice(1, 2, 5)) // [2, 3]
-    console.log(arr) // [1, 5, 4]
-    ```
+```js
+const arr = [1, 2, 3, 4]
+console.log(arr.slice(1, 3)) // [2, 3]
+console.log(arr.splice(1, 2, 5)) // [2, 3]
+console.log(arr) // [1, 5, 4]
+```
