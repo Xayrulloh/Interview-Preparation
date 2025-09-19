@@ -9,6 +9,7 @@
    [design pattern](https://anywhere.epam.com/en/blog/less-popular-javascript-design-patterns)
    and draws inspiration from Angular's architecture. Here's an overview of the
    architecture of a Nest.js application:
+
    - **Modules**: The application is divided into multiple modules, each
      responsible for a specific set of features. Each module contains its own
      set of controllers, services, and providers.
@@ -97,6 +98,7 @@
    by other modules.
 
    Some of the key roles of modules in Nest.js include:
+
    - **Encapsulation**: Modules encapsulate related functionality, making it
      easier to reason about and maintain the codebase.
    - **Dependency management**: Modules define the dependencies of a feature or
@@ -120,6 +122,7 @@
    @Injectable(), @Inject(), and @Module() to facilitate DI.
 
    Here's how Dependency Injection works in Nest.js:
+
    - **IoC Container:**  
      \- Nest.js has an IoC container that manages the instantiation and
      injection of dependencies  
@@ -212,6 +215,7 @@
    metadata and configurations for different parts of the application.
 
    Here are some common use cases of decorators in Nest.js:
+
    - **Class Decorators:**  
      \- Class decorators are applied to class declarations. They can be used to
      modify the behavior or add metadata to a class.  
@@ -294,10 +298,10 @@
 9. ## **What are pipes and filters**
 
    **Pipes:**  
-    Pipes in Nest.js are a way to transform input data before it reaches the
-   route handler or after it leaves the route handler. They are used to validate
-   and transform data. Pipes can be applied to parameters at the controller
-   level, method level, or globally.  
+    Pipes in Nest.js are a way to transform input data before it reaches the route
+   handler or after it leaves the route handler. They are used to validate and transform
+   data. Pipes can be applied to parameters at the controller level, method level,
+   or globally.  
     There are several built-in pipes in Nest.js, and you can also create custom
    pipes. Examples of built-in pipes include:
 
@@ -311,9 +315,8 @@
    **Filters:**  
     Filters in Nest.js are used to handle exceptions globally. When an unhandled
    exception occurs during the execution of a route handler, filters can be used
-   to customize the response that is sent back to the client. Filters are
-   applied at the global level or can be scoped to specific controllers or
-   routes.
+   to customize the response that is sent back to the client. Filters are applied
+   at the global level or can be scoped to specific controllers or routes.
 
    There are a few types of filters in Nest.js, including exception filters,
    which handle unhandled exceptions.
