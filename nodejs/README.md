@@ -67,27 +67,35 @@
     **Single-Threaded Nature –** Since Node.js operates on a single-threaded
     event loop, it struggles with CPU-intensive tasks like complex calculations
     or video processing, which can block the event loop and slow down
-    performance.  
+    performance.
+
     **Limited Multithreading Support** – While Node.js now supports worker
     threads, it is not as straightforward as using multiple threads in other
     languages like Java, making it less efficient for certain parallel computing
-    tasks.  
+    tasks.
+
     **Unstable API** – Frequent updates in Node.js sometimes introduce breaking
-    changes, requiring developers to frequently update their codebases.  
+    changes, requiring developers to frequently update their codebases.
+
     **Memory Consumption** – Compared to some other backend technologies,
     Node.js can consume more memory, which may be a concern in
-    resource-constrained environments.  
+    resource-constrained environments.
+
     **Not Ideal for Heavy Computation** – Node.js is not the best choice for
     applications that require extensive mathematical computations or CPU-heavy
     tasks, as it can block the event loop.
 
 12. ## **What are some commonly used timing features of Node.js**
 
-    setTimeout/clearTimeout: Used to implement delays in code execution
-    setInterval/clearInterval: Used to run a code block multiple times
-    setImmediate/clearImmediate: Takes a callback function and executes it in
-    the next iteration of the event loop process.nextTick: Like setImmediate but
-    its executes as soon as current operation ends
+    **setTimeout/clearTimeout:** - Used to implement delays in code execution
+
+    **setInterval/clearInterval:** - Used to run a code block multiple times
+
+    **setImmediate/clearImmediate:** - Takes a callback function and executes it
+    in the next iteration of the event loop process.
+
+    **nextTick:** - Like setImmediate but its executes as soon as current
+    operation ends
 
 13. ## **Differentiate between process.nextTick() and setImmediate()**
 
@@ -189,6 +197,7 @@
     to another stream
 
 17. ## **How many types of API functions are there in Node.js**
+
     - **Asynchronous, non-blocking:** mostly I/O operations which can be fork
       out of the main loop
     - **Synchronous, blocking function:** mostly operations that influence the
@@ -208,15 +217,17 @@
 
 20. ## **What is an EventEmitter**
 
-    In Node.js, an EventEmitter is a core module that provides an implementation
-    of the observer pattern. The observer pattern is a behavioral design pattern
-    where an object, known as the subject, maintains a list of dependents, known
-    as observers, that are notified of any state changes, typically by calling
-    one of their methods.  
-    The EventEmitter class in Node.js allows objects to emit named events that
-    cause registered listeners (observers) to be called. It provides a mechanism
-    for communication between different parts of a Node.js application, making
-    it an essential tool for building scalable and modular systems.
+    In Node.js, an **EventEmitter** is a core module that provides an
+    implementation of the observer pattern. The observer pattern is a behavioral
+    design pattern where an object, known as the subject, maintains a list of
+    dependents, known as observers, that are notified of any state changes,
+    typically by calling one of their methods.
+
+    The **EventEmitter** class in Node.js allows objects to emit named events
+    that cause registered listeners (observers) to be called. It provides a
+    mechanism for communication between different parts of a Node.js
+    application, making it an essential tool for building scalable and modular
+    systems.
 
     ```ts
     const EventEmitter = require('events')
@@ -253,6 +264,7 @@
     command-line arguments, handle signals, and more.
 
     Here are some common uses and properties of the process object:
+
     - **Accessing Command-Line Arguments** \- The process.argv property is an
       array that contains the command-line arguments used to run the Node.js
       process. The first two elements are the path to the Node.js executable and
@@ -300,9 +312,10 @@
 23. ## **What are global objects**
 
     Global objects in Node.js are objects that are available in all modules
-    without the need for an explicit require statement. Some of the most
-    commonly used global objects in Node.js include process, console, and
-    buffer.
+    without the need for an explicit require statement.
+
+    Some of the most commonly used global objects in Node.js include: _process_,
+    _console_, and _buffer_.
 
 24. ## **What is the purpose of module.exports**
 
@@ -318,6 +331,7 @@
     into manageable chunks.
 
     **Modules are of three types:**
+
     - Core Modules
     - Local Modules
     - Third-party Modules
@@ -355,9 +369,11 @@
 
     The **Thread Pool** is a set of worker threads (managed by **libuv**) that
     handle **offloaded I/O and CPU-intensive tasks** to prevent blocking the
-    main event loop.  
+    main event loop.
+
     It has 4 threads default and purpose is to execute blocking operations like
-    file I/O, DNS, crypto, etc.. asynchronously.  
+    file I/O, DNS, crypto, etc.. asynchronously.
+
     Why we need it is because JS is single-threaded, but some tasks like file
     I/O are inherently blocking. That’s why it offloads these tasks to worker
     threads to keep the event loop free.
@@ -377,22 +393,24 @@
     parallel processing, but still they have different use cases and operate at
     different levels of abstraction that differentiates both Worker threads and
     Clusters, which is given below.
-    - Granularity: Worker thread are thread level, Clusters are process level
-    - Communication: Worker thread communicates using postMessage API, Clusters
-      using IPC
-    - Isolation: Workers don’t share variables or memory directly, Clusters have
-      their own memory space
-    - I/O Operations: Worker threads are not built for I/O operations, Clusters
-      are built for handle I/O operations efficiently
-    - Memory Sharing: Worker thread can share memory using ArrayBuffer or
+
+    - **Granularity:** Worker thread are thread level, Clusters are process
+      level
+    - **Communication:** Worker thread communicates using postMessage API,
+      Clusters using IPC
+    - **Isolation:** Workers don’t share variables or memory directly, Clusters
+      have their own memory space
+    - **I/O Operations:** Worker threads are not built for I/O operations,
+      Clusters are built for handle I/O operations efficiently
+    - **Memory Sharing:** Worker thread can share memory using ArrayBuffer or
       SharedArrayBuffer instances, which allows more direct communication and
       shared data. Clusters operate in separate processes so memory is isolated
       between them. Communication between clusters is often achieved through
       message passing
-    - Use Case: Worker Threads are good for CPU tasks where parallel processing
-      can significantly improve performance. Clusters are good for improving the
-      scalability of networked applications by distribution incoming requests
-      among multiple processes
+    - **Use Case:** Worker Threads are good for CPU tasks where parallel
+      processing can significantly improve performance. Clusters are good for
+      improving the scalability of networked applications by distribution
+      incoming requests among multiple processes
 
 34. ## **Difference between child_process, worker_threads, and cluster**
 
