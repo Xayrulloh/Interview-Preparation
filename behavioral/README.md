@@ -1,3 +1,24 @@
+# Self Introduction
+
+Hi, my name is Khayrulla Abduvokhidov, and I’m a FullStack developer with over 4
+years of experience. My primary stack is Node.js, TypeScript, PostgreSQL, and
+React.
+
+And I've worked on projects like eCommerce in TUNE Consulting and it was the
+first marketplace in Uzbekistan, also worked on logistic platform in EO Global
+where we moved from all paper works to one simple website which includes jobs of
+HR, drivers, dispatchers, etc. Also worked on platform like Tik Tok but focuses
+on more voice actors where they can give a voice for lectures, lyrics,
+characters from books, etc. And last but not least, I've also worked as a Team
+Leader in Vention's inner project where we build the AI related project.
+
+Outside of client work, I also build pet projects, such as a Family Tree
+platform where I explored advanced data modeling, and a Telegram reminder bot
+that now serves hundreds of users.
+
+Overall, I’d describe myself as a problem-solver who enjoys building scalable
+systems, optimizing performance, and continuously learning.
+
 # Behavioral Interview Questions
 
 1. **Tell me about the most difficult bug you’ve fixed.**
