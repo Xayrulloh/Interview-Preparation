@@ -1,6 +1,7 @@
 # Redis Interview Questions
 
 1. ## **What is Redis and why is it used**
+
    - **Type:** _In-memory data structure store_
    - **Key Features:**
      - Supports strings, hashes, lists, sets, sorted sets
@@ -22,6 +23,7 @@
    | **Use Case**  | Caching, real-time | Persistent storage |
 
 3. ## **Redis Concurrency Handling**
+
    - **Single-threaded:** _by design (avoids locks)_
    - **Non-blocking I/O:**
      - Uses multiplexing (epoll/kqueue)
@@ -29,6 +31,7 @@
    - **Atomic operations:** _INCR, SETNX, etc._
 
 4. ## **Redis Pub/Sub**
+
    - **Publish-Subscribe:** _messaging pattern_
    - **Channels:** _Categories for messages_
    - **Example Flow:**
@@ -37,13 +40,16 @@
      3. All subscribers receive message
 
 5. ## **Redis Persistence**
+
    1. ### **(Snapshotting)**
+
       - Periodic binary snapshots
       - Configurable intervals (save 900 1)
       - Pros: Compact, faster restarts
       - Cons: Potential data loss
 
    2. ### **(Append-Only File)**
+
    - Logs every write operation
    - Configurable sync options:
      - always: safest
@@ -53,6 +59,7 @@
    - Cons: Larger files
 
 6. ## **Redis Keys**
+
    - **Format:** _Any binary sequence (max 512MB)_
    - **Best Practices:**
      - Use namespaces (user:1000:profile)
@@ -63,6 +70,7 @@
      - SCAN for safe iteration
 
 7. ## **When NOT to Use Redis**
+
    - **Large datasets** exceeding server RAM
    - **Complex transactions** requiring ACID
    - **Permanent storage** as sole database
