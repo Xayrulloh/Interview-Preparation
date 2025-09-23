@@ -9,10 +9,7 @@
   ```ts
   // Bad: A class with multiple responsibilities
   class BadUser {
-    constructor(
-      private name: string,
-      private email: string
-    ) {}
+    constructor(private name: string, private email: string) {}
 
     saveToDatabase() {
       // Database logic
@@ -27,10 +24,7 @@
 
   // Good: Separate classes for each responsibility
   class User {
-    constructor(
-      public name: string,
-      public email: string
-    ) {}
+    constructor(public name: string, public email: string) {}
   }
 
   class UserRepository {
@@ -178,10 +172,7 @@
   }
 
   class GoodRectangle implements Shape {
-    constructor(
-      private width: number,
-      private height: number
-    ) {}
+    constructor(private width: number, private height: number) {}
 
     getArea(): number {
       return this.width * this.height
