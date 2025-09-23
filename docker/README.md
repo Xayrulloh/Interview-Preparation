@@ -12,12 +12,14 @@
    efficient and come with higher overheads._
 
    ### Key Docker Components
+
    - **Docker Daemon**: _A persistent background process that manages and
      executes containers._
    - **Docker Engine**: _The CLI and API for interacting with the daemon._
    - **Docker Registry**: _A repository for Docker images._
 
    ### Core Building Blocks
+
    - **Dockerfile**: _A text document containing commands that assemble a
      container image._
    - **Image**: _A standalone, executable package containing everything required
@@ -27,7 +29,9 @@
    ### Virtual Machines vs. Docker Containers
 
    #### Virtual Machines
+
    - **Advantages**:
+
      - **Isolation:** VMs run separate operating systems, providing strict
        application isolation.
 
@@ -39,7 +43,9 @@
        slowing down deployment._
 
    #### Containers
+
    - **Efficiencies**:
+
      - **Resource Optimizations:** _As containers share the host OS kernel, they
        are exceptionally lightweight, requiring minimal RAM and storage._
      - **Rapid Deployment:** _Containers start almost instantaneously,
@@ -51,6 +57,7 @@
        for underlying resources._
 
    ### Core Unique Features of Docker
+
    - **Layered File System**: _Docker images are composed of layers, each
      representing a set of file changes. This structure aids in minimizing image
      size and optimizing builds._
@@ -76,6 +83,7 @@
    build-once-run-anywhere** philosophy._
 
    ### Image vs. Container
+
    - **Image**: _A static package that encompasses everything the application
      requires to run._
    - **Container**: _An operating instance of an image, running as a process on
@@ -88,6 +96,7 @@
    read/write, which allows for efficiency and flexibility._
 
    ### Key Components
+
    - **Operating System**: _Traditional images have a full or bespoke OS
      tailored for the application's needs. Recent developments like
      "distro-less" images, however, focus solely on application dependencies._
@@ -102,12 +111,14 @@
    allowing teams to collaborate efficiently._
 
    ### How to Build an Image
+
    1. **Dockerfile**: _Describes the steps and actions required to set up the
       image, from selecting the base OS to copying the application code._
    2. **Build Command**: _Docker's build command uses the Dockerfile as a
       blueprint to create the image._
 
    ### Advantages of Docker Images
+
    - **Portability**: _Docker images ensure consistent behavior across different
      environments, from development to production._
    - **Reproducibility**: _If you're using the same image, you can expect the
@@ -117,6 +128,7 @@
    - **Security**: _Distinct layers permit granular security control._
 
    ### Best Practices for Docker files
+
    - _Use the official base image if possible._
    - _Aim for minimal layers for better efficiency._
    - _Regularly update the base image to ensure security and feature updates._
@@ -128,6 +140,7 @@
    containers** are running instances of those images._
 
    ### Key Distinctions
+
    - **State**: _Containers encapsulate both the application code and its
      runtime environment in a stable and consistent **state**. In contrast,
      images are passive and don't change once created._
@@ -149,6 +162,7 @@
    ### Practical Demonstration
 
    Here is the code:
+
    1. **Dockerfile** - Defines the image:
 
    ```docker
@@ -225,6 +239,7 @@
    containers.
 
    ### Key Functions
+
    - **Image Storage**: As a centralized repository, the Hub stores your Docker
      images, making them easily accessible.
 
@@ -251,12 +266,14 @@
      vulnerabilities and security concerns.
 
    ### Cost and Pricing
+
    - **Free Tier**: Offers one private repository and unlimited public
      repositories.
    - **Pro and Team Tiers**: Both come with advanced features. The Team tier
      provides collaboration capabilities for organizations.
 
    ### Use Cases
+
    - **Public Repositories**: These are ideal for sharing your open-source
      applications with the community. Docker Hub is home to a multitude of
      public repositories, each extending the functionality of Docker.
@@ -266,7 +283,9 @@
      maintain private repositories.
 
    ### Key Benefits and Limitations
+
    - **Benefits**:
+
      - Centralized Container Distribution
      - Security Features
      - Integration with CI/CD Tools
@@ -283,6 +302,7 @@
    to assemble an image.
 
    ### Common Commands
+
    - **FROM**: Sets the base image for subsequent build stages.
    - **RUN**: Executes commands within the image and then commits the changes.
    - **EXPOSE**: Informs Docker that the container listens on a specific port.
@@ -292,6 +312,7 @@
      starts.
 
    ### Multi-Stage Builds
+
    - **FROM**: Allows for multiple build stages in a single `Dockerfile`.
    - **COPY --from=source**: Enables copying from another build stage, useful
      for extracting build artifacts.
@@ -310,6 +331,7 @@
    `Dockerfile`.
 
    ### Tips for Writing Efficient Dockerfiles
+
    - **Use Specific Base Images**: Start from the most lightweight, appropriate
      image to keep your build lean.
    - **Combine Commands**: Chaining commands with `&&` (where viable) reduces
@@ -361,6 +383,7 @@
    **Union File Systems** permit stacking multiple directories or file systems,
    presenting them **coherently** as a single unit. While several such systems
    are in use, **AUFS** and **OverlayFS** are notably popular.
+
    1. **AUFS**: A front-runner for a long time, AUFS offers versatile
       compatibility but is not part of the Linux kernel.
    2. **OverlayFS**: Now integrated into the Linux kernel, OverlayFS is
@@ -371,6 +394,7 @@
    When stacking Docker image layers, it's akin to a file system with
    **read-only** layers superimposed by a **writable** layer, the **container
    layer**. This setup ensures separation and persistence:
+
    1. **Base Image Layer**: This is the foundation, often comprising the
       operating system and core utilities. It's mostly read-only to safeguard
       uniformity.
@@ -384,6 +408,7 @@
    ### Code Overlayers
 
    Here is the code:
+
    1. Each layer is defined by a `Dockerfile` instruction.
    2. The base image is `ubuntu:latest`, and the application code is stored in a
       file named `app.py`.
@@ -493,6 +518,7 @@
    particularly lightweight as it's built on the Alpine Linux distribution.
 
    Here are images with different sizes:
+
    - node:current-slim (about 200MB)
    - node:alpine (about 90MB)
    - node:current (about 900MB)
@@ -557,6 +583,7 @@
    ### docker run
 
    The command `docker run` combines several actions:
+
    - **Creating**: If the container matching the input name already exists, it
      will stop and then start again.
    - **Running**: Activates the container, starting its process.
@@ -578,6 +605,7 @@
    ```
 
    In this example:
+
    - `-d`: The container is detached, running in the background.
    - `-p 5000:5000`: The host port 5000 is mapped to the container port 5000.
    - `--name myapp`: The container is named `myapp`.
@@ -592,6 +620,7 @@
    ```
 
    This:
+
    - Deletes the container after it stops.
    - Opens an interactive terminal.
    - Mounts the host's `/host/path` to the container's `/container/path`.
@@ -604,6 +633,7 @@
     isolation, supporting your security and operational requirements.
 
     ### Advantages of Docker Namespaces
+
     - **Isolated Environment**: Ensures separation, vital for multi-tenant
       systems, in\-house CI/CD, and staging environments.
 
@@ -623,6 +653,7 @@
       irrespective of the environment.
 
     ### Key Namespace Types
+
     - **Image IDs**: Unique identifiers for Docker images.
     - **Container Names**: Provides friendly readability to Docker containers.
     - **Volume Names**: Simplified references in managing persistent data
@@ -667,6 +698,7 @@
     persistence, even after containers have been stopped or removed.
 
     ### Volume Types
+
     1. **Host-Mounted Volumes**: These link a directory on the host machine to
        the container.
     2. **Named Volumes**: They have a specific name and are managed by Docker.
@@ -677,6 +709,7 @@
 
     Docker volumes are fundamental for data storage and sharing, which is
     especially beneficial in microservice and stateful applications.
+
     - **File Sharing**: Volume remaps between containers, facilitating file
       sharing without needing to commit volumes to an image or set up additional
       systems like NFS.
@@ -710,6 +743,7 @@
     operation.
 
     ### Core Advantages
+
     - **Simplified Multi-Container Management**: With one predefined
       configuration, launch and manage multi-container apps effortlessly.
     - **Streamlined Environment Sharing**: Consistent setups between teams and
@@ -720,6 +754,7 @@
       making boot-ups faster.
 
     ### Core Components
+
     - **Services**: Containers that build off the same image, defined in the
       compose file. Each is an independent component (e.g., web server,
       database).
@@ -781,6 +816,7 @@
 
     By default, Docker provides each container with its own network stack. The
     configuration includes:
+
     - **IP Address**: Obtained from the Docker network.
 
     - **Network Interfaces**: Namespaced within the container.
