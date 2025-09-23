@@ -3,31 +3,17 @@
 _Here you can find answers to the questions asked in the interview preparation
 series_
 
-## [Javascript Interview Questions](javascript/README.md)
+## [Language Related Interview Questions](language/README.md)
 
-## [Typescript Interview Questions](typescript/README.md)
+## [Backend Related Interview Questions](backend/README.md)
 
-## [Node.js Interview Questions](nodejs/README.md)
+## [Database Related Interview Questions](database/README.md)
 
-## [Nest.js Interview Questions](nestjs/README.md)
-
-## [Express.js Interview Questions](expressjs/README.md)
-
-## [SQL Interview Questions](sql/README.md)
-
-## [MongoDB Interview Questions](mongodb/README.md)
-
-## [Redis Interview Questions](redis/README.md)
-
-## [REST API Interview Questions](rest/README.md)
-
-## [GraphQL API Interview Questions](graph/README.md)
+## [IOT Related Interview Questions](IOT/README.md)
 
 ## [Docker Interview Questions](docker/README.md)
 
 ## [Git Interview Questions](git/README.md)
-
-## [Network Interview Questions](network/README.md)
 
 ## [Cloud Interview Questions](cloud/README.md)
 
@@ -37,4 +23,4 @@ series_
 
 ## [Behavioral Interview Preparation](behavioral/README.md)
 
-## [React Interview Questions](react/README.md)
+## [Frontend Related Interview Questions](frontend/README.md)
