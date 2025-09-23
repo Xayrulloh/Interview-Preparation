@@ -223,7 +223,7 @@ physical hardware_
 24. ## **What is the difference between RDS and DynamoDB?**
 
     - **Amazon RDS:** _A managed relational database service supporting
-      structured query language (SQL) databases. _
+      structured query language (SQL) databases._
     - **Amazon DynamoDB:** _A managed NoSQL database service designed for fast
       and predictable performance with seamless scalability._
 
