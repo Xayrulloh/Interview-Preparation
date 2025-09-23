@@ -5,10 +5,12 @@
 1. ## **What is a query language**
 
    A query language is:
+
    - A way to **ask for data** from a database or API
    - Uses specific **commands (queries)** to get only what you need
 
    **Example**:
+
    - `SQL` asks databases for data
    - `GraphQL` asks APIs for data
 
@@ -16,6 +18,7 @@
    GraphQL is a query language **for APIs** (not databases).
 
 2. ## **What is GraphQL**
+
    - **Type**: Open-source API query language
    - **Purpose**: Lets clients request _exact data needed_ (no over-fetching)
    - **Key Advantage**: Single request fetches nested/related data
@@ -31,7 +34,9 @@
 3. ## **How does GraphQL work**
 
    ### **Basic Flow**
+
    1. **Client Sends Query**
+
    - Single POST request to `/graphql` endpoint
    - Request contains exact data requirements
      ```graphql
@@ -42,14 +47,18 @@
        }
      }
      ```
+
    2. **Server Processes**
+
    - Validates query against schema
    - Fetches data from:
      - Databases
      - Microservices
      - REST APIs
      - Other sources
+
    3. **Response**
+
    - Returns JSON with exact requested structure
    - No extra data (unlike REST)
      ```json
@@ -64,6 +73,7 @@
      ```
 
    ### **Key Components**
+
    - **Single Endpoint:** No versioning/endpoint sprawl
    - **Type System:** Strongly-typed schema defines possible operations
    - **Resolver Functions:** Custom logic for each field
@@ -76,6 +86,7 @@
 4. ## **What is Apollo Client/Server**
 
    **Apollo Client**
+
    - Frontend GraphQL library
    - Features:
      - Smart caching
@@ -83,6 +94,7 @@
      - Optimized data fetching
 
    **Apollo Server**
+
    - Backend GraphQL server
    - Supports:
      - All major Node.js frameworks
@@ -157,6 +169,7 @@
    ### **1. Schema**
 
    The blueprint that defines:
+
    - All available data types (e.g., User, Product)
    - Relationships between types
    - Allowed operations (queries/mutations/subscriptions)
@@ -176,6 +189,7 @@
    ### **2. Resolvers**
 
    Functions that:
+
    - Contain the actual data-fetching logic
    - Execute when their associated field is requested
    - Can fetch from databases, APIs, or other services
@@ -201,6 +215,7 @@
    | **Subscription** | Receive real-time updates          | New message notifications |
 
    **How They Work Together:**
+
    1. Client sends an operation (query/mutation)
    2. GraphQL validates against the Schema
    3. Appropriate Resolvers execute
@@ -209,6 +224,7 @@
 7. ## **What is the difference between Query and Mutation in GraphQL**
 
    ### **Query** (Read)
+
    - Operation: Fetch data
    - Effect: No changes to server data
    - Analogous to: GET in REST
@@ -221,6 +237,7 @@
    ```
 
    ### **Mutation** (Write)
+
    - Operation: Modify data
    - Effect: Changes server state
    - Analogous to: POST/PUT/DELETE in REST
@@ -245,6 +262,7 @@
 8. ## **When to Use GraphQL or REST**
 
    ### **Choose GraphQL When:**
+
    - **Data needs are complex/changing:** _(Dynamic queries for different client
      needs)_
    - **Real-time updates required:** _(Subscriptions for live data)_
@@ -253,6 +271,7 @@
    - **Same team owns client+server:** _(Easier schema coordination)_
 
    ### **Choose REST When:**
+
    - **Simple data requirements:** _(Fixed endpoints suffice)_
    - **Caching is critical:** _(HTTP caching works well)_
    - **Stable API contracts:** _(Infrequent changes)_
@@ -272,6 +291,7 @@
 9. ## **How to Handle Errors in GraphQL**
 
    ### **Error Handling Approach**
+
    - **HTTP Status**: Always 200 OK (even for errors)
    - **Error Location**: Special `errors` array in response
    - **Response Structure**:
@@ -293,18 +313,21 @@
    ```
 
    ### **Error Types**
+
    1. **Syntax Errors** - Malformed queries
    2. **Validation Errors** - Schema violations
    3. **Execution Errors** - Resolver failures
    4. **Custom Business Errors** - App-specific
 
    ### **Best Practices**
+
    - Include helpful error messages
    - Use `extensions` for error codes/details
    - Log server-side errors properly
    - Document common error cases
 
    ### **Key Points**
+
    - Clients must check both `data` and `errors` fields
    - Partial responses possible (some data + some errors)
    - Error shapes follow GraphQL spec
@@ -362,18 +385,21 @@
     Here are some common strategies for handling versioning in GraphQL:
 
     **URL-based versioning:**
+
     - Include the version number in the URL. For example: /v1/graphql or
       /graphql/v2.
     - This approach is straightforward and easy to implement, but it can make
       the URLs less clean.
 
     **Custom request headers:**
+
     - Use custom headers to specify the API version. For instance, include a
       GraphQL-Version header in the request.
     - This approach keeps the URL clean but requires clients to include the
       custom header.
 
     **Field deprecation:**
+
     - Deprecate fields in the GraphQL schema that need to be versioned out.
     - This approach allows for a gradual transition and provides information to
       clients about deprecated fields.
@@ -396,6 +422,7 @@
     Here are some strategies to handle circular dependencies in GraphQL:
 
     **Late Binding / Forward Declarations:**
+
     - One approach is to use late binding or forward declarations. In this
       strategy, one of the types involved in the circular reference is declared
       first, and the other type is referenced using a forward declaration. The
@@ -404,6 +431,7 @@
       declarations explicitly.
 
     **Lazy Loading or Resolving Fields Dynamically:**
+
     - Delay the resolution of circular references until runtime. You can use
       lazy loading or dynamic resolution techniques to handle circular
       dependencies when the actual data is requested.
