@@ -6,7 +6,7 @@ power, storage options, and networking capabilities, enabling businesses and
 developers to deploy, manage, and scale applications without the need for
 physical hardware_
 
-2.  ## **What are the key services provided by AWS?**
+1.  ## **What are the key services provided by AWS?**
 
     _AWS offers numerous services categorized into different domains. Some of
     the key_
@@ -19,14 +19,14 @@ physical hardware_
     - **Networking:** _Amazon VPC, Amazon Route 53_
     - **Analytics:** _Amazon EMR, Amazon Redshift_
 
-3.  ## **What is an EC2 instance?**
+2.  ## **What is an EC2 instance?**
 
     _**Amazon EC2 (Elastic Compute Cloud)** is a web service that provides
     secure, resizable compute capacity in the cloud. An EC2 instance is a
     virtual server in Amazon’s Elastic Compute Cloud (EC2) for running
     applications on the AWS infrastructure_
 
-4.  ## **How do you launch an EC2 instance?**
+3.  ## **How do you launch an EC2 instance?**
 
     1. Open the Amazon EC2 console.
     2. Click “Launch Instance.”
@@ -39,14 +39,14 @@ physical hardware_
     8. Review and launch the instance.
     9. Create or select an existing key pair for SSH access.
 
-5.  ## **What is S3 in AWS?**
+4.  ## **What is S3 in AWS?**
 
     _**Amazon S3 (Simple Storage Service)** is a scalable object storage service
     that allows users to store and retrieve any amount of data at any time from
     anywhere on the web. It is designed for 99.999999999% (11 nines)
     durability._
 
-6.  ## **Explain the difference between S3 and EBS**
+5.  ## **Explain the difference between S3 and EBS**
 
     - **S3 (Simple Storage Service):** _Object storage service, used for storing
       and retrieving any amount of data. It is highly durable and accessible
@@ -55,13 +55,13 @@ physical hardware_
       volumes for EC2 instances. It provides persistent storage that can be
       attached to EC2 instances._
 
-7.  ## **What is an AMI?**
+6.  ## **What is an AMI?**
 
     _An **Amazon Machine Image (AMI)** is a pre-configured template for an EC2
     instance that contains the information required to launch an instance. This
     includes the operating system, application server, and applications._
 
-8.  ## **What is the difference between stopping and terminating an EC2 instance?**
+7.  ## **What is the difference between stopping and terminating an EC2 instance?**
 
     - **Stopping an EC2 instance:** _The instance is shut down, and you will not
       be billed for hourly usage, but the instance’s EBS volume remains and you
@@ -70,14 +70,14 @@ physical hardware_
       all associated storage (EBS volumes) is also deleted unless specified
       otherwise._
 
-9.  ## **What is a VPC?**
+8.  ## **What is a VPC?**
 
     _A **Virtual Private Cloud (VPC)** allows you to provision a logically
     isolated section of the AWS cloud where you can launch AWS resources in a
     virtual network defined by you. You have complete control over your virtual
     networking environment._
 
-10. ## **What are the benefits of using AWS?**
+9.  ## **What are the benefits of using AWS?**
 
     - **Scalability:** _Easily scale resources up or down as needed._
     - **Cost-effective:** _Pay only for the resources you use._
@@ -87,7 +87,7 @@ physical hardware_
       applications._
     - **Global Reach:** _Availability zones in multiple regions worldwide._
 
-11. ## **What is the difference between public and private subnets?**
+10. ## **What is the difference between public and private subnets?**
 
     - **Public Subnet:** _A subnet that is associated with a route table that
       has a route to an internet gateway. Resources in a public subnet can
@@ -96,14 +96,14 @@ physical hardware_
       gateway. Resources in a private subnet cannot communicate directly with
       the internet_
 
-12. ## **What is IAM?**
+11. ## **What is IAM?**
 
     _**AWS Identity and Access Management (IAM)** is a service that helps you
     securely control access to AWS services and resources. It allows you to
     create and manage AWS users and groups, and to set permissions to allow or
     deny their access to AWS resources._
 
-13. ## **How do you secure data in S3?**
+12. ## **How do you secure data in S3?**
 
     - **Enable server-side encryption:** _Encrypt data at rest._
     - **Use IAM policies:** _Control access to your S3 resources._
@@ -114,21 +114,21 @@ physical hardware_
     - **Enable MFA delete:** _Add another layer of security for object
       deletion._
 
-14. ## **What is the purpose of AWS CloudFormation?**
+13. ## **What is the purpose of AWS CloudFormation?**
 
     _**AWS CloudFormation** provides a way to model and set up your AWS
     resources using a template file. It allows you to define the infrastructure
     as code, which helps automate the deployment and management of AWS
     resources._
 
-15. ## **What is AWS Lambda?**
+14. ## **What is AWS Lambda?**
 
     _**AWS Lambda** is a serverless compute service that allows you to run code
     without provisioning or managing servers. You can run your code in response
     to events, such as changes to data in an S3 bucket or an update to a
     DynamoDB table._
 
-16. ## **What is Auto Scaling?**
+15. ## **What is Auto Scaling?**
 
     _**Auto Scaling** is an AWS service that automatically adjusts the number of
     EC2 instances in response to changing application demand. This ensures that
@@ -139,7 +139,7 @@ physical hardware_
     more EC2 instances when the CPU utilization exceeds a specified threshold,
     and remove instances when the utilization drops below the threshold._
 
-17. ## **How does Elastic Load Balancing work?**
+16. ## **How does Elastic Load Balancing work?**
 
     _Elastic Load Balancing (ELB) automatically distributes incoming application
     traffic across multiple targets, such as EC2 instances, containers, and IP
@@ -149,7 +149,7 @@ physical hardware_
     **Example:** _A web application can use an ELB to distribute incoming HTTP
     requests across a group of EC2 instances in multiple Availability Zones._
 
-18. ## **Explain the different types of load balancers in AWS.**
+17. ## **Explain the different types of load balancers in AWS.**
 
     _AWS offers **three types** of load balancers:_
 
@@ -161,14 +161,14 @@ physical hardware_
       transport layers, used for applications built within the EC2-Classic
       network._
 
-19. ## **What is Amazon RDS?**
+18. ## **What is Amazon RDS?**
 
     _**Amazon Relational Database Service (RDS)** is a managed database service
     that simplifies the setup, operation, and scaling of relational databases in
     the cloud. It supports multiple database engines, including MySQL,
     PostgreSQL, MariaDB, Oracle, and Microsoft SQL Server_
 
-20. ## **What are Security Groups and Network ACLs?**
+19. ## **What are Security Groups and Network ACLs?**
 
     - **Security Groups:** _Virtual firewalls for your EC2 instances that
       control inbound and outbound traffic. They operate at the instance level._
@@ -180,7 +180,7 @@ physical hardware_
     (port 22) only from a specific IP address, while **a Network ACL** can allow
     HTTP and HTTPS traffic (ports 80 and 443) for a specific subnet_
 
-21. ## **How do you monitor AWS resources?**
+20. ## **How do you monitor AWS resources?**
 
     _You can monitor AWS resources using:_
 
@@ -189,7 +189,7 @@ physical hardware_
     - **AWS CloudTrail:** _Provides governance, compliance, and operational and
       risk auditing by recording AWS API calls._
 
-22. ## **What is Amazon CloudWatch?**
+21. ## **What is Amazon CloudWatch?**
 
     _**Amazon CloudWatch** is a monitoring and observability service that
     provides data and actionable insights to monitor applications, understand
@@ -200,7 +200,7 @@ physical hardware_
     notifications when the CPU utilization of an EC2 instance exceeds a defined
     threshold_
 
-23. ## **What is AWS Route 53?**
+22. ## **What is AWS Route 53?**
 
     _**AWS Route 53** is a scalable **Domain Name System (DNS)** web service
     designed to route end-user requests to internet applications by translating
@@ -209,7 +209,7 @@ physical hardware_
     **Example:** _You can use Route 53 to route traffic to different endpoints,
     such as Amazon S3 buckets, EC2 instances, and ELBs, based on DNS queries._
 
-24. ## **Explain the concept of elasticity in AWS.**
+23. ## **Explain the concept of elasticity in AWS.**
 
     _**Elasticity** refers to the ability of AWS resources to automatically
     scale up or down based on demand. This ensures that the infrastructure can
@@ -220,7 +220,7 @@ physical hardware_
     dynamically adjusting the number of EC2 instances handling incoming traffic
     based on real-time demand._
 
-25. ## **What is the difference between RDS and DynamoDB?**
+24. ## **What is the difference between RDS and DynamoDB?**
 
     - **Amazon RDS:** _A managed relational database service supporting
       structured query language (SQL) databases. _
@@ -231,7 +231,7 @@ physical hardware_
     transactions (e.g., e-commerce platforms), and DynamoDB for applications
     needing low-latency access to large datasets (e.g., real-time analytics)._
 
-26. ## **What is the purpose of AWS Elastic Beanstalk?**
+25. ## **What is the purpose of AWS Elastic Beanstalk?**
 
     _**AWS Elastic Beanstalk** is an easy-to-use service for deploying and
     scaling web applications and services. It automatically handles the
@@ -242,7 +242,7 @@ physical hardware_
     application code, and Elastic Beanstalk handles the rest, including
     launching the necessary infrastructure._
 
-27. ## **How do you use AWS CloudTrail?**
+26. ## **How do you use AWS CloudTrail?**
 
     _**AWS CloudTrail** records AWS API calls and delivers log files to an
     Amazon S3 bucket. It provides visibility into user activity by recording
@@ -252,7 +252,7 @@ physical hardware_
     such as modifications to security group rules or the creation of new IAM
     users._
 
-28. ## **What is AWS Snowball?**
+27. ## **What is AWS Snowball?**
 
     _**AWS Snowball** is a data transport solution that uses secure physical
     devices to transfer large amounts of data into and out of AWS. It helps with
@@ -262,7 +262,7 @@ physical hardware_
     their on-premises data center to AWS without using the internet,
     significantly reducing transfer times._
 
-29. ## **What is Amazon ElastiCache?**
+28. ## **What is Amazon ElastiCache?**
 
     _**Amazon ElastiCache** is a managed in-memory data store and cache service
     that supports Redis and Memcached. It helps improve the performance of
@@ -272,7 +272,7 @@ physical hardware_
     **Example:** _A web application can use ElastiCache to store session data,
     reducing the load on the backend database and improving response times._
 
-30. ## **How do you implement multi-region deployments in AWS?**
+29. ## **How do you implement multi-region deployments in AWS?**
 
     _**Multi-region deployments** involve deploying your application across
     multiple AWS regions to achieve higher availability, fault tolerance, and
@@ -284,7 +284,7 @@ physical hardware_
     using Route 53 for global traffic management, RDS for database replication,
     and S3 for storing and replicating product images._
 
-31. ## **What is AWS Direct Connect?**
+30. ## **What is AWS Direct Connect?**
 
     _**AWS Direct Connect** is a cloud service that establishes a dedicated
     network connection from your premises to AWS. Using AWS Direct Connect, you
@@ -297,7 +297,7 @@ physical hardware_
     datasets between its on-premises environment and AWS S3, reducing transfer
     times and improving reliability._
 
-32. ## **Explain the use of AWS Lambda with AWS API Gateway.**
+31. ## **Explain the use of AWS Lambda with AWS API Gateway.**
 
     _**AWS Lambda** is a serverless compute service that allows you to run code
     without provisioning or managing servers. **AWS API Gateway** is a fully
@@ -310,7 +310,7 @@ physical hardware_
     API Gateway to expose an endpoint that triggers this Lambda function
     whenever a specific API request is made._
 
-33. ## **What is the difference between AWS OpsWorks and AWS Elastic Beanstalk?**
+32. ## **What is the difference between AWS OpsWorks and AWS Elastic Beanstalk?**
 
     - **AWS OpsWorks:** _is a configuration management service that provides
       managed instances of Chef and Puppet, which are automation platforms that
@@ -327,7 +327,7 @@ physical hardware_
     quick deployment and management of web applications without worrying about
     the underlying infrastructure._
 
-34. ## **How do you optimize costs in AWS?**
+33. ## **How do you optimize costs in AWS?**
 
     _To optimize costs in AWS, you can:_
 
@@ -342,7 +342,7 @@ physical hardware_
     - **Monitor and manage:** _Use AWS Cost Explorer and AWS Budgets to track
       and manage your spending._
 
-35. ## **What is AWS Global Accelerator?**
+34. ## **What is AWS Global Accelerator?**
 
     _**AWS Global Accelerator** is a service that improves the availability and
     performance of your applications with global users. It provides static IP
@@ -355,7 +355,7 @@ physical hardware_
     different geographic locations to the nearest available endpoint, reducing
     latency and improving user experience._
 
-36. ## **Explain the concept of serverless architecture in AWS.**
+35. ## **Explain the concept of serverless architecture in AWS.**
 
     _**Serverless architecture** allows you to build and run applications
     without managing infrastructure. AWS provides serverless services like AWS
@@ -368,7 +368,7 @@ physical hardware_
     HTTP requests, Lambda functions to process the requests, and DynamoDB to
     store application data._
 
-37. ## **How do you handle disaster recovery in AWS?**
+36. ## **How do you handle disaster recovery in AWS?**
 
     _**Disaster recovery** in AWS involves strategies to ensure data protection
     and recovery in the event of a disaster._
@@ -384,7 +384,7 @@ physical hardware_
     - **Replication:** _Use services like RDS Read Replicas and DynamoDB global
       tables for cross-region replication._
 
-38. ## **What is Amazon Kinesis?**
+37. ## **What is Amazon Kinesis?**
 
     _**Amazon Kinesis** is a platform on AWS to collect, process, and analyze
     real-time, streaming data._
@@ -398,7 +398,7 @@ physical hardware_
     - **Kinesis Video Streams:** _For securely streaming video from connected
       devices to AWS for analytics, machine learning, and other processing._
 
-39. ## **Explain the concept of Infrastructure as Code (IaC) in AWS.**
+38. ## **Explain the concept of Infrastructure as Code (IaC) in AWS.**
 
     _**Infrastructure as Code (IaC)** is the practice of managing and
     provisioning computing infrastructure through machine-readable configuration
@@ -410,7 +410,7 @@ physical hardware_
     resources like EC2 instances, VPCs, and RDS databases in a consistent and
     repeatable manner. _
 
-40. ## **How do you secure AWS environments?**
+39. ## **How do you secure AWS environments?**
 
     **To secure AWS environments, you can:**
 
@@ -424,7 +424,7 @@ physical hardware_
     - **Implement network security:** _Use security groups, Network ACLs, and
       VPCs to control traffic._
 
-41. ## **What is AWS Transit Gateway?**
+40. ## **What is AWS Transit Gateway?**
 
     _**AWS Transit Gateway** is a service that enables you to connect your
     Amazon VPCs and on-premises networks through a central hub. It simplifies
@@ -435,7 +435,7 @@ physical hardware_
     multiple VPCs and on-premises networks across different regions,
     streamlining network management._
 
-42. ## **How do you use AWS Systems Manager?**
+41. ## **How do you use AWS Systems Manager?**
 
     _**AWS Systems Manager** provides a unified interface to view and control
     your AWS resources. It helps automate operational tasks across AWS
@@ -445,7 +445,7 @@ physical hardware_
     **Example:** _Use Systems Manager to run commands on your EC2 instances,
     automate patching, and maintain a central inventory of your AWS resources._
 
-43. ## **What are AWS Step Functions?**
+42. ## **What are AWS Step Functions?**
 
     _**AWS Step Functions** is a serverless orchestration service that lets you
     coordinate multiple AWS services into serverless workflows. It allows you to
@@ -456,7 +456,7 @@ physical hardware_
     that involves steps like validating the order, processing payment, and
     updating inventory._
 
-44. ## **Explain the use of AWS Config.**
+43. ## **Explain the use of AWS Config.**
 
     _**AWS Config** is a service that enables you to assess, audit, and evaluate
     the configurations of your AWS resources. It continuously monitors and
@@ -466,7 +466,7 @@ physical hardware_
     **Example:** _Use AWS Config to track changes to security group rules and
     ensure they comply with your organization’s security policies._
 
-45. ## **How do you manage compliance in AWS?**
+44. ## **How do you manage compliance in AWS?**
 
     _**Managing compliance** in AWS involves using a combination of AWS services
     and best practices to meet regulatory requirements._
