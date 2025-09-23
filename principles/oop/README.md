@@ -6,6 +6,7 @@ code into reusable modules called classes that encapsulate data (attributes) and
 methods (functions) that operate on that data._
 
 - ## **Encapsulation:**
+
   - **private** _(accessible only within class)_
   - **protected** _(accessible within or subclass)_
   - **public** _(accessible anywhere)_
@@ -172,10 +173,7 @@ methods (functions) that operate on that data._
   ```ts
   // Base class
   class Animal {
-    constructor(
-      public name: string,
-      protected age: number
-    ) {}
+    constructor(public name: string, protected age: number) {}
 
     makeSound(): void {
       console.log('Some generic animal sound')
@@ -230,90 +228,83 @@ methods (functions) that operate on that data._
 
 - ## **Polymorphism:**
 
-_Poly_ \=\> Multiple, _Morphism_ \=\> Form \===\> Multiple Form  
- _Person_ \=\> Father, Mother, Child, Worker, President, etc..  
- _OOP_
+  _Poly_ \=\> Multiple, _Morphism_ \=\> Form \===\> Multiple Form  
+   _Person_ \=\> Father, Mother, Child, Worker, President, etc..  
+   _OOP_
 
-- Parent class (sound \=\> ‘parent’)
-- Child class inherited Parent class (sound \=\> ‘child’)
+  - Parent class (sound \=\> ‘parent’)
+  - Child class inherited Parent class (sound \=\> ‘child’)
 
-```ts
-// Abstract base class
-abstract class Shape {
-  constructor(public color: string) {}
+  ```ts
+  // Abstract base class
+  abstract class Shape {
+    constructor(public color: string) {}
 
-  abstract getArea(): number
-  abstract draw(): void
+    abstract getArea(): number
+    abstract draw(): void
 
-  displayInfo(): void {
-    console.log(`This is a ${this.color} shape with area ${this.getArea()}`)
-  }
-}
-
-// Concrete implementations
-class Circle extends Shape {
-  constructor(
-    color: string,
-    private radius: number
-  ) {
-    super(color)
+    displayInfo(): void {
+      console.log(`This is a ${this.color} shape with area ${this.getArea()}`)
+    }
   }
 
-  getArea(): number {
-    return Math.PI * this.radius ** 2
+  // Concrete implementations
+  class Circle extends Shape {
+    constructor(color: string, private radius: number) {
+      super(color)
+    }
+
+    getArea(): number {
+      return Math.PI * this.radius ** 2
+    }
+
+    draw(): void {
+      console.log(`Drawing a ${this.color} circle with radius ${this.radius}`)
+    }
   }
 
-  draw(): void {
-    console.log(`Drawing a ${this.color} circle with radius ${this.radius}`)
-  }
-}
+  class Rectangle extends Shape {
+    constructor(color: string, private width: number, private height: number) {
+      super(color)
+    }
 
-class Rectangle extends Shape {
-  constructor(
-    color: string,
-    private width: number,
-    private height: number
-  ) {
-    super(color)
-  }
+    getArea(): number {
+      return this.width * this.height
+    }
 
-  getArea(): number {
-    return this.width * this.height
+    draw(): void {
+      console.log(
+        `Drawing a ${this.color} rectangle ${this.width}x${this.height}`
+      )
+    }
   }
 
-  draw(): void {
-    console.log(
-      `Drawing a ${this.color} rectangle ${this.width}x${this.height}`
-    )
+  // Function demonstrating polymorphism
+  function processShapes(shapes: Shape[]): void {
+    shapes.forEach(shape => {
+      shape.draw()
+      shape.displayInfo()
+      console.log('---')
+    })
   }
-}
 
-// Function demonstrating polymorphism
-function processShapes(shapes: Shape[]): void {
-  shapes.forEach(shape => {
-    shape.draw()
-    shape.displayInfo()
-    console.log('---')
-  })
-}
+  // Usage
+  const shapes: Shape[] = [
+    new Circle('red', 5),
+    new Rectangle('blue', 4, 6),
+    new Circle('green', 3)
+  ]
 
-// Usage
-const shapes: Shape[] = [
-  new Circle('red', 5),
-  new Rectangle('blue', 4, 6),
-  new Circle('green', 3)
-]
-
-processShapes(shapes)
-/*
- Drawing a red circle with radius 5
- This is a red shape with area 78.53981633974483
- ---
- Drawing a blue rectangle 4x6
- This is a blue shape with area 24
- ---
- Drawing a green circle with radius 3
- This is a green shape with area 28.274333882308138
- ---
- */
-```
+  processShapes(shapes)
+  /*
+  Drawing a red circle with radius 5
+  This is a red shape with area 78.53981633974483
+  ---
+  Drawing a blue rectangle 4x6
+  This is a blue shape with area 24
+  ---
+  Drawing a green circle with radius 3
+  This is a green shape with area 28.274333882308138
+  ---
+  */
+  ```
