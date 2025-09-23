@@ -38,7 +38,7 @@ failures or concurrent access.
 
   **Example:** _If a database requires that every order must have a customer,
   the consistency property prevents adding an order without a valid customer
-  reference. _ <br>
+  reference._ <br>
 
 - ## **Isolation:**
 
