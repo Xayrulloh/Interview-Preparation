@@ -1,0 +1,15 @@
+# ⚖️ Zustand vs Redux vs Context API
+
+| Feature / Aspect          | Zustand 🐻                                                          | Redux / Redux Toolkit 🔥                                                 | Context API 🎯                                              |
+| ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| **Boilerplate**           | MVery low, just a function with hooks                               | High (Redux), reduced with Redux Toolkit but still more structured       | Very low, just `Provider` + `useContext`                    |
+| **Ease of Use**           | Simple, minimal API, beginner-friendly                              | Steeper learning curve, more concepts (actions, reducers, middleware)    | Easiest, built-in to React                                  |
+| **Performance**           | Efficient: only subscribed components re-render                     | Efficient but may re-render if not optimized                             | Can cause re-renders of all consumers unless memoized       |
+| **Async Handling**        | Directly in store (async/await)                                     | Handled with thunks, sagas, observables, or RTK Query                    | No built-in async handling                                  |
+| **DevTools Support**      | Yes (with middleware)                                               | Excellent (Redux DevTools)                                               | No devtools                                                 |
+| **Middleware**            | Built-in options: persist, devtools, immer..                        | Full ecosystem of middleware (redux-thunk, saga, logger)                 | None                                                        |
+| **Persistence**           | Easy with `persist` middleware                                      | Requires extra libs (redux-persist)                                      | Manual implementation needed                                |
+| **Scalability**           | Great for small to medium apps                                      | Best for large/complex enterprise apps                                   | Not ideal for large apps (prop drilling alternative only)   |
+| **Setup**                 | 1–2 lines                                                           | Complex setup (simplified in RTK)                                        | Minimal setup                                               |
+| **Community / Ecosystem** | Growing, smaller than Redux                                         | Huge ecosystem, widely adopted                                           | Native to React                                             |
+| **When to Use?**          | Small/medium projects, quick prototypes, apps where DX is important | Large apps with complex flows, need structured & strict state management | Small apps, local/global theme, auth user, language toggles |
