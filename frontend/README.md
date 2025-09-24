@@ -5,3 +5,5 @@
 ## [Next.js Interview Questions](nextjs/README.md)
 
 ## [Redux State Management Interview Questions](redux/README.md)
+
+## [Zustand State Management Interview Questions](zustand/README.md)
