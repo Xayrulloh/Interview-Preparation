@@ -8,6 +8,10 @@
 
 ## [DRY](dry/README.md)
 
+## [KISS](kiss/README.md)
+
+## [YAGNI](yagni/README.md)
+
 <br>
 <br>
 
