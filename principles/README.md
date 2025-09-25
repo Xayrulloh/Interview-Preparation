@@ -5,3 +5,5 @@
 ## [OOP](oop/README.md)
 
 ## [SOLID](solid/README.md)
+
+## [DRY](dry/README.md)
