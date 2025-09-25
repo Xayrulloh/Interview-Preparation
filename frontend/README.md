@@ -1,4 +1,4 @@
-# Frontend Related Interview Questions
+# Frontend Related Interview Topics
 
 ## [React Interview Questions](react/README.md)
 

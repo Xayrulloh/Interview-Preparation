@@ -1,4 +1,4 @@
-# Language Related Interview Questions
+# Language Related Interview Topics
 
 ## [Javascript Interview Questions](javascript/README.md)
 

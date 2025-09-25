@@ -1,4 +1,4 @@
-# Backend Related Interview Preparations
+# Backend Related Interview Topics
 
 ## [Node.js Interview Questions](nodejs/README.md)
 

@@ -1,4 +1,4 @@
-# Database Related Interview Questions
+# Database Related Interview Topics
 
 ## [SQL Interview Questions](sql/README.md)
 

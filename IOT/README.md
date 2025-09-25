@@ -1,4 +1,4 @@
-# IOT (Internet Of Things) Related Interview Questions
+# IOT (Internet Of Things) Related Interview Topics
 
 ## [REST API Interview Questions](rest/README.md)
 
