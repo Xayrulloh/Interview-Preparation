@@ -7,3 +7,8 @@
 ## [SOLID](solid/README.md)
 
 ## [DRY](dry/README.md)
+
+<br>
+<br>
+
+![YAGNI KISS DRY](./images/yagni-kiss-dry.png)
