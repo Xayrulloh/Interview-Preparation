@@ -9,3 +9,5 @@
 ## [Zustand State Management Interview Questions](zustand/README.md)
 
 ## [React Query Interview Questions](react-query/README.md)
+
+## [Effector State Management Interview Questions](effector/README.md)
