@@ -304,8 +304,8 @@
 
   - ### APIs and API Gateway
 
-    **What is it?** _An API (Application Programming Interface) defines how
-    components interact. An API Gateway is a single entry point that routes
+    **What is it?** _An **API** (Application Programming Interface) defines how
+    components interact. An **API Gateway** is a single entry point that routes
     client requests to different backend services._
 
     **When to Use:**
