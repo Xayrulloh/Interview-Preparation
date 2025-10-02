@@ -13,6 +13,8 @@ series_
 
 ## [Docker Interview Questions](docker/README.md)
 
+## [Kubernetes Interview Questions](kubernetes/README.md)
+
 ## [Git Interview Questions](git/README.md)
 
 ## [Cloud Interview Questions](cloud/README.md)
