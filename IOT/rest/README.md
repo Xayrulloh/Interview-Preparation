@@ -48,7 +48,8 @@
    - **PATCH** - Partial update (or create)
    - **OPTIONS** - List supported operations
 
-   _Note: PUT vs PATCH - PATCH replaces entire resource, PUT modifies partially_
+   _Note: **PUT** vs **PATCH** - **PATCH** replaces entire resource, **PUT**
+   modifies partially_
 
 7. ## **HTTP Status Codes**
 
