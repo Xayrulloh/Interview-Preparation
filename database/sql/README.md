@@ -207,8 +207,6 @@
       | **GiST**      | Custom / geometric data    | Geospatial queries, ranges      |
       | **SP-GiST**   | Partitioned structures     | IP ranges, hierarchical data    |
 
----
-
 ## Constraints & Keys
 
 11. ### **Primary Key**
