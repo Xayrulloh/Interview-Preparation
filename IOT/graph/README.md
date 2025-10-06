@@ -101,7 +101,7 @@
      - Easy schema setup
      - Data source integrations
 
-   _"Batteries-included GraphQL toolkit"_
+   **_"Batteries-included GraphQL toolkit"_**
 
 5. ## **What are the three types of operations in GraphQL**
 
