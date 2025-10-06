@@ -165,7 +165,7 @@
 
    1. **Dockerfile** - Defines the image:
 
-   ```docker
+   ```yaml
    # Set the base image
    FROM python:3.8
 
@@ -343,7 +343,7 @@
 
    Here is the `Dockerfile`:
 
-   ```dockerfile
+   ```yaml
    # Use a specific version of Node.js as the base
    FROM node:14-alpine
 
@@ -413,7 +413,7 @@
    2. The base image is `ubuntu:latest`, and the application code is stored in a
       file named `app.py`.
 
-   ```docker
+   ```yaml
    # Layer 1: Start from base image
    FROM ubuntu:latest
 
@@ -457,7 +457,7 @@
 
    Here is the `dockerfile` with the multi-stage build.
 
-   ```Dockerfile
+   ```yaml
 
    # Use an official Node.js runtime as the base image
    FROM node:current-slim AS build
@@ -530,7 +530,7 @@
    that packages multiple operations. This approach reduces additional layer
    creation, resulting in smaller images.
 
-   ```Dockerfile
+   ```yaml
    RUN apt-get update && apt-get install -y nginx && apt-get clean
    ```
 
@@ -546,13 +546,13 @@
    For `npm`, running the following command prevents the installation of
    development dependencies:
 
-   ```dockerfile
+   ```yaml
    RUN npm install --only=production
    ```
 
    For `pip`, you can achieve the same with:
 
-   ```dockerfile
+   ```yaml
    RUN pip install --no-cache-dir -r requirements.txt
    ```
 
@@ -566,7 +566,7 @@
 
    Here is an example:
 
-   ```Dockerfile
+   ```yaml
    COPY ["*.json", "*.sh", "config/", "./"]
    ```
 
