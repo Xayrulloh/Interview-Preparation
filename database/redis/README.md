@@ -35,9 +35,9 @@
    - **Publish-Subscribe:** _messaging pattern_
    - **Channels:** _Categories for messages_
    - **Example Flow:**
-     1. SUBSCRIBE news_channel
-     2. PUBLISH news_channel "Hello Redis"
-     3. All subscribers receive message
+     - **SUBSCRIBE** news_channel
+     - **PUBLISH** news_channel "Hello Redis"
+     - **All** subscribers receive message
 
 5. ## **Redis Persistence**
 
@@ -50,13 +50,13 @@
 
    2. ### **(Append-Only File)**
 
-   - Logs every write operation
-   - Configurable sync options:
-     - always: safest
-     - everysec: balanced
-     - no: fastest
-   - Pros: Durability
-   - Cons: Larger files
+      - Logs every write operation
+      - Configurable sync options:
+        - always: safest
+        - everysec: balanced
+        - no: fastest
+      - Pros: Durability
+      - Cons: Larger files
 
 6. ## **Redis Keys**
 
@@ -71,8 +71,8 @@
 
 7. ## **When NOT to Use Redis**
 
-   - **Large datasets** exceeding server RAM
-   - **Complex transactions** requiring ACID
-   - **Permanent storage** as sole database
-   - **Heavy writes** with low-latency reads
-   - **Relational data** needing joins
+   - **Large datasets** _exceeding server RAM_
+   - **Complex transactions** _requiring ACID_
+   - **Permanent storage** _as sole database_
+   - **Heavy writes** _with low-latency reads_
+   - **Relational data** _needing joins_
