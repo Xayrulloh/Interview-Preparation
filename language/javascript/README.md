@@ -1561,7 +1561,7 @@
     | Feature  | Iterator               | Generator        | Loop             |
     | -------- | ---------------------- | ---------------- | ---------------- |
     | Control  | Manual (next())        | Pausable (yield) | Automatic        |
-    | Syntax   | Symbol.iterator        | function\*       | for/while        |
+    | Syntax   | Symbol.iterator        | function         | for/while        |
     | Memory   | Efficient              | Efficient        | Less efficient   |
     | Use Case | Custom data structures | Async sequences  | Simple iteration |
 

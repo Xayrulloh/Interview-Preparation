@@ -66,7 +66,7 @@
      - SET/GET/DEL commands
      - TTL for expiration
    - **Pattern Matching:**
-     - KEYS user:\* (avoid in production)
+     - KEYS user: (avoid in production)
      - SCAN for safe iteration
 
 7. ## **When NOT to Use Redis**

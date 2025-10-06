@@ -310,32 +310,32 @@
 
 11. ### **Declaration merging**
 
-- Declaration merging is a feature in TypeScript that allows you to combine
-  multiple declarations of the same name into a single definition. This is
-  particularly useful with interface (but not with type)\*
+    - Declaration merging is a feature in TypeScript that allows you to combine
+      multiple declarations of the same name into a single definition. This is
+      particularly useful with interface (but not with type)
 
 ## Classes & OOP
 
-11. ### **What are abstract classes? When should you use one**
+12. ### **What are abstract classes? When should you use one**
 
     _Abstract classes are similar to interfaces in that they specify a contract
     for the objects, and you cannot instantiate them directly_
 
-12. ### **How to make object properties immutable in TypeScript**
+13. ### **How to make object properties immutable in TypeScript**
 
     _By using **readonly** keyword before the property name_
 
-13. ### **What are the **'implements'** clauses in TypeScript**
+14. ### **What are the **'implements'** clauses in TypeScript**
 
     _It's used to check that a class satisfies the contract specified by an
     interface_
 
-14. ### **Explain the concept of inheritance in TypeScript**
+15. ### **Explain the concept of inheritance in TypeScript**
     _It allows us to extend from another class and reuse or modify the behavior_
 
 ## Advanced Types
 
-15. ### **What are Union and Intersection Types**
+16. ### **What are Union and Intersection Types**
 
     - **Union Type:** _In TypeScript, union types, marked by **|**, allow a
       variable to have values from different types_
@@ -360,12 +360,12 @@
     const me: Person = { name: 'me', age: 1 }
     ```
 
-16. ### **What are type aliases? How do you create one**
+17. ### **What are type aliases? How do you create one**
 
     _If we've variable either string or number. We can create type something
     **string | number** and use this type to that variable_
 
-17. ### **What are string literal types**
+18. ### **What are string literal types**
 
     _You can refer to specific string or numbers as types_
 
@@ -375,7 +375,7 @@
     status = 'inactive' // Error: Type '"inactive"' is not assignable to type '"active"'.
     ```
 
-18. ### **What are template literal types**
+19. ### **What are template literal types**
 
     _They're like string literal but you can combine them with concrete_
 
@@ -387,7 +387,7 @@
     let message2: SizeMessage = 'The selected size is extra-large.' // Error: Type '"The selected size is extra-large."' is not assignable to type '"The selected size is small." | "The selected size is medium." | "The selected size is large."'.
     ```
 
-19. ### **What are Conditional Types**
+20. ### **What are Conditional Types**
 
     _Conditional types in TypeScript help us describe different type mappings
     based on certain conditions_
@@ -399,7 +399,7 @@
     type B = IsString<123> // type B = false
     ```
 
-20. ### **What are mapped types, and how do they work**
+21. ### **What are mapped types, and how do they work**
 
     _Mapped types in TypeScript allow you to create new types by changing the
     properties of existing ones_
@@ -419,24 +419,24 @@
     // MyOptionalType will be: { propA?: string; propB?: number; }
     ```
 
-21. ### **List some of the utility types provided by TypeScript and explain their usage**
+22. ### **List some of the utility types provided by TypeScript and explain their usage**
     _Partial, Required, Readonly, Record, Promise, Awaited, Pick, Omit_
 
 ## Special Types
 
-22. ### **What is void, and when to use the void type**
+23. ### **What is void, and when to use the void type**
 
     _Let's say you've a function which returns nothing, that means it's void
     function_
 
 ## Arrays & Tuples
 
-23. ### **Explain how the arrays work in TypeScript**
+24. ### **Explain how the arrays work in TypeScript**
 
     _We use arrays to store values of the same type. Arrays are ordered and
     indexed collections of values_
 
-24. ### **Explain how tuple destructuring works in TypeScript**
+25. ### **Explain how tuple destructuring works in TypeScript**
 
     _Instead of giving one type to array elements we can separate them one by
     one, this is why we need tuples. And it's works pretty easy like
@@ -457,7 +457,7 @@
     console.log(isActive) // Output: true
     ```
 
-25. ### **What are variadic tuple types**
+26. ### **What are variadic tuple types**
 
     _They allow defining tuples with rest elements._
 
@@ -468,7 +468,7 @@
 
 ## Enums
 
-26. ### **What is enums**
+27. ### **What is enums**
 
     _In TypeScript, enums work similarly to enums in other programming
     languages, providing a way to define a set of named constants_
@@ -500,7 +500,7 @@
     let today: DaysOfWeek = DaysOfWeek.Monday // Monday
     ```
 
-27. ### **What are const enums**
+28. ### **What are const enums**
 
     _They are similar to enums, but declared with const. When compiled, only the
     values of the enum members are emitted as constants. This is why you can use
@@ -509,7 +509,7 @@
 
 ## Modern Features
 
-28. ### **What is optional chaining**
+29. ### **What is optional chaining**
 
     _Instead of checking all the way down we can just use a ?. And it returns
     undefined it's not exist_
@@ -544,7 +544,7 @@
     service2.doSomething?.() // Does nothing, no error
     ```
 
-29. ### **What is the 'in' operator**
+30. ### **What is the 'in' operator**
 
     _It's used to find if a property is in the specified object_
 
@@ -554,7 +554,7 @@
     console.log('year' in car) // false
     ```
 
-30. ### **What are TypeScript decorators, and how do they work**
+31. ### **What are TypeScript decorators, and how do they work**
 
     _TypeScript decorators are special functions used to modify or add behavior
     to classes, methods, properties, or parameters at runtime_
@@ -597,17 +597,17 @@
 
 ## Configuration
 
-31. ### **What is the purpose of the tsconfig.json file**
+32. ### **What is the purpose of the tsconfig.json file**
 
     _It provides the compiler options to compile the project_
 
-32. ### **How to enforce strict null checks in TypeScript**
+33. ### **How to enforce strict null checks in TypeScript**
     _It's a way to check all possibilities that can be null. And to enforce it
     we change tsconfig.json file strictNullChecks to true_
 
 ## Type System
 
-33. ### **What is meant by type inference**
+34. ### **What is meant by type inference**
 
     _When you don't provide an explicit type typescript itself defines type_
 
@@ -616,7 +616,7 @@
     let message = 'Hello' // TypeScript infers 'message' as 'string'
     ```
 
-34. ### **What is meant by contextual typing**
+35. ### **What is meant by contextual typing**
 
     _When the typescript compiler uses the location of a variable to infer its
     type, it's called contextual typing_
@@ -628,7 +628,7 @@
     }
     ```
 
-35. ### **When would you use type assertion**
+36. ### **When would you use type assertion**
 
     _Type assertion in TypeScript is a mechanism to tell the compiler that you
     know more about the type of a value than TypeScript can infer_
@@ -645,30 +645,30 @@
 
 ## Advanced Concepts
 
-36. ### **Does TypeScript support static classes? If not, why**
+37. ### **Does TypeScript support static classes? If not, why**
 
     _In Typescript you can create any data and functions as simple objects
     without creating a containing class. Hence typescript doesn't need static
     classes_
 
-37. ### **What is the Function type in TypeScript**
+38. ### **What is the Function type in TypeScript**
 
     _Function is a global type in typescript and it has properties like bind,
     call and apply with other properties_
 
-38. ### **What is a type declaration file**
+39. ### **What is a type declaration file**
 
     _It's a file which ends with .d.ts extension providing a way to declare the
     existence of some types or values without actually providing implementations
     for those values_
 
-39. ### **Explain the various ways to control member visibility in TypeScript**
+40. ### **Explain the various ways to control member visibility in TypeScript**
 
     - **public:** _You can access a public member anywhere outside the class_
     - **protected:** _It's visible only to the subclasses_
     - **private:** _It's only visible inside the class_
 
-40. ### **What are Type Guards**
+41. ### **What are Type Guards**
 
     - **typeof:** _check primitive types_
     - **keyof:** _check is key available in object_
@@ -676,7 +676,7 @@
     - **in:** _check if a property exist in an object_
     - **is:** _User Defined Type Guard_
 
-41. ### **Difference between keyof, typeof, and their combined usage**
+42. ### **Difference between keyof, typeof, and their combined usage**
 
     - **keyof:** _Used to get the keys of an object_
     - **typeof:** _Used to get the type of a variable_
@@ -691,12 +691,12 @@
     type PersonKeys = keyof typeof person // 'name' | 'age'
     ```
 
-42. ### **Explain how TypeScript infers types**
+43. ### **Explain how TypeScript infers types**
 
     _TypeScript uses type inference to automatically determine the types of
     variables based on their assigned values while declaring_
 
-43. ### **What are generics in TypeScript, and when would you use them**
+44. ### **What are generics in TypeScript, and when would you use them**
 
     _Generics in TypeScript provide a way to create reusable components and
     functions while maintaining flexibility in the types they work with_
@@ -736,7 +736,7 @@
     }
     ```
 
-44. ### **What is the declare keyword**
+45. ### **What is the declare keyword**
 
     _The declare keyword in TypeScript is used to inform the compiler that a
     variable, method, or library is defined externally_
@@ -750,7 +750,7 @@
     }
     ```
 
-45. ### **What is a discriminated union and how does it help in type safety**
+46. ### **What is a discriminated union and how does it help in type safety**
 
     _Discriminated unions use a common literal property (tag) to distinguish
     between different variants._
@@ -770,7 +770,7 @@
     }
     ```
 
-46. ### **What is as const and how is it used**
+47. ### **What is as const and how is it used**
 
     _The as const keyword in TypeScript is used to create a constant variable
     whose type cannot be changed_
@@ -786,5 +786,5 @@
 
 ## Enums vs Types
 
-47. ### **Enums vs type declaration (type and interface)**
+48. ### **Enums vs type declaration (type and interface)**
     _Enum exists in JS but type declaration erased and used only for TS checks_
