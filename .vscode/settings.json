@@ -36,6 +36,7 @@
     "QUIC",
     "RDBMS",
     "Rspack",
+    "SAVEPOINT",
     "SETNX",
     "Sleepable",
     "WASI"
