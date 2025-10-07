@@ -110,8 +110,8 @@
 
 8. ## **What is the role of sample in Effector?**
 
-   `_sample` connects **events/effects/stores** together. It’s used for advanced
-   control flows.\_
+   _`sample` connects **events/effects/stores** together. It’s used for advanced
+   control flows._
 
    ```ts
    import { createEvent, createStore, sample } from 'effector'

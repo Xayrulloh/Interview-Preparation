@@ -2,10 +2,10 @@
 
 1. ## **What is Redux?**
 
-   **\_Redux** is a popular open-source state management library for JavaScript
+   _**Redux** is a popular open-source state management library for JavaScript
    applications. It provides a way to centralize the state of an application in
    a single store, making it easier to debug, test, and reason about the state
-   changes in the application.\_
+   changes in the application._
 
 2. ## **What are the problems that Redux solves?**
 
@@ -220,11 +220,11 @@
 
 21. ## **What are selectors in Redux?**
 
-    **\_Selectors** in Redux are the functions that extract specific pieces of
+    _**Selectors** in Redux are the functions that extract specific pieces of
     data from the Redux store state. They provide a way to pass the data from
     the state in an efficient manner. Selectors are mainly used to encapsulate
     the process of accessing and transforming state data which makes it easier
-    to manage and reuse across multiple components.\_
+    to manage and reuse across multiple components._
 
 22. ## **Explain the concept of "container components" in React Redux.**
 
