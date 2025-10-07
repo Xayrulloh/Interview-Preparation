@@ -8,7 +8,7 @@
    - Unlike Redux, you don’t need actions, reducers, or middlewares.
    - State is just a **store function** + **hooks**.
 
-   ```tsxx
+   ```tsx
    import { create } from 'zustand'
 
    const useStore = create(set => ({
@@ -38,7 +38,7 @@
 
 4. ## **How do you create a Zustand store?**
 
-   ```tsxx
+   ```tsx
    import { create } from 'zustand'
 
    // initialization
