@@ -48,7 +48,7 @@
 7. ## **What is getStaticProps in Next.js?**
 
    - Used for `SSG`.
-   - Fetches data at build time. -
+   - Fetches data at build time.
    - Runs only on the server (never shipped to client).
 
 8. ## **What is getServerSideProps?**
