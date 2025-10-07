@@ -187,7 +187,7 @@
       `client`.
     - `Reduce` bundle size and `improve` performance.
 
-22. ## **22. What are Portals in React?**
+22. ## **What are Portals in React?**
 
     _A way to render children into a DOM node outside the parent component’s
     hierarchy._
