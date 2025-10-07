@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "Abduvokhidov",
     "AUFS",
     "Automaticity",
     "bsondump",
@@ -18,6 +19,7 @@
     "HDFS",
     "HPACK",
     "ILIKE",
+    "Khayrulla",
     "kqueue",
     "Libuv",
     "Liskov",
@@ -38,7 +40,9 @@
     "Rspack",
     "SAVEPOINT",
     "SETNX",
+    "Shichu",
     "Sleepable",
+    "Vention's",
     "WASI"
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
