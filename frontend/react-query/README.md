@@ -210,7 +210,7 @@
 
 <br>
 
-# ⚖️ React Query vs RTK (React Toolkit) Query
+# ⚖️ React Query vs RTK (Redux Toolkit) Query
 
 | Feature / Aspect   | **React Query** ⚡                                                                  | **RTK Query (Redux Toolkit Query)** 🔥                                                              |
 | ------------------ | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
