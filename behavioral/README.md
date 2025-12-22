@@ -1,23 +1,19 @@
 # Self Introduction
 
-Hi, my name is Khayrulla Abduvokhidov, and I’m a FullStack developer with over 4
-years of experience. My primary stack is Node.js, TypeScript, PostgreSQL, and
-React.
+Hi, my name is **Xayrulloh**. I’m a **full-stack developer** with around **5 years of experience**, mainly working with **Node.js, React, and PostgreSQL**, along with modern frameworks and libraries in the JavaScript ecosystem.
 
-And I've worked on projects like eCommerce in TUNE Consulting and it was the
-first marketplace in Uzbekistan, also worked on logistic platform in EO Global
-where we moved from all paper works to one simple website which includes jobs of
-HR, drivers, dispatchers, etc. Also worked on platform like Tik Tok but focuses
-on more voice actors where they can give a voice for lectures, lyrics,
-characters from books, etc. And last but not least, I've also worked as a Team
-Leader in Vention's inner project where we build the AI related project.
+On the cloud side, I’ve worked with **AWS, Google Cloud Platform, and Cloudflare**, deploying and maintaining production systems, including containerized and serverless solutions.
 
-Outside of client work, I also build pet projects, such as a Family Tree
-platform where I explored advanced data modeling, and a Telegram reminder bot
-that now serves hundreds of users.
+Throughout my career, I’ve been involved in projects across different domains such as **e-commerce, logistics, social platforms, and AI-driven products**, usually working on both backend architecture and frontend integration.
 
-Overall, I’d describe myself as a problem-solver who enjoys building scalable
-systems, optimizing performance, and continuously learning.
+One project I’d like to highlight is a **Customer Feedback Sentiment Dashboard** that I built recently. The goal was to simplify how companies work with user feedback and reports. Users submit feedback, and the system uses AI to automatically **analyze sentiment**—positive, negative, or neutral—generate metrics, and present them in a **clear and simple UI**.
+
+Additionally, reports are **grouped and summarized**, making it easier for teams to understand recurring issues. If documentation is provided, the system can also **answer user questions using RAG**, which significantly reduces the need for manual support and human resources. The project was designed with scalability and real business use cases in mind.
+
+Besides commercial work, I also build **my own products**. Some of them have grown into **early-stage startups**, and a few already have **thousands of users**, which gave me strong experience in product thinking, performance optimization, and real-world scalability.
+
+That’s a quick overview of my background. I’d be happy to go deeper into any part or answer any questions you have.
+
 
 # Behavioral Interview Questions
 
