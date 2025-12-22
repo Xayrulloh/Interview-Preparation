@@ -6,7 +6,7 @@ On the cloud side, I’ve worked with **AWS, Google Cloud Platform, and Cloudfla
 
 Throughout my career, I’ve been involved in projects across different domains such as **e-commerce, logistics, social platforms, and AI-driven products**, usually working on both backend architecture and frontend integration.
 
-One project I’d like to highlight is a **Customer Feedback Sentiment Dashboard** that I built recently. The goal was to simplify how companies work with user feedback and reports. Users submit feedback, and the system uses AI to automatically **analyze sentiment**—positive, negative, or neutral—generate metrics, and present them in a **clear and simple UI**.
+One project I’d like to highlight is a **Customer Feedback Sentiment Dashboard** that I built recently. The goal was to simplify how companies work with user feedback and reports. Users submit feedback, and the system uses AI to automatically **analyze sentiment**, positive, negative, or neutral, generate metrics, and present them in a **clear and simple UI**.
 
 Additionally, reports are **grouped and summarized**, making it easier for teams to understand recurring issues. If documentation is provided, the system can also **answer user questions using RAG**, which significantly reduces the need for manual support and human resources. The project was designed with scalability and real business use cases in mind.
 
