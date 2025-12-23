@@ -1,14 +1,12 @@
 # Self Introduction
 
-Hi, my name is **Xayrulloh**. I’m a **full-stack developer** with around **5 years of experience**, mainly working with **Node.js, React, and PostgreSQL**, along with modern frameworks and libraries in the JavaScript ecosystem.
+Hi, my name is **Xayrulloh**. I’m a **full-stack developer** with  **5 years of experience**, mainly working with **Node.js, React, and PostgreSQL**, along with other frameworks, libraries, databases and so on.
 
-On the cloud side, I’ve worked with **AWS, Google Cloud Platform, and Cloudflare**, deploying and maintaining production systems, including containerized and serverless solutions.
+On the cloud side, I’ve worked with **AWS, Google Cloud Platform, Cloudflare**, and **Firebase**, deploying and maintaining production systems, including containerized and serverless solutions.
 
-Throughout my career, I’ve been involved in projects across different domains such as **e-commerce, logistics, social platforms, and AI-driven products**, usually working on both backend architecture and frontend integration.
+Throughout my career, I’ve worked on different projects such as **e-commerce, logistics, social platforms, and AI-driven products**, usually working on both backend and frontend.
 
-One project I’d like to highlight is a **Customer Feedback Sentiment Dashboard** that I built recently. The goal was to simplify how companies work with user feedback and reports. Users submit feedback, and the system uses AI to automatically **analyze sentiment**, positive, negative, or neutral, generate metrics, and present them in a **clear and simple UI**.
-
-Additionally, reports are **grouped and summarized**, making it easier for teams to understand recurring issues. If documentation is provided, the system can also **answer user questions using RAG**, which significantly reduces the need for manual support and human resources. The project was designed with scalability and real business use cases in mind.
+And my previous project was **Customer Feedback Sentiment**, which helps companies to analyze user feedback, reports and generate metrics. Our AI analyzes and shows overall user mood, whether it's positive, negative, or neutral, and generates metrics based on that. When it comes to reports, it groups and summarizes them, making it easier for teams to understand recurring issues. And the another feature is when you provide a documentation, the system can also **answer user questions using RAG (Retrieval Augmented Generation)**, which significantly reduces the need for manual support and human resources.
 
 Besides commercial work, I also build **my own products**. Some of them have grown into **early-stage startups**, and a few already have **thousands of users**, which gave me strong experience in product thinking, performance optimization, and real-world scalability.
 
