@@ -1,6 +1,6 @@
 # Self Introduction
 
-Hi, my name is **Xayrulloh**. I’m a **full-stack developer** with  **5 years of experience**, mainly working with **Node.js, React, and PostgreSQL**, along with other frameworks, libraries, databases and so on.
+Hi, I'm **Xayrulloh**, **full-stack developer** with  **5 years of experience**, mainly working with **Node.js, React, and PostgreSQL**, along with other frameworks, libraries, databases and so on.
 
 On the cloud side, I’ve worked with **AWS, Google Cloud Platform, Cloudflare**, and **Firebase**, deploying and maintaining production systems, including containerized and serverless solutions.
 
