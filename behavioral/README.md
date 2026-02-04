@@ -1,16 +1,16 @@
 # Self Introduction
 
-I’m **Xayrulloh**, a **full-stack developer** with **5 years of experience**, mainly working with **Node.js, React, and PostgreSQL**, along with modern frameworks, libraries, and databases.
+I’m **Xayrulloh**, **full-stack developer** with **5 years of experience**, mainly working with **Node.js, React, and PostgreSQL**, along with modern frameworks, libraries, and databases.
 
-On the cloud side, I’ve worked extensively with **AWS**, as well as **Google Cloud Platform, Cloudflare, and Firebase**, building and maintaining **production-ready, scalable systems** using both **serverless and containerized architectures**.
+On the cloud side, I’ve worked with **AWS**, **Google Cloud Platform, Cloudflare, and Firebase**, building and maintaining **production-ready, scalable systems** using both **serverless and containerized architectures**.
 
-Throughout my career, I’ve worked on projects across **e-commerce, logistics, social platforms, and data-driven systems**, usually focusing on backend architecture, integrations, and cloud infrastructure, while also contributing to frontend development.
+Throughout my career, I’ve worked on projects like **e-commerce, logistics, social platforms, AI related projects**, usually working on backend architecture, and cloud infrastructure, while also contributing to frontend development.
 
-In my most recent project, we built a **feedback and reporting platform** that helps companies collect user feedback and analyze reports through a **simple dashboard**, where everything is **grouped**, **summarized**, and overall **user sentiment** is clearly visible.
+In my recent project, we built a **feedback and reporting platform** which helps companies collect user feedback and analyze reports through a **simple dashboard**, where everything is **grouped**, **summarized**, and overall **user sentiment** is clearly visible.
 
-Although the product included **AI-driven analysis**, used mainly for sentiment detection and summarization, the core of my work was focused on the **AWS infrastructure and backend architecture**. I designed a **serverless setup** using **AWS Lambda and API Gateway**, handled background processing with **Amazon SQS**, event-based communication with **SNS**, and managed the infrastructure using **CloudFormation**.
+And my responsibility was to help **to design AWS infrastructure and backend architecture**. We designed a **serverless setup** using **AWS Lambda and API Gateway**, handled background processing with **Amazon SQS**, event-based communication with **SNS**, and managed the infrastructure using **CloudFormation**.
 
-Besides commercial work, I also build **my own products**. Some of them have grown into **early-stage startups**, and a few already have **thousands of users**, which gave me strong experience in **cloud cost optimization, performance tuning, and real-world scalability**.
+Besides commercial work, I also build **my own products**. Some of them have grown into **early-stage startups**, and a few already have **thousands of users**, which gave me strong experience in **cloud cost optimization, and real-world scalability**.
 
 That’s a brief overview of my background. I’d be happy to dive deeper into the AWS architecture or answer any questions you have.
 
