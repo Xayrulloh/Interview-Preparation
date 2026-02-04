@@ -1,16 +1,19 @@
 # Self Introduction
 
-Hi, I'm **Xayrulloh**, **full-stack developer** with  **5 years of experience**, mainly working with **Node.js, React, and PostgreSQL**, along with other frameworks, libraries, databases and so on.
+I’m **Xayrulloh**, a **full-stack developer** with **5 years of experience**, mainly working with **Node.js, React, and PostgreSQL**, along with modern frameworks, libraries, and databases.
 
-On the cloud side, I’ve worked with **AWS, Google Cloud Platform, Cloudflare**, and **Firebase**, deploying and maintaining production systems, including containerized and serverless solutions.
+On the cloud side, I’ve worked extensively with **AWS**, as well as **Google Cloud Platform, Cloudflare, and Firebase**, building and maintaining **production-ready, scalable systems** using both **serverless and containerized architectures**.
 
-Throughout my career, I’ve worked on different projects such as **e-commerce, logistics, social platforms, and AI-driven products**, usually working on both backend and frontend.
+Throughout my career, I’ve worked on projects across **e-commerce, logistics, social platforms, and data-driven systems**, usually focusing on backend architecture, integrations, and cloud infrastructure, while also contributing to frontend development.
 
-And my previous project was **Customer Feedback Sentiment**, which helps companies to analyze user feedback, reports and generate metrics. Our AI analyzes and shows overall user mood, whether it's positive, negative, or neutral, and generates metrics based on that. When it comes to reports, it groups and summarizes them, making it easier for teams to understand recurring issues. And the another feature is when you provide a documentation, the system can also **answer user questions using RAG (Retrieval Augmented Generation)**, which significantly reduces the need for manual support and human resources.
+In my most recent project, we built a **feedback and reporting platform** that helps companies collect user feedback and analyze reports through a **simple dashboard**, where everything is **grouped**, **summarized**, and overall **user sentiment** is clearly visible.
 
-Besides commercial work, I also build **my own products**. Some of them have grown into **early-stage startups**, and a few already have **thousands of users**, which gave me strong experience in product thinking, performance optimization, and real-world scalability.
+Although the product included **AI-driven analysis**, used mainly for sentiment detection and summarization, the core of my work was focused on the **AWS infrastructure and backend architecture**. I designed a **serverless setup** using **AWS Lambda and API Gateway**, handled background processing with **Amazon SQS**, event-based communication with **SNS**, and managed the infrastructure using **CloudFormation**.
 
-That’s a quick overview of my background. I’d be happy to go deeper into any part or answer any questions you have.
+Besides commercial work, I also build **my own products**. Some of them have grown into **early-stage startups**, and a few already have **thousands of users**, which gave me strong experience in **cloud cost optimization, performance tuning, and real-world scalability**.
+
+That’s a brief overview of my background. I’d be happy to dive deeper into the AWS architecture or answer any questions you have.
+
 
 
 # Behavioral Interview Questions
